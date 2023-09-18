@@ -46,6 +46,11 @@ public class StatsLibrary<E>{
         //square the new mean
         //return the result
 
+    //calculateFactorial method
+    //does what it says.
+    //use big integer object to avoid hitting integer limit on primitive int
+    //lets use recursion
+
     //findIntersection method
         //compare each value
         //if they match add to a new list
@@ -74,7 +79,4 @@ public class StatsLibrary<E>{
     //returns a list of each possible combination of elements from the set
     //note this differs from permutations; combinations can contain repeated elements
 
-    //calculateFactorial method
-    //does what it says.
-    //use big integer object to avoid hitting integer limit on primitive int
 }
