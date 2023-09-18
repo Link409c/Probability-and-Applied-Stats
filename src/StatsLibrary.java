@@ -63,5 +63,18 @@ public class StatsLibrary<E>{
 
     //isProperSubset method
 
-    //checking to test push and commits
+    //091823: checking to test push and commits - it worked! had to set new remote URL
+
+    //findPermutations method
+    //accepts a list, and number of elements in a permutation
+    //returns a list of each possible permutation of elements from the set
+
+    //findCombinations method
+    //accepts a list and number of elements in a combination
+    //returns a list of each possible combination of elements from the set
+    //note this differs from permutations; combinations can contain repeated elements
+
+    //calculateFactorial method
+    //does what it says.
+    //use big integer object to avoid hitting integer limit on primitive int
 }
