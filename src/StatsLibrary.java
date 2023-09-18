@@ -1,5 +1,11 @@
 import java.util.ArrayList;
 
+/**
+ * The Stats Library Class is a custom class created to use in the Probability
+ * and Applied Statistics course and beyond. The user can invoke its methods to
+ * calculate several values associated with an object that represents a data set.
+ * @param <E> The class will accept generics but works best with lists.
+ */
 public class StatsLibrary<E>{
 
     /**
@@ -57,5 +63,5 @@ public class StatsLibrary<E>{
 
     //isProperSubset method
 
-
+    //checking to test push and commits
 }
