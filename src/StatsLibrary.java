@@ -97,11 +97,15 @@ public class StatsLibrary<E>{
         //if a value is repeated do not add it
         //return the new list
 
+    //findCompliment method
+
     //listSubsets method
         //method to return a string of individual subsets from a given set
         //should always include the empty set
+        //dont need this for formal project
 
     //isProperSubset method
+        //dont need this for formal project
 
     //091823: checking to test push and commits - it worked! had to set new remote URL
 
@@ -115,10 +119,10 @@ public class StatsLibrary<E>{
     //note this differs from permutations; combinations can contain repeated elements
 
     //totalProbability method
+    
+    //conditionalProbability method
 
     //bayesTheorem method
-
-    //conditionalProbability method
 
     //independentVsDependent
 }
