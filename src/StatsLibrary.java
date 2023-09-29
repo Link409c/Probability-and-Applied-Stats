@@ -79,6 +79,8 @@ public class StatsLibrary<E>{
         return result;
     }
 
+    //findVariance method
+
     //calculateFactorial method
     //does what it says.
     //use big integer object to avoid hitting integer limit on primitive int
@@ -112,4 +114,11 @@ public class StatsLibrary<E>{
     //returns a list of each possible combination of elements from the set
     //note this differs from permutations; combinations can contain repeated elements
 
+    //totalProbability method
+
+    //bayesTheorem method
+
+    //conditionalProbability method
+
+    //independentVsDependent
 }
