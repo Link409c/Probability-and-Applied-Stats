@@ -1,0 +1,25 @@
+Date: OCT 30 (Monday) **Test
+
+Project 1
+
+Formula Sheet: Titled List of all formula from lectures / text. Check chapters for grey boxed formulas.
+
+Week 1: Histogram / Histogram Problems (excel work)
+
+Stats Library
+	Mean Median Mode
+	Std Dev / Variance
+	Set Theory: Union Intersection Compliment
+	Factorial
+	Permutations Combinations
+	Conditional Prob. / Bayes Theorem
+	Determining Independence
+
+Mini Projects:
+	Github Work (Repository, Paper, Clone, Commit to clone)
+	Monte's Three Doors / Deal or No Deal
+	Birthday Checker
+	Car Factory
+	Hands 
+
+Submissions via Github link shared with Byron.
