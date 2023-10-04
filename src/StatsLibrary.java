@@ -1,82 +1,149 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Objects;
 
 /**
  * The Stats Library Class is a custom class created to use in the Probability
  * and Applied Statistics course and beyond. The user can invoke its methods to
  * calculate several values associated with an object that represents a data set.
- * @param <E> The class will accept generics but works best with lists of numeric data types.
  */
-public class StatsLibrary<E>{
+public class StatsLibrary{
 
     /**
-     * findListSum method provides a helper method for summation of list elements.
+     * a helper method for summation of list elements.
      * @param anArrayList the list to sum values
      * @return the sum of list values.
      */
-    public double findListSum(ArrayList<E> anArrayList){
+    public double findListSum(ArrayList<Double> anArrayList){
         double sum = 0;
         if(!anArrayList.isEmpty()) {
-            for (E element : anArrayList) {
-                sum += (Double) element;
+            for (Double d : anArrayList) {
+                sum += d;
             }
         }
         return sum;
     }
 
     /**
-     * findDifferenceOfValuesAndMean method subtracts the mean of values in a list
-     * from each of those values. Used in calculating standard deviation of a dataset
+     * subtracts the mean of values in a list from each of those values.
+     * Used in calculating standard deviation of a set of values
      * @param anArrayList the list of values
      * @param mean mean of the passed list
      * @return the new list
      */
-    public ArrayList<Double> findDifferenceOfValues(ArrayList<E> anArrayList, double mean){
+    public ArrayList<Double> findDifferenceOfValuesAndMean(ArrayList<Double> anArrayList, double mean){
         //create a list of equal size to hold new values
         ArrayList<Double> differenceList = new ArrayList<>(anArrayList.size());
         //for each value of the passed list,
-        for (E element : anArrayList){
+        for (Double d : anArrayList){
             //set the elements of the new list as difference of passed list value and mean
-            double newValue = (Double) element - mean;
-            differenceList.add(newValue);
+            differenceList.add(d - mean);
         }
         //return the new list
         return differenceList;
+    }
+
+    /**
+     * squares each value in a list.
+     * @param anArrayList a list of values
+     * @return a list of squared values
+     */
+    public ArrayList<Double> squareList(ArrayList<Double> anArrayList){
+        for(Double d : anArrayList){
+            double element = d;
+            anArrayList.remove(d);
+            element *= element;
+            anArrayList.add(element);
+        }
+        return anArrayList;
     }
     /**
      * findMean computes the average of values in a list.
      * @param anArrayList the list to iterate
      * @return the average
      */
-    public double findMean(ArrayList<E> anArrayList){
+    public double findMean(ArrayList<Double> anArrayList){
         return findListSum(anArrayList) / anArrayList.size();
     }
 
-    //findMode method
-        //what is the best way?
-        //sort then count each?
-        //would need generic comparator
-        //possibly use comparator with toString?
-        //turn the list into a string and compare using substring?
-        //otherwise use a list by unique elements then count approach
+    /**
+     * sorts the passed list, and compares adjacent values to find the most
+     * represented value in the list.
+     * @param anArrayList a list of values
+     * @return the most represented value in the list
+     */
+    public double findMode(ArrayList<Double> anArrayList){
+        //sort the list
+        Collections.sort(anArrayList);
+        //loop list and compare pairs of values
+        int count = 0, maxCount = 0;
+        double mode = anArrayList.get(0);
+        int i = 0, j = 1;
+        do{
+            //if equal increment count
+            if(Objects.equals(anArrayList.get(i), anArrayList.get(j))){
+                count++;
+            }
+            //else non equal is found
+            //check if count is greater than current highest
+            if(count > maxCount){
+                //set mode value to this index element
+                mode = anArrayList.get(i);
+                //set current max count to count
+                maxCount = count;
+                //reset count
+                count = 0;
+            }
+            i++;
+            j++;
+        }while(j < anArrayList.size());
+        return mode;
+    }
 
-    //findMedian method
-        //sort then find middle
-        //return middle
+    /**
+     * sorts the passed array, and finds the median by calculating the middle index.
+     * if the list size is even, the median is taken as the average of the two middle
+     * values.
+     * @param anArrayList a list of values
+     * @return the median of the values in the list
+     */
+    public double findMedian(ArrayList<Double> anArrayList){
+        Collections.sort(anArrayList);
+        double median;
+        //if size is odd,
+        if(anArrayList.size() % 2 != 0){
+            //median is middle element
+            median = anArrayList.get(anArrayList.size() / 2);
+        }
+        //else if size is even,
+        else{
+            int middle = (anArrayList.size() / 2);
+            //median is average of adjacent middle elements
+            median = ((anArrayList.get(middle) + anArrayList.get(middle - 1)) / 2.0);
+        }
+        return median;
+    }
 
-    //computeStandardDeviation method
-    public double computeStandardDeviation(ArrayList<E> anArrayList) {
-        double result = 0;
-        //for each loop the list to get sum
+    /**
+     * calculates the standard deviation of a set of values. uses several helper
+     * methods for each step.
+     * @param anArrayList a list of values
+     * @return the standard deviation of the values.
+     */
+    public double computeStandardDeviation(ArrayList<Double> anArrayList) {
+        //get sum of the list elements
         //divide to find mean
         double mean = findMean(anArrayList);
         //for each element, subtract the mean from it to get a new list of values
-
+        anArrayList = findDifferenceOfValuesAndMean(anArrayList, mean);
         //square each value
-        //add the values
+        anArrayList = squareList(anArrayList);
+        //get sum of the list elements
         //find the new mean
-        //square the new mean
+        mean = findMean(anArrayList);
+        //take the square root of the mean
         //return the result
-        return result;
+        return Math.sqrt(mean);
     }
 
     //findVariance method
@@ -106,8 +173,6 @@ public class StatsLibrary<E>{
 
     //isProperSubset method
         //dont need this for formal project
-
-    //091823: checking to test push and commits - it worked! had to set new remote URL
 
     //findPermutations method
     //accepts a list, and number of elements in a permutation

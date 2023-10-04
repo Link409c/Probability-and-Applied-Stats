@@ -4,10 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="added Car &amp; Factory Classes">
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="finished all methods in Factory except export to file&#10;&#10;Tested factory methods">
+      <change afterPath="$PROJECT_DIR$/src/HandEvaluatorTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/InsertionSorter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StatsLibraryTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/FactoryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/FactoryTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Factory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FactoryTester.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/HandEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/HandEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyElement.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/StatsLibrary.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Suit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsLibrary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -44,7 +54,12 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.StatsLibraryTester">
     <configuration name="FactoryTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="FactoryTester" />
       <module name="Probability and Applied Statistics" />
@@ -52,8 +67,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StatsLibraryTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="StatsLibraryTester" />
+      <module name="Probability and Applied Statistics" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.StatsLibraryTester" />
         <item itemvalue="Application.FactoryTester" />
       </list>
     </recent_temporary>
@@ -137,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695403060679</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="finished all methods in Factory except export to file&#10;&#10;Tested factory methods">
+      <created>1695672945324</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1695672945324</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,6 +189,7 @@
     <MESSAGE value="pseudocode for permutations, combinations, and factorial methods" />
     <MESSAGE value="findSum, findMean, findDifference, std dev methods" />
     <MESSAGE value="added Car &amp; Factory Classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Car &amp; Factory Classes" />
+    <MESSAGE value="finished all methods in Factory except export to file&#10;&#10;Tested factory methods" />
+    <option name="LAST_COMMIT_MESSAGE" value="finished all methods in Factory except export to file&#10;&#10;Tested factory methods" />
   </component>
 </project>
