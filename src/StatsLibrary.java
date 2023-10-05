@@ -1,3 +1,4 @@
+import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
@@ -148,10 +149,21 @@ public class StatsLibrary{
 
     //findVariance method
 
-    //calculateFactorial method
-    //does what it says.
-    //use big integer object to avoid hitting integer limit on primitive int
-    //lets use recursion
+    /**
+     * calculates the factorial representation of a number returning a BigInteger object.
+     * This allows the method to avoid any overflow that would occur if using primitive
+     * datatypes.
+     * @param l the number to calculate
+     * @return the factorial of the input
+     */
+    public BigInteger calculateFactorial(int l){
+        long result = l;
+        while(l > 1){
+            l--;
+            result *= l;
+        }
+        return BigInteger.valueOf(result);
+    }
 
     //findIntersection method
         //compare each value
@@ -190,4 +202,6 @@ public class StatsLibrary{
     //bayesTheorem method
 
     //independentVsDependent
+
+    //probability mass function method
 }

@@ -39,5 +39,9 @@ public class StatsLibraryTester {
         System.out.printf("Mean: %.3f ", myStatsTest.findMean(testList));
         System.out.printf("Median: %.3f ", myStatsTest.findMedian(testList));
         System.out.printf("Mode: %.3f ", myStatsTest.findMode(testList));
+
+        int fact = 16;
+        System.out.println();
+        System.out.print(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
     }
 }
