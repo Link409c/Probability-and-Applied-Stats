@@ -1,3 +1,4 @@
+import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -157,12 +158,18 @@ public class StatsLibrary{
      * @return the factorial of the input
      */
     public BigInteger calculateFactorial(int l){
-        long result = l;
-        while(l > 1){
-            l--;
-            result *= l;
+        //case for zero factorial
+        if(l == 0){
+            return BigInteger.ONE;
         }
-        return BigInteger.valueOf(result);
+        else {
+            long result = l;
+            while (l > 1) {
+                l--;
+                result *= l;
+            }
+            return BigInteger.valueOf(result);
+        }
     }
 
     //findIntersection method
@@ -186,14 +193,50 @@ public class StatsLibrary{
     //isProperSubset method
         //dont need this for formal project
 
-    //findPermutations method
-    //accepts a list, and number of elements in a permutation
-    //returns a list of each possible permutation of elements from the set
+    /**
+     * calculates the number of permutations of an amount of elements resulting
+     * from a set of elements. Note that the order of elements matters, and
+     * duplicates are not allowed. uses the calculateFactorial helper method to calculate
+     * each section of the formula before returning the full formula with those values
+     * plugged in.
+     * @param setElements the number of elements in the set
+     * @param choices the number of elements in each permutation
+     * @return the total possible permutations in the set
+     */
+    public BigInteger findPermutations(int setElements, int choices){
+        //calc factorial of set elements
+        BigInteger elementsFactorial = calculateFactorial(setElements);
+        //subtract number of choices from number of elements
+        int difference = setElements - choices;
+        //calc factorial of difference
+        BigInteger elementsMinusChoices = calculateFactorial(difference);
+        //plug all values into permutations formula n! / (n-r)!
+        return elementsFactorial.divide(elementsMinusChoices);
+    }
 
-    //findCombinations method
-    //accepts a list and number of elements in a combination
-    //returns a list of each possible combination of elements from the set
-    //note this differs from permutations; combinations can contain repeated elements
+    /**
+     * calculates the number of combinations resulting from a set of elements
+     * and how many elements to include in each resulting combination. Note that
+     * order of the elements does not matter and duplicates are allowed. Uses the
+     * calculateFactorial helper method to calculate each section of the formula
+     * before returning the full formula with those values plugged in.
+     * @param setElements the number of elements in the set
+     * @param choices the number of elements in each combination
+     * @return the total possible combinations in the set
+     */
+    public BigInteger findCombinations(int setElements, int choices){
+        //check n >= r >= 0
+        //calc factorial of set elements
+        BigInteger elementsFactorial = calculateFactorial(setElements);
+        //calc factorial of choices in the combination
+        BigInteger choicesFactorial = calculateFactorial(choices);
+        //subtract number of choices from number of elements
+        int difference = setElements - choices;
+        //calc factorial of difference
+        BigInteger elementsMinusChoices = calculateFactorial(difference);
+        //plug all values into combinations formula n! / r!(n-r)!
+        return elementsFactorial.divide(elementsMinusChoices.multiply(choicesFactorial));
+    }
 
     //totalProbability method
     
