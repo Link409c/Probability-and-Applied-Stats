@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="wrote and tested factorial method">
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="wrote and tested combinations and permutations methods, added zero factorial case to factorial method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsLibrary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StatsLibraryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsLibraryTester.java" afterDir="false" />
@@ -171,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696477592233</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="wrote and tested combinations and permutations methods, added zero factorial case to factorial method">
+      <created>1696557823413</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1696557823413</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -196,6 +203,7 @@
     <MESSAGE value="finished all methods in Factory except export to file&#10;&#10;Tested factory methods" />
     <MESSAGE value="finished mode, median methods in stats library" />
     <MESSAGE value="wrote and tested factorial method" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrote and tested factorial method" />
+    <MESSAGE value="wrote and tested combinations and permutations methods, added zero factorial case to factorial method" />
+    <option name="LAST_COMMIT_MESSAGE" value="wrote and tested combinations and permutations methods, added zero factorial case to factorial method" />
   </component>
 </project>

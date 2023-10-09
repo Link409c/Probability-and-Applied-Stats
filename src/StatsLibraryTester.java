@@ -11,7 +11,7 @@ public class StatsLibraryTester {
             testList.add(r.nextDouble(1, 100));
         }
         System.out.println("List:");
-        for(Double e : testList) {
+        for (Double e : testList) {
             System.out.printf("%.3f\n", e);
         }
 
@@ -24,15 +24,14 @@ public class StatsLibraryTester {
         System.out.println();
         testList.clear();
         for (int i = 0; i < 10; i++) {
-            if(i%2 == 0){
+            if (i % 2 == 0) {
                 testList.add(2.0);
-            }
-            else{
+            } else {
                 testList.add(r.nextDouble(1, 10));
             }
         }
         System.out.println("List:");
-        for(Double e : testList) {
+        for (Double e : testList) {
             System.out.printf("%.3f\n", e);
         }
 
@@ -53,5 +52,26 @@ public class StatsLibraryTester {
                 choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
         System.out.println("Combinations of a set of " + totalElements + " elements " +
                 choiceNumber + " ways: " + myStatsTest.findCombinations(totalElements, choiceNumber));
+
+        totalElements = 41;
+        choiceNumber = 5;
+
+        fact = 40;
+        System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
+
+        System.out.println("Permutations of a set of " + totalElements + " elements " +
+                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        totalElements = 42;
+        System.out.println("Permutations of a set of " + totalElements + " elements " +
+                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        totalElements = 43;
+        System.out.println("Permutations of a set of " + totalElements + " elements " +
+                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        totalElements = 44;
+        System.out.println("Permutations of a set of " + totalElements + " elements " +
+                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        totalElements = 45;
+        System.out.println("Permutations of a set of " + totalElements + " elements " +
+                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
     }
 }

@@ -1,4 +1,3 @@
-import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -148,7 +147,19 @@ public class StatsLibrary{
         return Math.sqrt(mean);
     }
 
-    //findVariance method
+    /**
+     * calculates the variance of a population.
+     * @param anArrayList the list of elements passed to the method is considered the population.
+     * @return the variance of the population
+     */
+    public double calculateVariance(ArrayList<Double> anArrayList){
+        //get the difference of each list element and the mean
+        double sum = findListSum(anArrayList);
+        //square this value
+        sum = Math.sqrt(sum);
+        //return the squared value divided by the number of elements
+        return sum / anArrayList.size();
+    }
 
     /**
      * calculates the factorial representation of a number returning a BigInteger object.
