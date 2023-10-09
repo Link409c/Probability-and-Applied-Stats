@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Random;
 
 public class StatsLibraryTester {
@@ -73,5 +74,48 @@ public class StatsLibraryTester {
         totalElements = 45;
         System.out.println("Permutations of a set of " + totalElements + " elements " +
                 choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+
+        ArrayList<Double> testListTwo = new ArrayList<>();
+        testList.clear();
+
+        //randomly generate lists with some duplicate values
+        int k = r.nextInt(50);
+        for(int i = 1; i < k; i++){
+            double d = r.nextDouble(20);
+            testList.add(d);
+            if(k % i != 0){
+                testListTwo.add(d);
+            }
+        }
+
+        Collections.sort(testList);
+        Collections.sort(testListTwo);
+
+        //test intersection method
+        System.out.print("List A: ");
+        for(Double d : testList){
+            System.out.printf("[%.3f] ", d);
+        }
+        System.out.print("\nList B: ");
+        for(Double d : testListTwo){
+            System.out.printf("[%.3f] ", d);
+        }
+        System.out.print("\nIntersection: ");
+        for(Double d : myStatsTest.findIntersection(testList, testListTwo)){
+            System.out.printf("[%.3f] ", d);
+        }
+
+        System.out.print("List A: ");
+        for(Double d : testList){
+            System.out.printf("[%.3f] ", d);
+        }
+        System.out.print("\nList B: ");
+        for(Double d : testListTwo){
+            System.out.printf("[%.3f] ", d);
+        }
+        System.out.print("\nUnion: ");
+        for(Double d : myStatsTest.findUnion(testList, testListTwo)){
+            System.out.printf("[%.3f] ", d);
+        }
     }
 }
