@@ -132,17 +132,9 @@ public class StatsLibrary{
      * @return the standard deviation of the values.
      */
     public double computeStandardDeviation(ArrayList<Double> anArrayList) {
-        //get sum of the list elements
-        //divide to find mean
-        double mean = findMean(anArrayList);
-        //for each element, subtract the mean from it to get a new list of values
-        anArrayList = findDifferenceOfValuesAndMean(anArrayList, mean);
-        //square each value
-        anArrayList = squareList(anArrayList);
-        //get sum of the list elements
-        //find the new mean
-        mean = findMean(anArrayList);
-        //take the square root of the mean
+        //calculate variance
+        double mean = calculateVariance(anArrayList);
+        //take the square root of the variance
         //return the result
         return Math.sqrt(mean);
     }
@@ -153,12 +145,16 @@ public class StatsLibrary{
      * @return the variance of the population
      */
     public double calculateVariance(ArrayList<Double> anArrayList){
-        //get the difference of each list element and the mean
-        double sum = findListSum(anArrayList);
-        //square this value
-        sum = Math.sqrt(sum);
-        //return the squared value divided by the number of elements
-        return sum / anArrayList.size();
+        //get sum of the list elements
+        //divide to find mean
+        double mean = findMean(anArrayList);
+        //for each element, subtract the mean from it to get a new list of values
+        anArrayList = findDifferenceOfValuesAndMean(anArrayList, mean);
+        //square each value
+        anArrayList = squareList(anArrayList);
+        //get sum of the list elements
+        //find the new mean
+        return findMean(anArrayList);
     }
 
     /**
@@ -245,6 +241,10 @@ public class StatsLibrary{
     }
 
     //findCompliment method
+        //given a set S and a universal set P (population)
+        //compliment is all elements of P that are not in S
+        //example a hand of 5 cards and a deck of cards
+        //the compliment of the hand of cards is the remaining cards in the deck.
 
     //listSubsets method
         //method to return a string of individual subsets from a given set
@@ -300,12 +300,32 @@ public class StatsLibrary{
     }
 
     //totalProbability method
+    //representing 0 < P(B) < 1
     
     //conditionalProbability method
+    // "B Given A"
+    //the probability of an event given that another has occurred.
+    //example choosing a red ball from a bag, when that bag has been chosen from a set of bags.
 
     //bayesTheorem method
+    //P(B|A) = P(A|B)P(B) / P(A)
+    //the probability of an event B, given an event A has occurred is...
+    //the probability of an event A, given an event B has occurred times the probability of an event B
+    //all over the probability of an event A
 
-    //independentVsDependent
+    //independent Vs Dependent
+    //Probability of B vs B given A
 
     //probability mass function method
+
+    //binomial distribution method
+    //the number of combinations "N choose R" times...
+    //(probability of success raised to the number of successes ) times...
+    // probability of failure raised to (the number of successes minus 1)
+    // | N |
+    // | R | (p^y)(q^(y-1))
+
+    //geometric distribution method
+
+
 }

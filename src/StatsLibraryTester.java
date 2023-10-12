@@ -39,20 +39,23 @@ public class StatsLibraryTester {
         //test with a defined mode
         System.out.printf("Mean: %.3f ", myStatsTest.findMean(testList));
         System.out.printf("Median: %.3f ", myStatsTest.findMedian(testList));
-        System.out.printf("Mode: %.3f ", myStatsTest.findMode(testList));
+        System.out.printf("Mode: %.3f \n", myStatsTest.findMode(testList));
 
         //test factorial method
-        int fact = 16;
-        System.out.println();
+        int fact = 0;
+        System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
+        fact = 4;
+        System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
+        fact = 16;
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
 
         //test combinations and permutations
         int totalElements = 4;
         int choiceNumber = 4;
-        System.out.println("Permutations of a set of " + totalElements + " elements " +
-                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
-        System.out.println("Combinations of a set of " + totalElements + " elements " +
-                choiceNumber + " ways: " + myStatsTest.findCombinations(totalElements, choiceNumber));
+        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
+                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        System.out.println("Combinations of a set of " + totalElements + " elements, choose " +
+                choiceNumber + ": " + myStatsTest.findCombinations(totalElements, choiceNumber));
 
         totalElements = 41;
         choiceNumber = 5;
@@ -60,24 +63,23 @@ public class StatsLibraryTester {
         fact = 40;
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
 
-        System.out.println("Permutations of a set of " + totalElements + " elements " +
-                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
+                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
         totalElements = 42;
-        System.out.println("Permutations of a set of " + totalElements + " elements " +
-                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
+                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
         totalElements = 43;
-        System.out.println("Permutations of a set of " + totalElements + " elements " +
-                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
+                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
         totalElements = 44;
-        System.out.println("Permutations of a set of " + totalElements + " elements " +
-                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
+                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
         totalElements = 45;
-        System.out.println("Permutations of a set of " + totalElements + " elements " +
-                choiceNumber + " ways: " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
+                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
 
         ArrayList<Double> testListTwo = new ArrayList<>();
         testList.clear();
-
         //randomly generate lists with some duplicate values
         int k = r.nextInt(50);
         for(int i = 1; i < k; i++){
