@@ -48,6 +48,12 @@ public class StatsLibraryTester {
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
         fact = 16;
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
+        fact = 20;
+        System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
+        fact = 21;
+        System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
+        fact = 22;
+        System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
 
         //test combinations and permutations
         int totalElements = 4;
@@ -107,7 +113,7 @@ public class StatsLibraryTester {
             System.out.printf("[%.3f] ", d);
         }
 
-        System.out.print("List A: ");
+        System.out.print("\nList A: ");
         for(Double d : testList){
             System.out.printf("[%.3f] ", d);
         }

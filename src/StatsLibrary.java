@@ -228,16 +228,35 @@ public class StatsLibrary{
     public ArrayList<Double> findUnion(ArrayList<Double> listA, ArrayList<Double> listB){
         //create new list object to return
         ArrayList<Double> union = new ArrayList<>();
-        //find unique elements and add to new list
+        //add each element of A to union
         for(Double first : listA){
-            for(Double second : listB){
-                if(!first.equals(second)){
-                    union.add(first);
+            union.add(first);
+        }
+        boolean match;
+        int index;
+        //for each element in B,
+        for(Double second : listB){
+            match = false;
+            index = 0;
+            //compare to each element in union
+            while(index < union.size() && !match) {
+                if(!second.equals(union.get(index))){
+                    index++;
+                    //if end of listB is reached,
+                    if(index == union.size()){
+                        //no match found
+                        //add this unique element to union
+                        union.add(second);
+                    }
+                }
+                else{
+                    match = true;
                 }
             }
         }
-        //sort and remove repeat elements
-        return sortAndKeepUniqueElements(union);
+        //finally sort and return union
+        Collections.sort(union);
+        return union;
     }
 
     //findCompliment method
@@ -309,8 +328,8 @@ public class StatsLibrary{
 
     //bayesTheorem method
     //P(B|A) = P(A|B)P(B) / P(A)
-    //the probability of an event B, given an event A has occurred is...
-    //the probability of an event A, given an event B has occurred times the probability of an event B
+    /* the probability of an event B, given an event A has occurred is...
+    the probability of an event A, given an event B has occurred times the probability of an event B */
     //all over the probability of an event A
 
     //independent Vs Dependent
@@ -324,6 +343,11 @@ public class StatsLibrary{
     // probability of failure raised to (the number of successes minus 1)
     // | N |
     // | R | (p^y)(q^(y-1))
+
+    //binomialMean
+    //1 over p where p is the probability of success of an event
+
+    //binomialVariance
 
     //geometric distribution method
 

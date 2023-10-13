@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="wrote and tested Intersection and Union methods&#10;&#10;Union throws OOB exception in sort and keep unique elements method">
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="fixed variance method and consolidated these steps in std deviation method&#10;&#10;changed some values in tester for factorial tests in debugging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsLibrary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StatsLibraryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsLibraryTester.java" afterDir="false" />
@@ -192,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696879658519</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="fixed variance method and consolidated these steps in std deviation method&#10;&#10;changed some values in tester for factorial tests in debugging">
+      <created>1697143521418</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1697143521418</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -221,6 +228,7 @@
     <MESSAGE value="wrote calculateVariance method" />
     <MESSAGE value="wrote calculateVariance method&#10;&#10;factorial method needs more testing. produces small and negative numbers" />
     <MESSAGE value="wrote and tested Intersection and Union methods&#10;&#10;Union throws OOB exception in sort and keep unique elements method" />
-    <option name="LAST_COMMIT_MESSAGE" value="wrote and tested Intersection and Union methods&#10;&#10;Union throws OOB exception in sort and keep unique elements method" />
+    <MESSAGE value="fixed variance method and consolidated these steps in std deviation method&#10;&#10;changed some values in tester for factorial tests in debugging" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed variance method and consolidated these steps in std deviation method&#10;&#10;changed some values in tester for factorial tests in debugging" />
   </component>
 </project>
