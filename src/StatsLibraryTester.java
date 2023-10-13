@@ -125,5 +125,24 @@ public class StatsLibraryTester {
         for(Double d : myStatsTest.findUnion(testList, testListTwo)){
             System.out.printf("[%.3f] ", d);
         }
+        //test binomial distribution
+        double p = .15;
+        int trials = 10;
+        int successes = 4;
+        System.out.printf("\n%.5f", 1.0 - p);
+        System.out.printf("\nThere is a %.4f chance that, in 10 trials, we find 4 successes.",
+                myStatsTest.binomialDistribution(trials, successes, p));
+
+        p = .8;
+        successes = 7;
+        System.out.printf("\nThere is a %.4f chance that, in %d trials with a %.2f chance of success, " +
+                        "we find %d successes.", myStatsTest.binomialDistribution(trials, successes, p),
+                trials, p, successes);
+
+        //testing geometric distribution
+        p = .5;
+        trials = 5;
+        System.out.printf("\nThere is a %.4f chance that, with a %.2f chance of success, we find a success " +
+                "at the %dth trial.", myStatsTest.geometricDistribution(trials, p), p, trials);
     }
 }

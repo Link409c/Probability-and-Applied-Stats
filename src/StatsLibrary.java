@@ -3,11 +3,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
 
-/**
+/************************************************************************************
  * The Stats Library Class is a custom class created to use in the Probability
  * and Applied Statistics course and beyond. The user can invoke its methods to
  * calculate several values associated with an object that represents a data set.
- */
+ * These methods can produce new sets, and inform the user on several key points of
+ * data concerning a set or population. This data includes averages, variance,
+ * standard deviation, and several forms of calculating probability of given events.
+ * --
+ * Author: Christian Simpson
+ * Version: 10/13/23
+ ************************************************************************************/
 public class StatsLibrary{
 
     /**
@@ -173,7 +179,7 @@ public class StatsLibrary{
             BigInteger result = BigInteger.valueOf(l);
             while (l > 1) {
                 l--;
-                result.multiply(result);
+                result = result.multiply(BigInteger.valueOf(l));
             }
             return result;
         }
@@ -337,19 +343,46 @@ public class StatsLibrary{
 
     //probability mass function method
 
-    //binomial distribution method
-    //the number of combinations "N choose R" times...
-    //(probability of success raised to the number of successes ) times...
-    // probability of failure raised to (the number of successes minus 1)
-    // | N |
-    // | R | (p^y)(q^(y-1))
+    /**
+     * calculates the binomial distribution for a set of values. Useful when data deals
+     * with individual, independent trials resulting in either success or failure only.
+     * @param n the number of trials conducted
+     * @param y the intended number of successes
+     * @param p the probability of success occurring in one trial
+     * @return the probability of Y successes in N trials.
+     */
+    public double binomialDistribution(int n, int y, double p){
+        //calculate combinations for N choose Y
+        BigInteger combinations = findCombinations(n, y);
+        //calculate q
+        double q = 1 - p;
+        //raise p to y
+        double pRaisedY = Math.pow(p, y);
+        //raise q to y - 1
+        double qRaised = Math.pow(q, (n-y));
+        //return combinations * p^y * q^y-1
+        return combinations.longValue() * pRaisedY * qRaised;
+    }
 
     //binomialMean
     //1 over p where p is the probability of success of an event
 
     //binomialVariance
 
-    //geometric distribution method
+    /**
+     * calculates the geometric distribution for a set of values. Useful when data deals
+     * with individual, independent trials resulting in either success or failure only.
+     * @param y the number of trials
+     * @param p the probability of success
+     * @return the chance of finding a success by the yth trial.
+     */
+    public double geometricDistribution(int y, double p){
+        double qRaised = Math.pow(1 - p, y-1);
+        return qRaised * p;
+    }
 
+    //hyper geometric distribution
+
+    //negative geometric distribution
 
 }
