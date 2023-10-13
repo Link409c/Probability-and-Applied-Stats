@@ -170,12 +170,12 @@ public class StatsLibrary{
             return BigInteger.ONE;
         }
         else {
-            long result = l;
+            BigInteger result = BigInteger.valueOf(l);
             while (l > 1) {
                 l--;
-                result *= l;
+                result.multiply(result);
             }
-            return BigInteger.valueOf(result);
+            return result;
         }
     }
 
