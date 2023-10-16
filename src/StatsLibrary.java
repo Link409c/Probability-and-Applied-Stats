@@ -325,7 +325,7 @@ public class StatsLibrary{
     }
 
     //totalProbability method
-    //representing 0 < P(B) < 1
+    //representing 0 < P(x) < 1
     
     //conditionalProbability method
     // "B Given A"
@@ -374,7 +374,7 @@ public class StatsLibrary{
      * with individual, independent trials resulting in either success or failure only.
      * @param y the number of trials
      * @param p the probability of success
-     * @return the chance of finding a success by the yth trial.
+     * @return the chance of finding a success at the yth trial.
      */
     public double geometricDistribution(int y, double p){
         double qRaised = Math.pow(1 - p, y-1);

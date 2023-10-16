@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="further tested and updated union method; no longer throwing out of bounds exceptions for index and values are correct &#10;&#10;factorial method negative and incorrect values due to trailing zeroes in representation - try using built in biginteger methods?">
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="successfully debugged and tested factorial method. completed and tested binomial and geometric distribution methods. updated javadoc.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsLibrary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StatsLibraryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsLibraryTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697164800453</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="successfully debugged and tested factorial method. completed and tested binomial and geometric distribution methods. updated javadoc.">
+      <created>1697220270166</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1697220270166</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -237,6 +243,7 @@
     <MESSAGE value="wrote and tested Intersection and Union methods&#10;&#10;Union throws OOB exception in sort and keep unique elements method" />
     <MESSAGE value="fixed variance method and consolidated these steps in std deviation method&#10;&#10;changed some values in tester for factorial tests in debugging" />
     <MESSAGE value="further tested and updated union method; no longer throwing out of bounds exceptions for index and values are correct &#10;&#10;factorial method negative and incorrect values due to trailing zeroes in representation - try using built in biginteger methods?" />
-    <option name="LAST_COMMIT_MESSAGE" value="further tested and updated union method; no longer throwing out of bounds exceptions for index and values are correct &#10;&#10;factorial method negative and incorrect values due to trailing zeroes in representation - try using built in biginteger methods?" />
+    <MESSAGE value="successfully debugged and tested factorial method. completed and tested binomial and geometric distribution methods. updated javadoc." />
+    <option name="LAST_COMMIT_MESSAGE" value="successfully debugged and tested factorial method. completed and tested binomial and geometric distribution methods. updated javadoc." />
   </component>
 </project>
