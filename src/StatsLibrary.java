@@ -328,15 +328,22 @@ public class StatsLibrary{
     //representing 0 < P(x) < 1
     
     //conditionalProbability method
-    // "B Given A"
+    // "B Given A" P( B | A )
     //the probability of an event given that another has occurred.
     //example choosing a red ball from a bag, when that bag has been chosen from a set of bags.
+    //what is the probability of each event "A"
+    //then what is the probability of each event "B"
+    //multiply P(A) x P(B) = P(AnB)
+    //divide by P(B)
 
     //bayesTheorem method
     //P(B|A) = P(A|B)P(B) / P(A)
     /* the probability of an event B, given an event A has occurred is...
     the probability of an event A, given an event B has occurred times the probability of an event B */
     //all over the probability of an event A
+    //multiply P(A) x P(B) = P(AnB)
+    //multiply P(AnB) x P(B)
+    //divide by P(A)
 
     //independent Vs Dependent
     //Probability of B vs B given A
@@ -384,5 +391,21 @@ public class StatsLibrary{
     //hyper geometric distribution
 
     //negative geometric distribution
+
+    //poisson mean (also poisson variance)
+    public double poissonLambda(double k, double n){
+        // k over n
+        return 0;
+    }
+
+    //poisson distribution method
+    public double poissonDistribution(double lambda, int trials){
+        //(lambda raised to trials) times (euler's number raised to the negative lambda)
+        //all over (the number of trials factorial)
+        return 0;
+    }
+
+    //poisson compliment
+
 
 }
