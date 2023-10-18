@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="successfully debugged and tested factorial method. completed and tested binomial and geometric distribution methods. updated javadoc.">
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="started work on poisson distribution.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsLibrary.java" afterDir="false" />
     </list>
@@ -219,7 +219,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697427583323</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="started work on poisson distribution.">
+      <created>1697476493726</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1697476493726</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -251,6 +258,7 @@
     <MESSAGE value="fixed variance method and consolidated these steps in std deviation method&#10;&#10;changed some values in tester for factorial tests in debugging" />
     <MESSAGE value="further tested and updated union method; no longer throwing out of bounds exceptions for index and values are correct &#10;&#10;factorial method negative and incorrect values due to trailing zeroes in representation - try using built in biginteger methods?" />
     <MESSAGE value="successfully debugged and tested factorial method. completed and tested binomial and geometric distribution methods. updated javadoc." />
-    <option name="LAST_COMMIT_MESSAGE" value="successfully debugged and tested factorial method. completed and tested binomial and geometric distribution methods. updated javadoc." />
+    <MESSAGE value="started work on poisson distribution." />
+    <option name="LAST_COMMIT_MESSAGE" value="started work on poisson distribution." />
   </component>
 </project>

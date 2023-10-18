@@ -407,5 +407,13 @@ public class StatsLibrary{
 
     //poisson compliment
 
+    //standard deviation computation using binomial / geometric values
+
+    //chebyshev's theorem
+
+    //calculate "within" number method
+    //used in chebyshev's
+
+
 
 }
