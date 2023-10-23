@@ -12,4 +12,7 @@ public class Salter(){
   
   //the plot data created with salt
   private double[] plotData;
+
+  //be able to configure the range of salt values
+  //loop thru y values and +/- from each
 }
