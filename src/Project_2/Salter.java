@@ -1,3 +1,5 @@
+package Project_2;
+
 /**
 * Salter takes a csv file input and "salts"
 * the data by adding or subtracting from

@@ -1,3 +1,5 @@
+package Project_2;
+
 /*******************************
 * Plotter takes a value and plots a
 * number of points using a defined
