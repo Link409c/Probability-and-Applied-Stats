@@ -1,3 +1,5 @@
+package Mini_Coding_Projects;
+
 public class FactoryTester {
 
     public static void main(String[] args){

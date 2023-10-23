@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="started work on poisson distribution.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/StatsLibrary.java" afterDir="false" />
-    </list>
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="added minimal pseudocode for chebyshev's." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,14 +47,14 @@
   </component>
   <component name="RunManager" selected="Application.StatsLibraryTester">
     <configuration name="FactoryTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="FactoryTester" />
+      <option name="MAIN_CLASS_NAME" value="Mini_Coding_Projects.FactoryTester" />
       <module name="Probability and Applied Statistics" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="StatsLibraryTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StatsLibraryTester" />
+      <option name="MAIN_CLASS_NAME" value="Project_1_Stats_Library.StatsLibraryTester" />
       <module name="Probability and Applied Statistics" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -226,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697476493726</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added minimal pseudocode for chebyshev's.">
+      <created>1697646555752</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1697646555752</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -259,6 +263,7 @@
     <MESSAGE value="further tested and updated union method; no longer throwing out of bounds exceptions for index and values are correct &#10;&#10;factorial method negative and incorrect values due to trailing zeroes in representation - try using built in biginteger methods?" />
     <MESSAGE value="successfully debugged and tested factorial method. completed and tested binomial and geometric distribution methods. updated javadoc." />
     <MESSAGE value="started work on poisson distribution." />
-    <option name="LAST_COMMIT_MESSAGE" value="started work on poisson distribution." />
+    <MESSAGE value="added minimal pseudocode for chebyshev's." />
+    <option name="LAST_COMMIT_MESSAGE" value="added minimal pseudocode for chebyshev's." />
   </component>
 </project>

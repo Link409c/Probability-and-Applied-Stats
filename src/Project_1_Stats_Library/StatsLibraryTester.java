@@ -1,3 +1,5 @@
+package Project_1_Stats_Library;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;

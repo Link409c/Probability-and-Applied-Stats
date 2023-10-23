@@ -1,3 +1,5 @@
+package Mini_Coding_Projects;
+
 import java.util.Random;
 
 public class HandEvaluator {
