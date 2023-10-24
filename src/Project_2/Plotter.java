@@ -1,15 +1,11 @@
 package Project_2;
 
-/*******************************
-* Plotter takes a value and plots a
-* number of points using a defined
-* function. The program then outputs
-* these values to a .csv file users
-* can view results in.
-*
+/**
+* Plotter plots a number of points using a defined function. The program then outputs
+* these values to a .csv file users can view in Excel or similar software.
 * Author: Christian Simpson
 * Version: 10/23/23
-********************************/
+**/
 
 public class Plotter{
   

@@ -1,10 +1,10 @@
 package Project_2;
 
 /**
-* Salter takes a csv file input and "salts"
-* the data by adding or subtracting from
-* each value to change the plot. 
-*
+ * Salter takes a csv file input and "salts" the data by adding or subtracting from
+ * each value to change the plot, effectively scattering the information on an observable graph.
+ * Author: Christian Simpson
+ * Version: 10/24/23
 **/
 
 public class Salter{

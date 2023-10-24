@@ -1,11 +1,13 @@
 package Project_1_Stats_Library;
 
+import Project_1_Stats_Library.Custom_Exceptions.TotalProbabilityException;
+
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Objects;
 
-/************************************************************************************
+/**
  * The Stats Library Class is a custom class created to use in the Probability
  * and Applied Statistics course and beyond. The user can invoke its methods to
  * calculate several values associated with an object that represents a data set.
@@ -15,7 +17,7 @@ import java.util.Objects;
  * --
  * Author: Christian Simpson
  * Version: 10/13/23
- ************************************************************************************/
+ **/
 public class StatsLibrary{
 
     /**
@@ -267,6 +269,20 @@ public class StatsLibrary{
         return union;
     }
 
+    /**
+     * calculates the three central tendency values of a space and provides a
+     * String representation of the output.
+     * @param anArrayList the values of our space in a list
+     * @return the mean, median, and mode of the space.
+     */
+    public String centralTendency(ArrayList<Double> anArrayList){
+        String result = "";
+        //call mean, median, mode methods
+        //output each value and add it to the string
+        //format the output
+        return result;
+    }
+
     //findCompliment method
         //given a set S and a universal set P (population)
         //compliment is all elements of P that are not in S
@@ -280,6 +296,24 @@ public class StatsLibrary{
 
     //isProperSubset method
         //dont need this for formal project
+
+    /**
+     * calculates
+     * @param space the total number of elements in the sample space.
+     * @param coefficients the groups of those elements to consider which equal the total.
+     * @return the amount of
+     */
+    public BigInteger calcMultinomialCoefficients(int space, int[] coefficients){
+        //calculate numerator
+        BigInteger total = calculateFactorial(space);
+        BigInteger denominator = BigInteger.ONE;
+        //calculate denominator
+        for (int coefficient : coefficients) {
+            denominator = denominator.multiply(calculateFactorial(coefficient));
+        }
+        //return the division
+        return total.divide(denominator);
+    }
 
     /**
      * calculates the number of permutations of an amount of elements resulting
@@ -332,8 +366,59 @@ public class StatsLibrary{
         // c. Probability of pairwise exclusive events are the sum of the possibilities.
             // eg. rolling an odd number on a 1d6 = 1/6 + 1/6 + 1/6 = 3/6 or 1/2
 
-    //totalProbability method
-    //representing 0 < P(x) < 1
+    /**
+     * represents the probability axiom: "The probability of an event occurring cannot be less than zero".
+     * @return true if the probability is negative, false otherwise.
+     */
+    public boolean negativeAxiom(double probability){
+        return probability < 0;
+    }
+    /**
+     * represents the probability axiom: "The total probability of events occurring
+     * in a set must equal exactly 100%".
+     * @param probabilities the list of probabilities to consider.
+     * @return true if the total equals 100%, false otherwise.
+     */
+    public boolean totalAxiom(ArrayList<Double> probabilities){
+        return findListSum(probabilities) == 1.0;
+    }
+
+    //theorem of total Probability method
+    //                    n
+    //representing P(A) = E  P(A|Bi)P(Bi)
+    //                   i=1
+    //or, The Probability of all occurrences of an event A within a sample space is equal to
+    //the sum from i to n of one occurrence of A given Bi occurred, times the probability of Bi.
+
+    /**
+     * calculates the total probability of an event A, or P(A), by using the Theorem of Total Probability.
+     * The Theorem states: "The Probability of all occurrences of an event A within a sample space is
+     * equal to the sum from i to n of one occurrence of A given Bi occurred, times the probability
+     * of Bi". These sample space probabilities are subject to all the axioms of probability.
+     * @param eventA the list of events A, which have unique probabilities of occurring in their
+     *               respective sample spaces.
+     * @param eventB the list of events B, which have unique probabilities of occurring in their
+     *               respective sample space.
+     * @return the total probability of an event A in a sample space.
+     */
+    public double thmTotalProb(ArrayList<Double> eventA, ArrayList<Double> eventB) throws TotalProbabilityException {
+        //amount of steps in the addition loop
+        int bSize = eventB.size();
+        //check that total prob of A = 1 and B = 1
+        //if either total != 1,
+        if(!totalAxiom(eventA) || !totalAxiom(eventB)){
+            throw new TotalProbabilityException();
+        }
+        else {
+            double result = 0;
+            //for each event B,
+            for(int i = 0; i < bSize; i++) {
+                //multiply P(A|Bi) by P(Bi)
+                result += eventA.get(i)*eventB.get(i);
+            }
+            return result;
+        }
+    }
     
     //conditionalProbability method
     // "B Given A" P( B | A )

@@ -7,6 +7,8 @@ import java.util.Random;
 public class StatsLibraryTester {
     public static void main(String[] args) {
 
+        //test list generation
+
         Random r = new Random();
         ArrayList<Double> testList = new ArrayList<>();
 
@@ -18,9 +20,15 @@ public class StatsLibraryTester {
             System.out.printf("%.3f\n", e);
         }
 
+        //stats library object used for all method testing
+
         StatsLibrary myStatsTest = new StatsLibrary();
+
         //test mean, median, mode methods
-        /*System.out.printf("Mean: %.3f ", myStatsTest.findMean(testList));
+
+        /*
+
+        System.out.printf("Mean: %.3f ", myStatsTest.findMean(testList));
         System.out.printf("Median: %.3f ", myStatsTest.findMedian(testList));
         System.out.printf("Mode: %.3f ", myStatsTest.findMode(testList));
 
@@ -43,24 +51,30 @@ public class StatsLibraryTester {
         System.out.printf("Median: %.3f ", myStatsTest.findMedian(testList));
         System.out.printf("Mode: %.3f \n", myStatsTest.findMode(testList));
 
+        */
+
         //test factorial method
+
+        /*
+
         int fact = 0;
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
         fact = 4;
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
         fact = 16;
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
-        fact = 20;
+        fact = 40;
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
-        fact = 21;
-        System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
-        fact = 22;
-        System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
-    */
+
+        */
+
         //test combinations and permutations
+
+        /*
+
         int totalElements = 4;
         int choiceNumber = 4;
-        /*
+
         System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
                 choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
         System.out.println("Combinations of a set of " + totalElements + " elements, choose " +
@@ -68,9 +82,6 @@ public class StatsLibraryTester {
 
         totalElements = 41;
         choiceNumber = 5;
-
-        fact = 40;
-        System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
 
         System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
                 choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
@@ -89,7 +100,9 @@ public class StatsLibraryTester {
 
         ArrayList<Double> testListTwo = new ArrayList<>();
         testList.clear();
+
         //randomly generate lists with some duplicate values
+
         int k = r.nextInt(50);
         for(int i = 1; i < k; i++){
             double d = r.nextDouble(20);
@@ -102,7 +115,12 @@ public class StatsLibraryTester {
         Collections.sort(testList);
         Collections.sort(testListTwo);
 
-        //test intersection method
+        */
+
+        //test intersection, union methods
+
+        /*
+
         System.out.print("List A: ");
         for(Double d : testList){
             System.out.printf("[%.3f] ", d);
@@ -128,12 +146,17 @@ public class StatsLibraryTester {
         for(Double d : myStatsTest.findUnion(testList, testListTwo)){
             System.out.printf("[%.3f] ", d);
         }
+
        */
+
         //test binomial distribution
+
+        /*
+
         double p = .15;
         int trials = 10;
         int successes = 4;
-        /*
+
         System.out.printf("\n%.5f", 1.0 - p);
         System.out.printf("\nThere is a %.4f chance that, in 10 trials, we find 4 successes.",
                 myStatsTest.binomialDistribution(trials, successes, p));
@@ -144,11 +167,10 @@ public class StatsLibraryTester {
                         "we find %d successes.", myStatsTest.binomialDistribution(trials, successes, p),
                 trials, p, successes);
 
-        //testing geometric distribution
         p = .5;
         trials = 5;
         System.out.printf("\nThere is a %.4f chance that, with a %.2f chance of success, we find a success " +
-                "at the %dth trial.", myStatsTest.geometricDistribution(trials, p), p, trials);*/
+                "at the %dth trial.", myStatsTest.geometricDistribution(trials, p), p, trials);
 
         totalElements = 15;
         choiceNumber = 3;
@@ -173,7 +195,20 @@ public class StatsLibraryTester {
                             "we banish exactly %d Chaos Angel, Sky Crisis, or Muckraker.",
                     myStatsTest.binomialDistribution(trials, successes, p), trials, successes);
             successes++;
-        }
+
+         */
+
+        //test geometric distribution
+
+        //test axioms
+
+        //test Thm Total Prob
+
+        //test Conditional
+
+        //test Bayes
+
 
     }
 }
+

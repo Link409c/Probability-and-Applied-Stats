@@ -12,12 +12,18 @@ public class ExtravaganceProbability {
 
     //error reduction methods:
     //method to check extra deck size
+    //method to check card amounts in ED
     //method to check banish amount
     //method to check card names
     //method to check targets array size
 
     //supplemental methods:
     //method to construct the extra deck
+    //method to add / remove cards
+    //method to return the extra deck as a formatted list
+    //method to return the targets of the probability
+    //method to calculate probability of targets
+
     //method to "activate" extrav
     //method to return results strings
     //method to format printed output
@@ -26,6 +32,18 @@ public class ExtravaganceProbability {
     //prompt banish amount
     //prompt names to target
     //prompt quit or continue
+
+    //high level of what the program does / example run
+    //opens with the name, version, author, maybe some ASCII art.
+    //succinctly describe the program for the user
+    //prompt the user to build the extra deck
+    //user enters names and quantities
+    //once extra deck is full, prompt user to continue
+    //on continue, prompt for use of extrav or modify ED.
+    //when extrav is chosen, user chooses banish amount.
+    //based on banish amount, display the permutations of that choice.
+    //
+
 
     //method to run the program
         //prompt user to populate extra deck
