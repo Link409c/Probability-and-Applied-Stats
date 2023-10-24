@@ -326,6 +326,12 @@ public class StatsLibrary{
         return elementsFactorial.divide(elementsMinusChoices.multiply(choicesFactorial));
     }
 
+    //probability axioms
+        // a. The probability of an event occurring cannot be less than zero. P(A) >= 0
+        // b. The total probability of events occurring in a set must be 100%. P(S) = 1
+        // c. Probability of pairwise exclusive events are the sum of the possibilities.
+            // eg. rolling an odd number on a 1d6 = 1/6 + 1/6 + 1/6 = 3/6 or 1/2
+
     //totalProbability method
     //representing 0 < P(x) < 1
     
@@ -347,7 +353,9 @@ public class StatsLibrary{
     //multiply P(AnB) x P(B)
     //divide by P(A)
 
-    //independent Vs Dependent
+    //independent Vs Dependent intersection
+    //exclusive vs not exclusive union ( i programmed exclusive already )
+    //independence or dependency
     //Probability of B vs B given A
 
     //probability mass function method

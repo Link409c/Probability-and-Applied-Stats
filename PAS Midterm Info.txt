@@ -19,7 +19,7 @@ Mini Projects:
 	Github Work (Repository, Paper, Clone, Commit to clone)
 	Monte's Three Doors / Deal or No Deal
 	Birthday Checker
-	Mini_Coding_Projects.Car Mini_Coding_Projects.Factory
-	Hands 
+	Car Factory
+	Hands
 
 Submissions via Github link shared with Byron.

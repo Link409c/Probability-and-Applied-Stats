@@ -1,4 +1,4 @@
-package Mini_Coding_Projects;
+package Mini_Coding_Projects.Car_Factory;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import java.util.Random;
 
 
 /**
- * The Mini_Coding_Projects.Factory class makes cars and exports the data as a .csv file for use in excel.
+ * The Mini_Coding_Projects.Car_Factory.Factory class makes cars and exports the data as a .csv file for use in excel.
  * @author simpso61
  *
  */
@@ -16,7 +16,7 @@ import java.util.Random;
 public class Factory {
 
 	/**
-	 * makeCar calls the constructors of the Mini_Coding_Projects.Car class to produce a car object and add it to the list.
+	 * makeCar calls the constructors of the Mini_Coding_Projects.Car_Factory.Car class to produce a car object and add it to the list.
 	 */
 	public void makeCar() {
 		//make car object

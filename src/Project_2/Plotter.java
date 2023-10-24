@@ -11,7 +11,7 @@ package Project_2;
 * Version: 10/23/23
 ********************************/
 
-public class Plotter(){
+public class Plotter{
   
   //function method
   //plot method

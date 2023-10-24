@@ -1,4 +1,4 @@
-package Mini_Coding_Projects;
+package Mini_Coding_Projects.Hand_Evaluator;
 
 import java.util.Random;
 

@@ -20,7 +20,7 @@ public class StatsLibraryTester {
 
         StatsLibrary myStatsTest = new StatsLibrary();
         //test mean, median, mode methods
-        System.out.printf("Mean: %.3f ", myStatsTest.findMean(testList));
+        /*System.out.printf("Mean: %.3f ", myStatsTest.findMean(testList));
         System.out.printf("Median: %.3f ", myStatsTest.findMedian(testList));
         System.out.printf("Mode: %.3f ", myStatsTest.findMode(testList));
 
@@ -56,10 +56,11 @@ public class StatsLibraryTester {
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
         fact = 22;
         System.out.println(fact + " Factorial: " + myStatsTest.calculateFactorial(fact));
-
+    */
         //test combinations and permutations
         int totalElements = 4;
         int choiceNumber = 4;
+        /*
         System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
                 choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
         System.out.println("Combinations of a set of " + totalElements + " elements, choose " +
@@ -127,10 +128,12 @@ public class StatsLibraryTester {
         for(Double d : myStatsTest.findUnion(testList, testListTwo)){
             System.out.printf("[%.3f] ", d);
         }
+       */
         //test binomial distribution
         double p = .15;
         int trials = 10;
         int successes = 4;
+        /*
         System.out.printf("\n%.5f", 1.0 - p);
         System.out.printf("\nThere is a %.4f chance that, in 10 trials, we find 4 successes.",
                 myStatsTest.binomialDistribution(trials, successes, p));
@@ -145,6 +148,32 @@ public class StatsLibraryTester {
         p = .5;
         trials = 5;
         System.out.printf("\nThere is a %.4f chance that, with a %.2f chance of success, we find a success " +
-                "at the %dth trial.", myStatsTest.geometricDistribution(trials, p), p, trials);
+                "at the %dth trial.", myStatsTest.geometricDistribution(trials, p), p, trials);*/
+
+        totalElements = 15;
+        choiceNumber = 3;
+        System.out.println("Activating Pot of Extravagance with an extra deck of "
+                + totalElements + " unique cards, " + "choosing banish " + choiceNumber
+                + ", results in " + myStatsTest.findPermutations(totalElements, choiceNumber) + " different" +
+                " permutations of cards.");
+
+        choiceNumber = 6;
+        System.out.println("Activating Pot of Extravagance with an extra deck of "
+                + totalElements + " unique cards, " + "choosing banish " + choiceNumber
+                + ", results in " + myStatsTest.findPermutations(totalElements, choiceNumber) + " different" +
+                " permutations of cards.");
+
+        trials = 6;
+        p = .6;
+        successes = 1;
+        System.out.println("----- Extrav Banish 6 Probability Chart -----");
+
+        for(int i = 0; i < 6; i++) {
+            System.out.printf("\nThere is a %.4f chance that, when activating Extrav banishing %d, " +
+                            "we banish exactly %d Chaos Angel, Sky Crisis, or Muckraker.",
+                    myStatsTest.binomialDistribution(trials, successes, p), trials, successes);
+            successes++;
+        }
+
     }
 }

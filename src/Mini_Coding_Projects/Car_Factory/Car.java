@@ -1,4 +1,4 @@
-package Mini_Coding_Projects;
+package Mini_Coding_Projects.Car_Factory;
 
 public class Car {
 	

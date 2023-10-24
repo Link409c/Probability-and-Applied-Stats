@@ -7,7 +7,7 @@ package Project_2;
 *
 **/
 
-public class Salter(){
+public class Salter{
   //method to input the data
   //method to dalt each data point
   //method to output the data
