@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="reorganized more files. started Extrav program version 0.01; Wrote short readme on goals of program and application.">
-      <change afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/Custom_Exceptions/ProbabilityException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/Custom_Exceptions/TotalProbabilityException.java" afterDir="false" />
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="Coded probability axioms 1 and 2; Coded Theorem of Total Probability; Added more pseudocode to Extravagance; Reorganized tester into neater sectioned comment blocks.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibraryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibraryTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Plotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plotter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Salter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Salter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Smoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Smoother.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -263,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698123873773</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Coded probability axioms 1 and 2; Coded Theorem of Total Probability; Added more pseudocode to Extravagance; Reorganized tester into neater sectioned comment blocks.">
+      <created>1698187505953</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1698187505953</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -299,6 +300,7 @@
     <MESSAGE value="added minimal pseudocode for chebyshev's." />
     <MESSAGE value="reorganized files for easier identification within project." />
     <MESSAGE value="reorganized more files. started Extrav program version 0.01; Wrote short readme on goals of program and application." />
-    <option name="LAST_COMMIT_MESSAGE" value="reorganized more files. started Extrav program version 0.01; Wrote short readme on goals of program and application." />
+    <MESSAGE value="Coded probability axioms 1 and 2; Coded Theorem of Total Probability; Added more pseudocode to Extravagance; Reorganized tester into neater sectioned comment blocks." />
+    <option name="LAST_COMMIT_MESSAGE" value="Coded probability axioms 1 and 2; Coded Theorem of Total Probability; Added more pseudocode to Extravagance; Reorganized tester into neater sectioned comment blocks." />
   </component>
 </project>

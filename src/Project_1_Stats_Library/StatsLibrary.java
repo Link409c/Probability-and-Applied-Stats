@@ -394,11 +394,14 @@ public class StatsLibrary{
      * calculates the total probability of an event A, or P(A), by using the Theorem of Total Probability.
      * The Theorem states: "The Probability of all occurrences of an event A within a sample space is
      * equal to the sum from i to n of one occurrence of A given Bi occurred, times the probability
-     * of Bi". These sample space probabilities are subject to all the axioms of probability.
+     * of Bi". These sample space probabilities are subject to all the axioms of probability. --
+     * The passed lists should be formatted so the first contains the probability of the desired event
+     * within the respective sample space should that same index element be chosen from the event B list.
+     * ex. eventA.get(i) is P(A|Bi).
      * @param eventA the list of events A, which have unique probabilities of occurring in their
      *               respective sample spaces.
      * @param eventB the list of events B, which have unique probabilities of occurring in their
-     *               respective sample space.
+     *               respective sample space and determine the probability of the respective event A.
      * @return the total probability of an event A in a sample space.
      */
     public double thmTotalProb(ArrayList<Double> eventA, ArrayList<Double> eventB) throws TotalProbabilityException {
@@ -421,7 +424,7 @@ public class StatsLibrary{
     }
     
     //conditionalProbability method
-    // "B Given A" P( B | A )
+    // "B Given A" P(B|A)
     //the probability of an event given that another has occurred.
     //example choosing a red ball from a bag, when that bag has been chosen from a set of bags.
     //what is the probability of each event "A"
@@ -486,18 +489,44 @@ public class StatsLibrary{
     //hyper geometric distribution
 
     //negative geometric distribution
+    //y = total trials
+    //p = chance of success
+    //r = intended number of successes
+    // (y-1)C(r-1) * p^r * q^(y-r)
 
-    //poisson mean (also poisson variance)
+    /**
+     * the lambda, used in Poisson Distribution calculations, is a representation
+     * of not only the mean of the data, but also the variance. It is calculated by
+     * dividing the total number of events by the number of units measured, such as
+     * hours, miles, etc.
+     * @param k the number of events occurring.
+     * @param n the units of measurement, per unit.
+     * @return the average number of events per unit of measurement.
+     */
     public double poissonLambda(double k, double n){
-        // k over n
-        return 0;
+        //events per unit
+        //k's per n
+        return k / n;
     }
 
-    //poisson distribution method
+    /**
+     * calculates the Poisson Distribution of a desired event in a sample space. Useful when
+     * calculating the number of occurrences on a per-unit basis, such as units of time, speed,
+     * area, volume, etc. It should be noted that the larger the number of trials become, the
+     * smaller the chance of success of the event becomes - or, the success rate is
+     * directly dependent on the region size.
+     * @param lambda the mean; also the variance.
+     * @param trials the number of trials to conduct
+     * @return the chance of success within the performed trials space.
+     */
     public double poissonDistribution(double lambda, int trials){
-        //(lambda raised to trials) times (euler's number raised to the negative lambda)
-        //all over (the number of trials factorial)
-        return 0;
+        //lambda raised to trials times...
+        double lambdaRaisedTrials = Math.pow(lambda, trials);
+        //euler's number raised to the negative lambda...
+        double eulerRaisedNegLambda = Math.pow(EULERS_NUMBER, Math.negateExact((long) lambda));
+        //all over the number of trials factorial
+        BigInteger bigTrials = calculateFactorial(trials);
+        return (lambdaRaisedTrials * eulerRaisedNegLambda) / bigTrials.longValue();
     }
 
     //poisson compliment
@@ -509,6 +538,6 @@ public class StatsLibrary{
     //calculate "within" number method
     //used in chebyshev's
 
-
+    private static final double EULERS_NUMBER = 2.7182818;
 
 }

@@ -200,6 +200,10 @@ public class StatsLibraryTester {
 
         //test geometric distribution
 
+        //test hyper geometric
+
+        //test negative binomial
+
         //test axioms
 
         //test Thm Total Prob
@@ -208,7 +212,9 @@ public class StatsLibraryTester {
 
         //test Bayes
 
+        //test Poisson
 
+        //test Chebychev's
     }
 }
 
