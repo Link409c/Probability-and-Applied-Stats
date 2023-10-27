@@ -16,9 +16,31 @@ import java.util.Objects;
  * standard deviation, and several forms of calculating probability of given events.
  * --
  * Author: Christian Simpson
- * Version: 10/13/23
+ * Version: 10/26/23
  **/
 public class StatsLibrary{
+
+    //helper methods I want to create:
+
+    //count unique elements method
+    /* count the number of unique elements or objects in a list.
+       used for determining those elements' probabilities.
+       can be coded in a way to allow for different object subtypes
+       gives users the ability to use the methods in library with lists
+       of any assortment of objects. */
+
+    //determineElementProbabilities method
+
+    /* knowing the number of elements in a list,
+       use their occurrences to determine the probability
+       of choosing each element from that list in a single trial.
+       ex: a bag of colored balls; 3 red, 7 white.
+       two unique elements: P(red) = .3, P(white) = .7
+       or: a junk drawer full of stuff; could be anything.
+       6 unique elements: 1 pair of scissors, 3 rolls of tape, 5 pens,
+       43 coupons, a roll of string, 10 bag clips; 63 total items.
+       P(Scissors) = .01587, P(Tape) = .04769, P(Pen) = .07936,
+       P(Coupon) = .68253, P(String) = .01587, P(Clip) = .15873 */
 
     /**
      * a helper method for summation of list elements.
@@ -48,7 +70,8 @@ public class StatsLibrary{
         //for each value of the passed list,
         for (Double d : anArrayList){
             //set the elements of the new list as difference of passed list value and mean
-            differenceList.add(d - mean);
+            double difference = d - mean;
+            differenceList.add(difference);
         }
         //return the new list
         return differenceList;
@@ -60,13 +83,12 @@ public class StatsLibrary{
      * @return a list of squared values
      */
     public ArrayList<Double> squareList(ArrayList<Double> anArrayList){
+        ArrayList<Double> squaredList = new ArrayList<>(anArrayList.size());
         for(Double d : anArrayList){
-            double element = d;
-            anArrayList.remove(d);
-            element *= element;
-            anArrayList.add(element);
+            d *= d;
+            squaredList.add(d);
         }
-        return anArrayList;
+        return squaredList;
     }
     /**
      * findMean computes the average of values in a list.
@@ -141,7 +163,7 @@ public class StatsLibrary{
      * @param anArrayList a list of values
      * @return the standard deviation of the values.
      */
-    public double computeStandardDeviation(ArrayList<Double> anArrayList) {
+    public double calcStandardDeviation(ArrayList<Double> anArrayList) {
         //calculate variance
         double mean = calculateVariance(anArrayList);
         //take the square root of the variance
@@ -286,7 +308,7 @@ public class StatsLibrary{
     //findCompliment method
         //given a set S and a universal set P (population)
         //compliment is all elements of P that are not in S
-        //example a hand of 5 cards and a deck of cards
+        //example a hand of 5 cards S and a deck of cards P
         //the compliment of the hand of cards is the remaining cards in the deck.
 
     //listSubsets method
@@ -367,15 +389,17 @@ public class StatsLibrary{
             // eg. rolling an odd number on a 1d6 = 1/6 + 1/6 + 1/6 = 3/6 or 1/2
 
     /**
-     * represents the probability axiom: "The probability of an event occurring cannot be less than zero".
+     * represents the probability axiom:
+     * "The probability of an event occurring cannot be less than zero".
      * @return true if the probability is negative, false otherwise.
      */
     public boolean negativeAxiom(double probability){
         return probability < 0;
     }
+
     /**
-     * represents the probability axiom: "The total probability of events occurring
-     * in a set must equal exactly 100%".
+     * represents the probability axiom:
+     * "The total probability of events occurring in a set must equal exactly 100%".
      * @param probabilities the list of probabilities to consider.
      * @return true if the total equals 100%, false otherwise.
      */
@@ -391,12 +415,12 @@ public class StatsLibrary{
     //the sum from i to n of one occurrence of A given Bi occurred, times the probability of Bi.
 
     /**
-     * calculates the total probability of an event A, or P(A), by using the Theorem of Total Probability.
+     * calculates the probability of an event A in a space, or P(A), by using the Theorem of Total Probability.
      * The Theorem states: "The Probability of all occurrences of an event A within a sample space is
-     * equal to the sum from i to n of one occurrence of A given Bi occurred, times the probability
+     * equal to the sum from i to n of each occurrence of A given Bi occurred, times the probability
      * of Bi". These sample space probabilities are subject to all the axioms of probability. --
      * The passed lists should be formatted so the first contains the probability of the desired event
-     * within the respective sample space should that same index element be chosen from the event B list.
+     * within the respective sample space should that same index element be chosen from the second.
      * ex. eventA.get(i) is P(A|Bi).
      * @param eventA the list of events A, which have unique probabilities of occurring in their
      *               respective sample spaces.
@@ -424,13 +448,17 @@ public class StatsLibrary{
     }
     
     //conditionalProbability method
-    // "B Given A" P(B|A)
+    // "A given B" P(A|B)
     //the probability of an event given that another has occurred.
-    //example choosing a red ball from a bag, when that bag has been chosen from a set of bags.
-    //what is the probability of each event "A"
-    //then what is the probability of each event "B"
-    //multiply P(A) x P(B) = P(AnB)
-    //divide by P(B)
+    //rolling a 1 on a 1d6, given you rolled an odd number.
+    //probability of event A given B occurred - P(A|B): 1/6
+    //probability of event B occurring - P(B): 1/2
+    //the conditional probability is P(A|B) / P(B) :
+
+
+    public double conditionalProb(double probA, double probB){
+        return 0;
+    }
 
     //bayesTheorem method
     //P(B|A) = P(A|B)P(B) / P(A)
@@ -441,12 +469,20 @@ public class StatsLibrary{
     //multiply P(AnB) x P(B)
     //divide by P(A)
 
+    public double bayesTheorem(){
+        return 0;
+    }
+
     //independent Vs Dependent intersection
     //exclusive vs not exclusive union ( i programmed exclusive already )
-    //independence or dependency
-    //Probability of B vs B given A
 
-    //probability mass function method
+    //independence or dependency
+    //given two events, P(A) and P(B)
+    //if P(A|B) = P(A)
+    //or P(B|A) = P(B)
+    //or P(AnB) = P(A)P(B)
+    //the events are independent
+    //otherwise they are dependent.
 
     /**
      * calculates the binomial distribution for a set of values. Useful when data deals
@@ -473,6 +509,8 @@ public class StatsLibrary{
     //1 over p where p is the probability of success of an event
 
     //binomialVariance
+
+    //standard deviation computation using binomial / geometric values
 
     /**
      * calculates the geometric distribution for a set of values. Useful when data deals
@@ -530,8 +568,6 @@ public class StatsLibrary{
     }
 
     //poisson compliment
-
-    //standard deviation computation using binomial / geometric values
 
     //chebyshev's theorem
 

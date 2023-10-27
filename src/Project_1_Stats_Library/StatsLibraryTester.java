@@ -13,7 +13,7 @@ public class StatsLibraryTester {
         ArrayList<Double> testList = new ArrayList<>();
 
         for (int i = 0; i < 10; i++) {
-            testList.add(r.nextDouble(1, 100));
+            testList.add(r.nextDouble(1, 10));
         }
         System.out.println("List:");
         for (Double e : testList) {
@@ -24,13 +24,15 @@ public class StatsLibraryTester {
 
         StatsLibrary myStatsTest = new StatsLibrary();
 
-        //test mean, median, mode methods
+        //test mean, median, mode, variance, stdDev methods
 
-        /*
+
 
         System.out.printf("Mean: %.3f ", myStatsTest.findMean(testList));
         System.out.printf("Median: %.3f ", myStatsTest.findMedian(testList));
         System.out.printf("Mode: %.3f ", myStatsTest.findMode(testList));
+        System.out.printf("Variance: %.3f ", myStatsTest.calculateVariance(testList));
+        System.out.printf("Standard Deviation: %.3f ", myStatsTest.calcStandardDeviation(testList));
 
         System.out.println();
         testList.clear();
@@ -50,8 +52,9 @@ public class StatsLibraryTester {
         System.out.printf("Mean: %.3f ", myStatsTest.findMean(testList));
         System.out.printf("Median: %.3f ", myStatsTest.findMedian(testList));
         System.out.printf("Mode: %.3f \n", myStatsTest.findMode(testList));
+        System.out.printf("Variance: %.3f ", myStatsTest.calculateVariance(testList));
+        System.out.printf("Standard Deviation: %.3f ", myStatsTest.calcStandardDeviation(testList));
 
-        */
 
         //test factorial method
 
