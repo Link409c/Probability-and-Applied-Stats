@@ -18,26 +18,40 @@ public class HandEvaluator {
 	//evaluate hand method
 	//checks what type of hand the combination of cards creates. 
 	//make helper methods for each type.
+
+	//poker hands, in order from least to greatest:
+
+	//highCard
+	//considers highest rank card when no special hand is drawn.
+	//eg. 1, 3, 4, 7, J - Jack is high card.
 	
-	//isPair method
-	//depends on hand size
-	//check if at least one pair.
-	//count number of pairs in the hand.
+	//pair
+	//two cards of the same rank.
+
+	//two Pair
+	//two pairs.
 	
 	//three of a kind
-	
-	//four of a kind
-	
+	//three cards of the same rank.
+
 	//straight
-	
+	//any 5 cards in sequential order that are not a flush.
+
 	//flush
-	
+	//any five cards of the same suit, but not in sequence.
+
 	//full house
-	
+	//three of a kind and a pair.
+
+	//four of a kind
+	//four cards of the same rank.
+
 	//straight flush
-	
+	//a straight of all the same suit.
+
 	//royal flush
-	
+	//10, J, Q, K, A must all be the same suit.
+
 	//dealHands method
 	//deal an amount of hands and evaluate each.
 	//number of hands is user determined

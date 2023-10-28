@@ -107,7 +107,7 @@ public class Factory {
 	 */
 	public String exportCars(String fileName) throws IOException {
 		//string to return
-		String successMsg = "";
+		String successMsg;
 		//surround with try starting here
 		if(fileName != null){
 			//create the csv file to pass to the constructor

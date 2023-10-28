@@ -1,0 +1,38 @@
+From Mathematical Statistics - 7th Edition - Wackerly
+Pg 34 - 35 Exercise 2.20
+
+The following game was played on a popular television show. The host showed a contestant
+three large curtains. Behind one of the curtains was a nice prize (maybe a new car) and behind
+the other two curtains were worthless prizes (duds). The contestant was asked to choose one
+curtain. If the curtains are identified by their prizes, they could be labeled G, D1, and D2 (Good
+Prize, Dud1, and Dud2). Thus, the sample space for the contestants choice is S = {G, D1, D2}.
+
+a. If the contestant has no idea which curtains hide the various prizes and selects a curtain at
+random, assign reasonable probabilities to the simple events and calculate the probability
+that the contestant selects the curtain hiding the nice prize.
+
+b. Before showing the contestant what was behind the curtain initially chosen, the game show
+host would open one of the curtains and show the contestant one of the duds (he could
+always do this because he knew the curtain hiding the good prize). He then offered the
+contestant the option of changing from the curtain initially selected to the other remaining
+unopened curtain.
+
+Which strategy maximizes the contestant’s probability of winning the
+good prize: stay with the initial choice or switch to the other curtain? In answering the
+following sequence of questions, you will discover that, perhaps surprisingly, this question
+can be answered by considering only the sample space above and using the probabilities
+that you assigned to answer part (a).
+
+i If the contestant chooses to stay with her initial choice, she wins the good prize if and
+only if she initially chose curtain G. If she stays with her initial choice, what is the
+probability that she wins the good prize?
+
+ii If the host shows her one of the duds and she switches to the other unopened curtain,
+what will be the result if she had initially selected G?
+
+iii Answer the question in part (ii) if she had initially selected one of the duds.
+iv If the contestant switches from her initial choice (as the result of being shown one of
+the duds), what is the probability that the contestant wins the good prize?
+
+v Which strategy maximizes the contestant’s probability of winning the good prize: stay
+with the initial choice or switch to the other curtain?

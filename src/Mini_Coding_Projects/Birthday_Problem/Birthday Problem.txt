@@ -1,4 +1,4 @@
-A Program which determines the probability of any two people in a group would have the same birthday.
+Write a program which determines the probability of any two people in a group having the same birthday.
 
 Control the input so the user can determine how many people are in the group.
 

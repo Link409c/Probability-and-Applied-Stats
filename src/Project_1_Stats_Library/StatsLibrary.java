@@ -305,11 +305,16 @@ public class StatsLibrary{
         return result;
     }
 
-    //findCompliment method
-        //given a set S and a universal set P (population)
-        //compliment is all elements of P that are not in S
-        //example a hand of 5 cards S and a deck of cards P
-        //the compliment of the hand of cards is the remaining cards in the deck.
+
+    /**
+     * the compliment of the probability of an event is the total probability of the
+     * sample space minus that event's probability within the same space.
+     * @param probEvent the probability of the event occurring.
+     * @return the total probability of the space minus the probability of an event.
+     */
+    public double complimentOfEvent(double probEvent){
+        return 1 - probEvent;
+    }
 
     //listSubsets method
         //method to return a string of individual subsets from a given set
@@ -457,6 +462,7 @@ public class StatsLibrary{
 
 
     public double conditionalProb(double probA, double probB){
+        //A given B is the intersection of P(A) and P(B)
         return 0;
     }
 

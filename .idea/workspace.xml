@@ -4,12 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method.">
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method. added image file of factory tester output to package.">
+      <change afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/Monte Hall Problem.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHallTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Birthday Problem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Birthday Problem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/FactoryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/FactoryTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testFile.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -287,7 +291,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698519973601</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method. added image file of factory tester output to package.">
+      <created>1698521329156</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1698521329156</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -327,6 +338,7 @@
     <MESSAGE value="Coded Poisson Distribution and Poisson Lambda. Added needed comment blocks to tester for the rest of the intended methods." />
     <MESSAGE value="debugged squareList method which fixed bugs with variance and standard deviation methods. laid out pseudocode for using class with generics. began work on conditional probability." />
     <MESSAGE value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method." />
-    <option name="LAST_COMMIT_MESSAGE" value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method." />
+    <MESSAGE value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method. added image file of factory tester output to package." />
+    <option name="LAST_COMMIT_MESSAGE" value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method. added image file of factory tester output to package." />
   </component>
 </project>

@@ -31,13 +31,13 @@ public class BirthdayProblem {
             //divide the permutations by the total
             BigInteger bigResult = bDayPermutations.divide(bDays);
             //subtract the result from the total probability to get the compliment
-
+            result = 1 - bigResult.doubleValue();
         }
         //else, throw an exception
         else{
             //throw a custom exception
         }
-        return 0;
+        return result;
     }
 
     public BirthdayProblem(ArrayList<Person> thePeople){
