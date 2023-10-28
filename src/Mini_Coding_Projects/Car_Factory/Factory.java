@@ -1,22 +1,24 @@
 package Mini_Coding_Projects.Car_Factory;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
-//import java.util.GregorianCalendar;
 
 
 /**
- * The Mini_Coding_Projects.Car_Factory.Factory class makes cars and exports the data as a .csv file for use in excel.
+ * The Mini_Coding_Projects.Car_Factory.Factory class makes cars and
+ * exports the data as a .csv file for use in excel.
  * @author simpso61
- *
  */
 
 public class Factory {
 
 	/**
-	 * makeCar calls the constructors of the Mini_Coding_Projects.Car_Factory.Car class to produce a car object and add it to the list.
+	 * makeCar calls the constructors of the Car class to produce a car object and add it to the list.
 	 */
 	public void makeCar() {
 		//make car object
@@ -74,9 +76,10 @@ public class Factory {
 	 * @return a random year within the last 50 years.
 	 */
 	public int chooseYear() {
-		//GregorianCalendar theDate = new GregorianCalendar();
+		int withinLastFiftyYears = getCurrentYear() - 50;
+		int upperYearsBound = getCurrentYear() + 1;
 		Random randomYear = new Random();
-		return randomYear.nextInt(getCurrentYear() - 50, getCurrentYear() + 1);
+		return randomYear.nextInt(withinLastFiftyYears, upperYearsBound);
 	}
 	
 	/**
@@ -90,13 +93,50 @@ public class Factory {
 	}
 
 	public int chooseMiles(){
+		int upperMilesBound = 250001;
 		Random r = new Random();
-		return r.nextInt(0, 250001);
+		return r.nextInt(0, upperMilesBound);
 	}
 
-	public File exportCars(ArrayList<Car> theCars) {
-		File theExportFile = null;
-		return theExportFile;
+	/**
+	 * exportCars writes the contents of the cars arraylist to a csv file
+	 * the user can explore and use to visualize and represent data in excel.
+	 * The method is programmed using a relative path for the output file, placing the
+	 * file in the project folder of Factory.java. This can be changed by the user for
+	 * ease of navigation.
+	 * @param fileName the name of the file to create, not including filetype suffix.
+	 * @return a string informing the user the file has been created.
+	 */
+	public String exportCars(String fileName) throws IOException {
+		//string to return
+		String successMsg = "";
+		//surround with try starting here
+		if(fileName != null){
+			//create the csv file to pass to the constructor
+			//using file writer object with the filename input
+			fileName = fileName.concat(".csv");
+			FileWriter toCsv = new FileWriter(fileName);
+			BufferedWriter csvWriter = new BufferedWriter(toCsv);
+			//write the headers separated by commas on line 1
+			csvWriter.write("Year,Color,Type,Miles");
+			//for each car in the list,
+			for (Car c : getTheCars()) {
+				//write each line with the variables in order separated by commas
+				//lets do Year, Color, Type, Miles.
+				csvWriter.newLine();
+				csvWriter.write(c.getYear() + "," + c.getColor() + ","
+						+ c.getCarType() + "," + c.getMiles());
+				//after loop runs, close the file writer.
+			}
+			csvWriter.close();
+			successMsg = fileName + " created in the specified directory.";
+			//end try, follow with catch
+		}
+		else {
+			String errMsg = "No file name passed to the method.";
+			throw new IOException(errMsg);
+		}
+		return successMsg;
 	}
 
 	//constructors

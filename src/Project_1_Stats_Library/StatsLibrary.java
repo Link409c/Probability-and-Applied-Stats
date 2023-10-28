@@ -448,12 +448,12 @@ public class StatsLibrary{
     }
     
     //conditionalProbability method
-    // "A given B" P(A|B)
+    //"A given B" P(A|B)
     //the probability of an event given that another has occurred.
     //rolling a 1 on a 1d6, given you rolled an odd number.
     //probability of event A given B occurred - P(A|B): 1/6
     //probability of event B occurring - P(B): 1/2
-    //the conditional probability is P(A|B) / P(B) :
+    //the conditional probability is P(A|B) / P(B) : 1/3
 
 
     public double conditionalProb(double probA, double probB){
@@ -507,8 +507,17 @@ public class StatsLibrary{
 
     //binomialMean
     //1 over p where p is the probability of success of an event
+    public double binomialMean(double p){
+        return 1 / p;
+    }
 
     //binomialVariance
+    //1 minus p all over p squared
+    public double binomialVariance(double p){
+        double numerator = 1 - p;
+        double denominator = Math.pow(p, 2);
+        return numerator / denominator;
+    }
 
     //standard deviation computation using binomial / geometric values
 
@@ -517,10 +526,12 @@ public class StatsLibrary{
      * with individual, independent trials resulting in either success or failure only.
      * @param y the number of trials
      * @param p the probability of success
-     * @return the chance of finding a success at the yth trial.
+     * @return the chance of finding the first success at the yth trial.
      */
     public double geometricDistribution(int y, double p){
-        double qRaised = Math.pow(1 - p, y-1);
+        int trialsFailed = y - 1;
+        double q = 1 - p;
+        double qRaised = Math.pow(q, trialsFailed);
         return qRaised * p;
     }
 

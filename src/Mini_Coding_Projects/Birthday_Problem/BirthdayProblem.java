@@ -6,28 +6,6 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 
 public class BirthdayProblem {
-    /*
-     * A Program which determines the probability of any two people in
-     * a group would have the same birthday.
-     *
-     * Control the input so the user can determine how many people are
-     * in the group.
-     *
-     * Make a Person Class with int birthday.
-     *
-     * Make # of runs configurable (eg. user input in main.)
-     *
-     * Notes:
-     * 1/365 The probability of a birthday being any one day.
-     * For the sample space -
-     * E1 = 1 = 365/365 First Person is equally likely to have any one birthday
-     * E2 = 364/365 Second Person
-     * E3 = 363/365 Third... and so on.
-     * En = 1 x 364/365 x 363/365 x ... x 365-n/365
-     * (Conditional Probability) - B Given A in this example is E2|E1, E3|E2, etc.
-     * Equates to the permutations formula n!/(n - r)!
-     */
-
     /**
      * calculates the probability that in the sample space of people, some
      * number of them share a birthday. Uses methods defined in the Stats
