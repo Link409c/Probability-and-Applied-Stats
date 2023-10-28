@@ -7,7 +7,11 @@ public class FactoryTester {
     public static void main(String[] args){
         Factory myFactory = new Factory();
 
-        System.out.println("Current year is: " + myFactory.calculateYear() + "\n");
+        //test current year calculation
+
+        System.out.println("\nCurrent year is: " + myFactory.calculateYear() + "\n");
+
+        //test car object creation
 
         for(int i = 0; i < 6; i++){
             myFactory.makeCar();
@@ -18,7 +22,24 @@ public class FactoryTester {
                     c.getCarType(), c.getMiles());
         }
 
+        System.out.println();
+
+        //test exporting to csv
+
         String fileName = "testFile";
+        try {
+            System.out.println(myFactory.exportCars(fileName));
+        }
+        catch(IOException err){
+            err.printStackTrace();
+        }
+
+        //test exception handling
+
+        System.out.println("\nTesting null case for exception handling: ");
+
+        fileName = null;
+
         try {
             System.out.println(myFactory.exportCars(fileName));
         }

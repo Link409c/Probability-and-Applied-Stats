@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="debugged squareList method which fixed bugs with variance and standard deviation methods. laid out pseudocode for using class with generics. began work on conditional probability.">
-      <change afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Birthday Problem.txt" afterDir="false" />
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/Factory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/FactoryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/FactoryTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/testFile.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +280,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698369944643</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method.">
+      <created>1698519973601</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1698519973601</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -321,6 +326,7 @@
     <MESSAGE value="Coded probability axioms 1 and 2; Coded Theorem of Total Probability; Added more pseudocode to Extravagance; Reorganized tester into neater sectioned comment blocks." />
     <MESSAGE value="Coded Poisson Distribution and Poisson Lambda. Added needed comment blocks to tester for the rest of the intended methods." />
     <MESSAGE value="debugged squareList method which fixed bugs with variance and standard deviation methods. laid out pseudocode for using class with generics. began work on conditional probability." />
-    <option name="LAST_COMMIT_MESSAGE" value="debugged squareList method which fixed bugs with variance and standard deviation methods. laid out pseudocode for using class with generics. began work on conditional probability." />
+    <MESSAGE value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method." />
+    <option name="LAST_COMMIT_MESSAGE" value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method." />
   </component>
 </project>

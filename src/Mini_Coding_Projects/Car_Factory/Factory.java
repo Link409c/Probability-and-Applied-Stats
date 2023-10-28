@@ -1,13 +1,11 @@
 package Mini_Coding_Projects.Car_Factory;
 
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
-
 
 /**
  * The Mini_Coding_Projects.Car_Factory.Factory class makes cars and
@@ -133,7 +131,7 @@ public class Factory {
 			//end try, follow with catch
 		}
 		else {
-			String errMsg = "No file name passed to the method.";
+			String errMsg = "File name passed to the exportCars method is null.";
 			throw new IOException(errMsg);
 		}
 		return successMsg;

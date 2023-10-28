@@ -1,4 +1,4 @@
-This program was written as a practical test of the Stats Library Program methods, applying Binomial Distribution
+This program was written as a practical test of the Stats Library Program methods, applying what we have learned so far
 to a concept that is interesting and useful for my hobby of the Yu-Gi-Oh card game. A version of this program already
 exists and is accessible through a website, but I currently do not know of a app-based alternative. For those of you
 reading this who do not play the Yu-Gi-Oh Card game, let me explain some simple concepts that drive the usefulness of
