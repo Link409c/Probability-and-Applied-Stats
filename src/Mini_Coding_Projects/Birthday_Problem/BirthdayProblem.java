@@ -5,6 +5,11 @@ import Project_1_Stats_Library.StatsLibrary;
 import java.math.BigInteger;
 import java.util.ArrayList;
 
+
+/**
+ * This program models the "Birthday Problem", an experiment that finds the probability of
+ * two individuals within a group sharing a birthday.
+ */
 public class BirthdayProblem {
     /**
      * calculates the probability that in the sample space of people, some
@@ -35,7 +40,8 @@ public class BirthdayProblem {
         }
         //else, throw an exception
         else{
-            //throw a custom exception
+            //placeholder
+            result = 0;
         }
         return result;
     }

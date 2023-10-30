@@ -19,7 +19,7 @@ public class Deck implements Queue<Card> {
 
     @Override
     public boolean isEmpty() {
-        if(this.)
+        return false;
     }
 
     @Override
@@ -101,6 +101,4 @@ public class Deck implements Queue<Card> {
     public Card peek() {
         return null;
     }
-
-
 }

@@ -251,6 +251,9 @@ public class StatsLibrary{
         return sortAndKeepUniqueElements(intersection);
     }
 
+    //union also refers to adding probabilites.
+    //ex P1 or P2 or P3 = P1 + P2 + P3
+
     /**
      * from two sets, creates a new set of elements consisting of the elements of both sets.
      * @param listA the first set
@@ -451,19 +454,20 @@ public class StatsLibrary{
             return result;
         }
     }
-    
-    //conditionalProbability method
-    //"A given B" P(A|B)
-    //the probability of an event given that another has occurred.
-    //rolling a 1 on a 1d6, given you rolled an odd number.
-    //probability of event A given B occurred - P(A|B): 1/6
-    //probability of event B occurring - P(B): 1/2
-    //the conditional probability is P(A|B) / P(B) : 1/3
 
+    //addition rule
+    //P(AuB) = P(A) + P(B) - P(AnB)
 
-    public double conditionalProb(double probA, double probB){
-        //A given B is the intersection of P(A) and P(B)
-        return 0;
+    /**
+     * calculates the probability of an event occurring, given another event has
+     * already occurred. represented by the formula P(A|B) = P(AnB) / P(B) .
+     * @param probAnB the intersection of the events A and B.
+     * @param probB the total probability that an event B will occur in some sample space.
+     * @return the conditional probability of A given B, or P(A|B).
+     */
+    public double conditionalProb(double probAnB, double probB){
+        //probB must be > 0
+        return probAnB / probB;
     }
 
     //bayesTheorem method
@@ -542,6 +546,7 @@ public class StatsLibrary{
     }
 
     //hyper geometric distribution
+    //used in trials where the probability changes trial to trial.
 
     //negative geometric distribution
     //y = total trials

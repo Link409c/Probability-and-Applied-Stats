@@ -5,6 +5,8 @@ import java.util.ArrayList;
 /**
  * This program allows the user to calculate the probability
  * involved in using the Yu-Gi-Oh! card, "Pot of Extravagance".
+ * The key calculation used to determine the probability of
+ * choosing specified combinations of cards is Hypergeometric Distribution.
  * Author: Link409c
  * Version: 0.01 | 10/23/23
  **/

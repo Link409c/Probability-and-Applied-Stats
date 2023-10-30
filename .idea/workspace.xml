@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method. added image file of factory tester output to package.">
-      <change afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/Monte Hall Problem.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHallTester.java" afterDir="false" />
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="Stats Library: continued work on Conditional Probability. Programmed compliment method. Hand Evaluator: Listed the correct types of hands. Created Deck class to implement in the future. Monte Hall: Copied assignment instructions from textbook.">
+      <change afterPath="$PROJECT_DIR$/src/Homework/HomeworkOne.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework/HomeworkThree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Homework/HomeworkTwo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Birthday Problem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Birthday Problem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homework/Homework Problems" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Homework Problems" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/Deck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibraryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibraryTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,10 +58,23 @@
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FactoryTester">
+  <component name="RunManager" selected="Application.HomeworkThree">
     <configuration name="FactoryTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Mini_Coding_Projects.Car_Factory.FactoryTester" />
       <module name="Probability and Applied Statistics" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HomeworkThree" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Homework.HomeworkThree" />
+      <module name="Probability and Applied Statistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Homework.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -74,8 +88,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.FactoryTester" />
+        <item itemvalue="Application.HomeworkThree" />
         <item itemvalue="Application.StatsLibraryTester" />
+        <item itemvalue="Application.FactoryTester" />
       </list>
     </recent_temporary>
   </component>
@@ -298,7 +313,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698521329156</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Stats Library: continued work on Conditional Probability. Programmed compliment method. Hand Evaluator: Listed the correct types of hands. Created Deck class to implement in the future. Monte Hall: Copied assignment instructions from textbook.">
+      <created>1698530224079</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1698530224079</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -314,7 +336,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="completed findMean method. laid out some pseudocode for finding mode, median, and std deviation" />
     <MESSAGE value="laid out pseudocode for st dev method, intersection, and union" />
     <MESSAGE value="push check to correct repository and url" />
     <MESSAGE value="pseudocode for permutations, combinations, and factorial methods" />
@@ -339,6 +360,7 @@
     <MESSAGE value="debugged squareList method which fixed bugs with variance and standard deviation methods. laid out pseudocode for using class with generics. began work on conditional probability." />
     <MESSAGE value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method." />
     <MESSAGE value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method. added image file of factory tester output to package." />
-    <option name="LAST_COMMIT_MESSAGE" value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method. added image file of factory tester output to package." />
+    <MESSAGE value="Stats Library: continued work on Conditional Probability. Programmed compliment method. Hand Evaluator: Listed the correct types of hands. Created Deck class to implement in the future. Monte Hall: Copied assignment instructions from textbook." />
+    <option name="LAST_COMMIT_MESSAGE" value="Stats Library: continued work on Conditional Probability. Programmed compliment method. Hand Evaluator: Listed the correct types of hands. Created Deck class to implement in the future. Monte Hall: Copied assignment instructions from textbook." />
   </component>
 </project>

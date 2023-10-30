@@ -26,7 +26,7 @@ public class StatsLibraryTester {
 
         //test mean, median, mode, variance, stdDev methods
 
-
+        /*
 
         System.out.printf("Mean: %.3f ", myStatsTest.findMean(testList));
         System.out.printf("Median: %.3f ", myStatsTest.findMedian(testList));
@@ -55,6 +55,7 @@ public class StatsLibraryTester {
         System.out.printf("Variance: %.3f ", myStatsTest.calculateVariance(testList));
         System.out.printf("Standard Deviation: %.3f ", myStatsTest.calcStandardDeviation(testList));
 
+        */
 
         //test factorial method
 
@@ -73,10 +74,21 @@ public class StatsLibraryTester {
 
         //test combinations and permutations
 
+        int totalElements;
+        int choiceNumber;
+
         /*
 
-        int totalElements = 4;
-        int choiceNumber = 4;
+        totalElements = 5;
+        choiceNumber = 2;
+
+        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
+                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        System.out.println("Combinations of a set of " + totalElements + " elements, choose " +
+                choiceNumber + ": " + myStatsTest.findCombinations(totalElements, choiceNumber));
+
+        totalElements = 4;
+        choiceNumber =
 
         System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
                 choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
@@ -86,20 +98,7 @@ public class StatsLibraryTester {
         totalElements = 41;
         choiceNumber = 5;
 
-        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
-                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
-        totalElements = 42;
-        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
-                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
-        totalElements = 43;
-        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
-                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
-        totalElements = 44;
-        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
-                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
-        totalElements = 45;
-        System.out.println("Permutations of a set of " + totalElements + " elements, choose " +
-                choiceNumber + ": " + myStatsTest.findPermutations(totalElements, choiceNumber));
+        */
 
         ArrayList<Double> testListTwo = new ArrayList<>();
         testList.clear();
@@ -117,8 +116,6 @@ public class StatsLibraryTester {
 
         Collections.sort(testList);
         Collections.sort(testListTwo);
-
-        */
 
         //test intersection, union methods
 
@@ -154,11 +151,15 @@ public class StatsLibraryTester {
 
         //test binomial distribution
 
+        double p;
+        int trials;
+        int successes;
+
         /*
 
-        double p = .15;
-        int trials = 10;
-        int successes = 4;
+        p = .15;
+        trials = 10;
+        successes = 4;
 
         System.out.printf("\n%.5f", 1.0 - p);
         System.out.printf("\nThere is a %.4f chance that, in 10 trials, we find 4 successes.",
