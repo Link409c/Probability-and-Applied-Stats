@@ -1,6 +1,7 @@
 package Project_1_Stats_Library;
 
 import Project_1_Stats_Library.Custom_Exceptions.TotalProbabilityException;
+import Project_1_Stats_Library.Custom_Exceptions.WithinNumberException;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -459,6 +460,9 @@ public class StatsLibrary{
     //addition rule
     //P(AuB) = P(A) + P(B) - P(AnB)
 
+    //multiplication rule
+    //P(AnB) = P(A)P(B|A) or P(B)P(A|B)
+
     /**
      * calculates the probability of an event occurring, given another event has
      * already occurred. represented by the formula P(A|B) = P(AnB) / P(B) .
@@ -519,21 +523,27 @@ public class StatsLibrary{
         return combinations.longValue() * pRaisedY * qRaised;
     }
 
-    //binomialMean
-    //1 over p where p is the probability of success of an event
+    /**
+     * calculates the mean of the data using values provided in a problem
+     * applying binomial distribution.
+     * @param p the probability of success
+     * @return the average value of the data.
+     */
     public double binomialMean(double p){
         return 1 / p;
     }
 
-    //binomialVariance
-    //1 minus p all over p squared
+    /**
+     * calculates the variance of the data using values provided in a problem
+     * applying binomial distribution.
+     * @param p the probability of success.
+     * @return the variance of the data.
+     */
     public double binomialVariance(double p){
         double numerator = 1 - p;
         double denominator = Math.pow(p, 2);
         return numerator / denominator;
     }
-
-    //standard deviation computation using binomial / geometric values
 
     /**
      * calculates the geometric distribution for a set of values. Useful when data deals
@@ -588,7 +598,6 @@ public class StatsLibrary{
         BigInteger numerator = nChooseY.multiply(remainingChooseRemaining);
         return numerator.divide(totalCombinations).doubleValue();
     }
-
 
     /**
      * calculates the probability of finding a certain number of successes within
@@ -689,12 +698,25 @@ public class StatsLibrary{
         return (lambdaRaisedTrials * eulerRaisedNegLambda) / bigTrials.longValue();
     }
 
-    //calculate "within" number method
-    //used in Tchebysheff's
-    public double calcWithinNumber(double lowBound, double highBound, double mean){
+    /**
+     * the "within number" is associated with Tchebysheff's Theorem. It represents, when divided
+     * by the standard deviation, the number of standard deviations about the mean in which the
+     * random variable has a probability of existing.
+     * @param lowBound the lower bound of the interval
+     * @param highBound the higher bound of the interval
+     * @param mean the average of the data
+     * @return the "within number".
+     * @throws WithinNumberException if the calculated values using each of the bounds do not match.
+     */
+    public double calcWithinNumber(double lowBound, double highBound, double mean) throws WithinNumberException{
         double withinNumberLower = mean - lowBound;
         double withinNumberUpper = highBound - mean;
-        return 0;
+        if(withinNumberLower == withinNumberUpper){
+            return withinNumberLower;
+        }
+        else{
+            throw new WithinNumberException();
+        }
     }
 
     /**
@@ -706,12 +728,16 @@ public class StatsLibrary{
      * @param stdDev the standard deviation of the data
      * @return the probability our random variable lies within the interval.
      */
-    public double tchebysheffsTheorem(double lowBound, double highBound, double mean, double stdDev){
+    public double tchebysheffsTheorem(double lowBound, double highBound, double mean, double stdDev)
+            throws WithinNumberException {
         //subtract lower bound from mean and mean from upper bound
         //these should be equal and are the "within number"
+        double withinNumber = calcWithinNumber(lowBound, highBound, mean);
         //divide within number by standard deviation to get k
-        //subtract 1/1-k^2 from 1 to get probability
-        return 0;
+        double k = withinNumber / stdDev;
+        double denominator = 1 - Math.pow(k, 2);
+        //subtract 1/1-k^2 from 1 to get result
+        return 1 - (1 / denominator);
     }
     private static final double EULERS_NUMBER = 2.7182818;
 
