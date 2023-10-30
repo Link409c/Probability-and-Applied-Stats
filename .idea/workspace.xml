@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="Stats Library: continued work on Conditional Probability. Programmed compliment method. Hand Evaluator: Listed the correct types of hands. Created Deck class to implement in the future. Monte Hall: Copied assignment instructions from textbook.">
-      <change afterPath="$PROJECT_DIR$/src/Homework/HomeworkOne.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Homework/HomeworkThree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Homework/HomeworkTwo.java" afterDir="false" />
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="Birthday Problem: Changed documentation to reflect current functionality of program - a pair of people sharing a birthday. Extravagance: Updated doc to reflect use of hyper geometric distribution. Homework: Worked out first two sets and started on third. Created a class for each to test in. Stats Library: added comments for hyper geometric distribution. Library Tester: moved some variable declarations outside comment blocks for ease of use in testing sections.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Homework/Homework Problems" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/Homework Problems" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homework/HomeworkThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/HomeworkThree.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibraryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibraryTester.java" afterDir="false" />
     </list>
@@ -320,7 +314,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698530224079</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Birthday Problem: Changed documentation to reflect current functionality of program - a pair of people sharing a birthday. Extravagance: Updated doc to reflect use of hyper geometric distribution. Homework: Worked out first two sets and started on third. Created a class for each to test in. Stats Library: added comments for hyper geometric distribution. Library Tester: moved some variable declarations outside comment blocks for ease of use in testing sections.">
+      <created>1698641522902</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1698641522902</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -336,7 +337,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="laid out pseudocode for st dev method, intersection, and union" />
     <MESSAGE value="push check to correct repository and url" />
     <MESSAGE value="pseudocode for permutations, combinations, and factorial methods" />
     <MESSAGE value="findSum, findMean, findDifference, std dev methods" />
@@ -361,6 +361,7 @@
     <MESSAGE value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method." />
     <MESSAGE value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method. added image file of factory tester output to package." />
     <MESSAGE value="Stats Library: continued work on Conditional Probability. Programmed compliment method. Hand Evaluator: Listed the correct types of hands. Created Deck class to implement in the future. Monte Hall: Copied assignment instructions from textbook." />
-    <option name="LAST_COMMIT_MESSAGE" value="Stats Library: continued work on Conditional Probability. Programmed compliment method. Hand Evaluator: Listed the correct types of hands. Created Deck class to implement in the future. Monte Hall: Copied assignment instructions from textbook." />
+    <MESSAGE value="Birthday Problem: Changed documentation to reflect current functionality of program - a pair of people sharing a birthday. Extravagance: Updated doc to reflect use of hyper geometric distribution. Homework: Worked out first two sets and started on third. Created a class for each to test in. Stats Library: added comments for hyper geometric distribution. Library Tester: moved some variable declarations outside comment blocks for ease of use in testing sections." />
+    <option name="LAST_COMMIT_MESSAGE" value="Birthday Problem: Changed documentation to reflect current functionality of program - a pair of people sharing a birthday. Extravagance: Updated doc to reflect use of hyper geometric distribution. Homework: Worked out first two sets and started on third. Created a class for each to test in. Stats Library: added comments for hyper geometric distribution. Library Tester: moved some variable declarations outside comment blocks for ease of use in testing sections." />
   </component>
 </project>

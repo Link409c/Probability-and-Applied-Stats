@@ -63,8 +63,8 @@ public class HomeworkThree {
 
 
 
-        System.out.println("b. There is a " + dBeforeF + " chance when randomly selecting an itinerary that she" +
-                " visits Denver before San Fransisco.");
+        //System.out.println("b. There is a " + dBeforeF + " chance when randomly selecting an itinerary that she" +
+        //        " visits Denver before San Fransisco.");
 
         //2.39
 

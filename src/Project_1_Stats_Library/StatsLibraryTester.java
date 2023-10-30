@@ -157,14 +157,6 @@ public class StatsLibraryTester {
 
         /*
 
-        p = .15;
-        trials = 10;
-        successes = 4;
-
-        System.out.printf("\n%.5f", 1.0 - p);
-        System.out.printf("\nThere is a %.4f chance that, in 10 trials, we find 4 successes.",
-                myStatsTest.binomialDistribution(trials, successes, p));
-
         p = .8;
         successes = 7;
         System.out.printf("\nThere is a %.4f chance that, in %d trials with a %.2f chance of success, " +
@@ -176,29 +168,6 @@ public class StatsLibraryTester {
         System.out.printf("\nThere is a %.4f chance that, with a %.2f chance of success, we find a success " +
                 "at the %dth trial.", myStatsTest.geometricDistribution(trials, p), p, trials);
 
-        totalElements = 15;
-        choiceNumber = 3;
-        System.out.println("Activating Pot of Extravagance with an extra deck of "
-                + totalElements + " unique cards, " + "choosing banish " + choiceNumber
-                + ", results in " + myStatsTest.findPermutations(totalElements, choiceNumber) + " different" +
-                " permutations of cards.");
-
-        choiceNumber = 6;
-        System.out.println("Activating Pot of Extravagance with an extra deck of "
-                + totalElements + " unique cards, " + "choosing banish " + choiceNumber
-                + ", results in " + myStatsTest.findPermutations(totalElements, choiceNumber) + " different" +
-                " permutations of cards.");
-
-        trials = 6;
-        p = .6;
-        successes = 1;
-        System.out.println("----- Extrav Banish 6 Probability Chart -----");
-
-        for(int i = 0; i < 6; i++) {
-            System.out.printf("\nThere is a %.4f chance that, when activating Extrav banishing %d, " +
-                            "we banish exactly %d Chaos Angel, Sky Crisis, or Muckraker.",
-                    myStatsTest.binomialDistribution(trials, successes, p), trials, successes);
-            successes++;
 
          */
 

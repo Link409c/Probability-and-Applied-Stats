@@ -328,10 +328,11 @@ public class StatsLibrary{
         //dont need this for formal project
 
     /**
-     * calculates
+     * calculates the ways a sample space can be split into different groupings of elements
+     * as divided by the user.
      * @param space the total number of elements in the sample space.
      * @param coefficients the groups of those elements to consider which equal the total.
-     * @return the amount of
+     * @return the amount of unique groupings that can be created.
      */
     public BigInteger calcMultinomialCoefficients(int space, int[] coefficients){
         //calculate numerator
@@ -471,15 +472,18 @@ public class StatsLibrary{
     }
 
     //bayesTheorem method
-    //P(B|A) = P(A|B)P(B) / P(A)
+    //P(B|A) = P(A|B)P(B) / P(A) or...
+    //P(A|B) = P(B|A)P(A) / P(B)
     /* the probability of an event B, given an event A has occurred is...
     the probability of an event A, given an event B has occurred times the probability of an event B */
     //all over the probability of an event A
-    //multiply P(A) x P(B) = P(AnB)
     //multiply P(AnB) x P(B)
     //divide by P(A)
 
-    public double bayesTheorem(){
+    public double bayesTheorem(double probA, double probB){
+        //get the intersection of the two probabilities
+        //multiply the intersection by the probability of B
+        //divide by the probability of A
         return 0;
     }
 
@@ -545,14 +549,110 @@ public class StatsLibrary{
         return qRaised * p;
     }
 
-    //hyper geometric distribution
-    //used in trials where the probability changes trial to trial.
+    /**
+     * calculates the probability of selecting a number of elements from the sample where
+     * selecting an element would change the probability of subsequent selections. Useful for
+     * problems involving a random variable with dependent events.
+     * @param totalElements the total number of elements in the space.
+     * @param totalChoices the total number of choices in the space.
+     * @param y the number of elements we want to choose from the sample.
+     * @param n the number of elements in the sample.
+     * @return the probability of choosing y elements from n specific elements.
+     */
 
-    //negative geometric distribution
-    //y = total trials
-    //p = chance of success
-    //r = intended number of successes
-    // (y-1)C(r-1) * p^r * q^(y-r)
+    //Example:
+    /*
+    We have a raffle with our class where 3 prizes are chosen.
+    Once a student is picked, they cannot win another prize.
+    If 16 Students are Male and 7 are Female, what is the probability that 2 winners are male and 1 is female?
+    Intersection: 2 male winners and 1 female winner
+    Combinations: ways to choose 2 male students, ways to choose 1 female student
+    Total = 23 choose 3
+    Sample = 7 choose 1
+    Remaining = 16 choose 2
+    |7||16|
+    |1|| 2|
+    ------- = .47430 ~ 47.43% chance two winners are male and one is female.
+     |23|
+     | 3|
+     */
+
+    public double hyperGeometricDistribution(int totalElements, int totalChoices, int y, int n){
+        //combinations of choices from the sample
+        BigInteger nChooseY = findCombinations(n, y);
+        //combinations of the remaining choices from the remaining set elements
+        BigInteger remainingChooseRemaining = findCombinations(totalElements - n, totalChoices - y);
+        //combinations of the total set choosing the total number of choices
+        BigInteger totalCombinations = findCombinations(totalElements, totalChoices);
+        //numerator = nCy * T-n C t-y
+        BigInteger numerator = nChooseY.multiply(remainingChooseRemaining);
+        return numerator.divide(totalCombinations).doubleValue();
+    }
+
+
+    /**
+     * calculates the probability of finding a certain number of successes within
+     * a number of trials where each trial is an independent event and the probability
+     * of success remains the same from trial to trial.
+     * @param y the amount of successes to find.
+     * @param p the probability of success.
+     * @param r the number of trials to conduct.
+     * @return the probability of finding Y successes in R trials.
+     */
+
+    //Example
+    /*
+    A local coffee shop offers special lattes and coffees on their menu, most of which consumers
+    ignore in favor of simple and familiar drinks. Some of these customers will step out of
+    their comfort zone and try something different every once in a while. The management is
+    questioning the time and budget that does into making these special drinks. Checking their
+    sales, customers tried the special drinks 5 percent of the time when ordering. However,
+    the baristas claim they spend a lot of time making these special drinks - about a third
+    of their day at the bar. What is the probability that 1 out of every 3 customers will try a special drink?
+
+    p = .05
+    y = 3
+    r = 1
+    |3-1|
+    | C |(.05)^1(.95)^3-1 = .045125 ~ a 4.5% chance that one in three customers get a special.
+    |1-1|
+     */
+
+    public double negativeBinomialDistribution(int y, double p, int r){
+        //calculate combinations of successes - 1 choosing trials - 1
+        BigInteger combinations = findCombinations(y - 1, r - 1);
+        //chance to fail
+        double q = 1 - p;
+        //calculate pieces of equation
+        double pRaisedR = Math.pow(p, r);
+        double qRaised = Math.pow(q, y-r);
+        //multiply each value and return
+        return combinations.doubleValue() * pRaisedR * qRaised;
+    }
+
+    /**
+     * calculates the mean of the sample space for a problem utilizing
+     * negative binomial distribution.
+     * @param p the probability of success
+     * @param r the number of trials conducted
+     * @return the average rate of success.
+     */
+    public double negativeBinomialMean(double p, int r){
+        return r / p;
+    }
+
+    /**
+     * calculates the variance of the sample space for a problem utilizing
+     * negative binomial distribution.
+     * @param p the probability of success.
+     * @param r the number of trials conducted.
+     * @return the variance of success over the trials.
+     */
+    public double negativeBinomialVariance(double p, int r){
+        double numerator = r * (1-p);
+        double denominator = Math.pow(p, 2);
+        return numerator / denominator;
+    }
 
     /**
      * the lambda, used in Poisson Distribution calculations, is a representation
@@ -589,13 +689,30 @@ public class StatsLibrary{
         return (lambdaRaisedTrials * eulerRaisedNegLambda) / bigTrials.longValue();
     }
 
-    //poisson compliment
-
-    //chebyshev's theorem
-
     //calculate "within" number method
-    //used in chebyshev's
+    //used in Tchebysheff's
+    public double calcWithinNumber(double lowBound, double highBound, double mean){
+        double withinNumberLower = mean - lowBound;
+        double withinNumberUpper = highBound - mean;
+        return 0;
+    }
 
+    /**
+     * calculates the probability that a number of observations lie in the given interval about
+     * the mean, or "K" standard deviations about the mean.
+     * @param lowBound the lower bound of the interval
+     * @param highBound the upper bound of the interval
+     * @param mean the mean of the data
+     * @param stdDev the standard deviation of the data
+     * @return the probability our random variable lies within the interval.
+     */
+    public double tchebysheffsTheorem(double lowBound, double highBound, double mean, double stdDev){
+        //subtract lower bound from mean and mean from upper bound
+        //these should be equal and are the "within number"
+        //divide within number by standard deviation to get k
+        //subtract 1/1-k^2 from 1 to get probability
+        return 0;
+    }
     private static final double EULERS_NUMBER = 2.7182818;
 
 }
