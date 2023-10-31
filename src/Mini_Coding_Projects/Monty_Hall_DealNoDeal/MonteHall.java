@@ -26,18 +26,39 @@ public class MonteHall {
         int bound = DOORS_SIZE+1;
         //for each try,
         for(int i = 0; i < tries; i++) {
+            String doors = "123";
             //randomly assign the winning door
             int winningDoor = r.nextInt(1, bound);
             //randomly pick a door as our choice
             int contestantChoice = r.nextInt(1, bound);
-            int[] doors = {1, 2, 3};
+            //remove our door from the choices
+            //remove winning door from the choices
+            char winner = Character.forDigit(winningDoor, 8);
+            char ourChoice = Character.forDigit(contestantChoice, 8);
+            char indexChar;
+            for(int j = 0; j < doors.length(); j++){
+                 indexChar = doors.charAt(j);
+                if(indexChar == winner || indexChar == ourChoice){
+                   doors = doors.replace(doors.charAt(j), ' ');
+                }
+            }
+            doors = doors.trim();
             //host shows one of the non winning doors
-            //remove our door from the array
-            //remove winning door from the array
-            //host chooses from the remaining doors
-            //if change is true, change to another door
+            //simulated by taking the remaining doors that are not winners or current choice
+            //add those doors to an array
+            char[] remainingDoors = doors.toCharArray();
+            int[] newChoices = new int[remainingDoors.length];
+            for(int j = 0; j < remainingDoors.length; j++) {
+                newChoices[j] = remainingDoors[j];
+            }
+            //if change, get a new choice from the doors that are not goats or current choice
             if(change) {
-
+                if(newChoices.length == 1){
+                    contestantChoice = newChoices[0];
+                }
+                else {
+                    contestantChoice = newChoices[r.nextInt(1, newChoices.length)];
+                }
             }
             //else do not change doors
             //if winner = choice, increment wins
