@@ -50,30 +50,13 @@ public class MonteHall {
                 hostDoor = getRemainingDoor(winningDoor, contestantChoice);
             }
             if (change) {
-                //if winner is your door choose the door the host did not
+                //if winner is your door and you switch you lose
                 if (winningDoor == contestantChoice) {
-                    if (contestantChoice == 1) {
-                        if (hostDoor == 2) {
-                            contestantChoice = 3;
-                        } else {
-                            contestantChoice = 2;
-                        }
-                    } else if (contestantChoice == 2) {
-                        if (hostDoor == 1) {
-                            contestantChoice = 3;
-                        } else {
-                            contestantChoice = 1;
-                        }
-                    } else {
-                        if (hostDoor == 1) {
-                            contestantChoice = 2;
-                        } else {
-                            contestantChoice = 1;
-                        }
-                    }
-                    //else get the remaining logical choice
-                } else {
                     contestantChoice = getRemainingDoor(winningDoor, hostDoor);
+                    //if you did not pick the winner,
+                    //if you change doors you should win
+                } else {
+                    contestantChoice = getRemainingDoor(contestantChoice, hostDoor);
                 }
             }
             //else do not change doors
