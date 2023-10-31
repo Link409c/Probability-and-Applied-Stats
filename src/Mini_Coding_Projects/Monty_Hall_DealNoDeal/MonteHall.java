@@ -1,8 +1,5 @@
 package Mini_Coding_Projects.Monty_Hall_DealNoDeal;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -23,60 +20,99 @@ public class MonteHall {
     public String runGames(int tries, boolean change) {
         //accepts number of tries as input and change door choice as input
         Random r = new Random();
-        int bound = DOORS_SIZE+1;
+        int bound = DOORS_SIZE + 1;
         //for each try,
-        for(int i = 0; i < tries; i++) {
-            String doors = "123";
+        for (int i = 0; i < tries; i++) {
             //randomly assign the winning door
             int winningDoor = r.nextInt(1, bound);
             //randomly pick a door as our choice
             int contestantChoice = r.nextInt(1, bound);
-            //remove our door from the choices
-            //remove winning door from the choices
-            char winner = Character.forDigit(winningDoor, 8);
-            char ourChoice = Character.forDigit(contestantChoice, 8);
-            char indexChar;
-            for(int j = 0; j < doors.length(); j++){
-                indexChar = doors.charAt(j);
-                if(indexChar == winner || indexChar == ourChoice){
-                   doors = doors.replace(doors.charAt(j), ' ');
+            //pick host door
+            int hostDoor = -1;
+            if (winningDoor == contestantChoice) {
+                //host door can be two choices
+                //check winningDoor
+                switch (winningDoor) {
+                    //if 1 host picks 2 or 3
+                    case 1 -> hostDoor = r.nextInt(2, 4);
+                    //if 2 host picks 1 or 3
+                    case 2 -> {
+                        hostDoor = r.nextInt(0, 2);
+                        int[] choices = {1, 3};
+                        hostDoor = choices[hostDoor];
+                    }
+                    //if 3 host picks 1 or 2
+                    case 3 -> hostDoor = r.nextInt(1, 3);
                 }
             }
-            doors = doors.trim();
-            //host shows one of the non winning doors
-            //simulated by taking the remaining doors that are not winners or current choice
-            //add those doors to an array
-            char[] remainingDoors = doors.toCharArray();
-            int[] newChoices = new int[remainingDoors.length];
-            for(int j = 0; j < remainingDoors.length; j++) {
-                newChoices[j] = (remainingDoors[j] - '0');
+            //else host has one choice
+            else {
+                hostDoor = getRemainingDoor(winningDoor, contestantChoice);
             }
-            //if change, get a new choice from the doors that are not goats or current choice
-            if(change) {
-                if(newChoices.length == 1){
-                    contestantChoice = newChoices[0];
-                }
-                else {
-                    contestantChoice = newChoices[r.nextInt(1, newChoices.length)];
+            if (change) {
+                //if winner is your door choose the door the host did not
+                if (winningDoor == contestantChoice) {
+                    if (contestantChoice == 1) {
+                        if (hostDoor == 2) {
+                            contestantChoice = 3;
+                        } else {
+                            contestantChoice = 2;
+                        }
+                    } else if (contestantChoice == 2) {
+                        if (hostDoor == 1) {
+                            contestantChoice = 3;
+                        } else {
+                            contestantChoice = 1;
+                        }
+                    } else {
+                        if (hostDoor == 1) {
+                            contestantChoice = 2;
+                        } else {
+                            contestantChoice = 1;
+                        }
+                    }
+                    //else get the remaining logical choice
+                } else {
+                    contestantChoice = getRemainingDoor(winningDoor, hostDoor);
                 }
             }
             //else do not change doors
             //if winner = choice, increment wins
-            if(winningDoor == contestantChoice) {
+            if (winningDoor == contestantChoice) {
                 setWins(getWins() + 1);
             }
         }
         String result;
         //return a string telling user various statistics about the games
-        if(change){
+        if (change) {
             result = "In 10000 Games, you changed your door each time and won " + getWins() + " times.";
-        }
-        else{
+        } else {
             result = "In 10000 Games, you did not change your door and won " + getWins() + " times.";
         }
         return result;
     }
 
+
+    /**
+     * A helper method designed to get the remaining choice to make or change to from
+     * the selection of choices provided. Based on the winning choice and user or
+     * Host choice that was already made.
+     * @param winningDoor the door containing the prize for this run of the game
+     * @param contestantOrHost the door the contestant or host has chosen, depending
+     *                         on where the method is called.
+     * @return the remaining choice that can be made based on
+     */
+    public int getRemainingDoor(int winningDoor, int contestantOrHost){
+        //check both choices and return the remaining number
+        String doors = "123";
+        char winner = Character.forDigit(winningDoor, 8);
+        //contestant or host door choice
+        char cOrH = Character.forDigit(contestantOrHost, 8);
+        doors = doors.replace(winner, ' ');
+        doors = doors.replace(cOrH, ' ');
+        doors = doors.trim();
+        return Integer.parseInt(doors);
+    }
     public MonteHall(){
         setWins(0);
     }
