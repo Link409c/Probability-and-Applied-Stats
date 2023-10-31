@@ -28,16 +28,13 @@ public class MonteHall {
         for(int i = 0; i < tries; i++) {
             //randomly assign the winning door
             int winningDoor = r.nextInt(1, bound);
-            //assign the two other doors a goat
-            int[] goatDoors;
-            switch(winningDoor){
-                case 1 -> goatDoors = new int[]{2, 3};
-                case 2 -> goatDoors = new int[]{1, 3};
-                case 3 -> goatDoors = new int[]{1, 2};
-            }
             //randomly pick a door as our choice
             int contestantChoice = r.nextInt(1, bound);
+            int[] doors = {1, 2, 3};
             //host shows one of the non winning doors
+            //remove our door from the array
+            //remove winning door from the array
+            //host chooses from the remaining doors
             //if change is true, change to another door
             if(change) {
 
