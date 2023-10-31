@@ -16,19 +16,26 @@ public class MonteHall {
      * Answer questions A & B in the comments.
      */
 
-    //run games method
+    /**
+     * plays the Monty Hall game a specified number of times with the option to
+     * change the chosen door or not.
+     * @param tries the number of trials to conduct
+     * @param change if true, changes the chosen door to one of the remaining ones.
+     * @return the result of the trials as a String.
+     */
     public String runGames(int tries, boolean change) {
         //accepts number of tries as input and change door choice as input
         Random r = new Random();
-        int bound = DOORS_SIZE + 1;
+        int bound = 4;
+        int winningDoor, contestantChoice, hostDoor;
         //for each try,
         for (int i = 0; i < tries; i++) {
             //randomly assign the winning door
-            int winningDoor = r.nextInt(1, bound);
+            winningDoor = r.nextInt(1, bound);
             //randomly pick a door as our choice
-            int contestantChoice = r.nextInt(1, bound);
+            contestantChoice = r.nextInt(1, bound);
             //pick host door
-            int hostDoor = -1;
+            hostDoor = -1;
             if (winningDoor == contestantChoice) {
                 //host door can be two choices
                 //check winningDoor
@@ -68,13 +75,12 @@ public class MonteHall {
         String result;
         //return a string telling user various statistics about the games
         if (change) {
-            result = "In 10000 Games, you changed your door each time and won " + getWins() + " times.";
+            result = "In " + tries + " Games, you changed your door each time and won " + getWins() + " times.";
         } else {
-            result = "In 10000 Games, you did not change your door and won " + getWins() + " times.";
+            result = "In " + tries + " Games, you did not change your door and won " + getWins() + " times.";
         }
         return result;
     }
-
 
     /**
      * A helper method designed to get the remaining choice to make or change to from
@@ -86,11 +92,11 @@ public class MonteHall {
      * @return the remaining choice that can be made based on
      */
     public int getRemainingDoor(int winningDoor, int contestantOrHost){
-        //check both choices and return the remaining number
         String doors = "123";
         char winner = Character.forDigit(winningDoor, 8);
         //contestant or host door choice
         char cOrH = Character.forDigit(contestantOrHost, 8);
+        //remove passed door choices from the total
         doors = doors.replace(winner, ' ');
         doors = doors.replace(cOrH, ' ');
         doors = doors.trim();
@@ -99,17 +105,12 @@ public class MonteHall {
     public MonteHall(){
         setWins(0);
     }
-
     public int getWins() {
         return wins;
     }
-
     public void setWins(int wins) {
         this.wins = wins;
     }
-
     private int wins;
-
-    private static final int DOORS_SIZE = 3;
 
 }
