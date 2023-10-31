@@ -1,81 +1,158 @@
 package Mini_Coding_Projects.Hand_Evaluator;
 
+import java.util.ArrayList;
 import java.util.Random;
+import java.util.Stack;
 
 public class HandEvaluator {
-	
-	//draw card method
-	//adds one card to the hand from the deck
+
+	/**
+	 * adds one card object from the stack to the hand.
+	 */
 	public void drawCard() {
-		getHand()[findNextIndex()] = getDeck()[getDeck().length - 1];
-		getDeck()[getDeck().length - 1] = null;
+		//pop the top element of the deck and add it to the hand
+		getHand().add(getDeck().pop());
 	}
-	
-	//draw hand method
-	//use draw card method to fill the hand
-	//hands are user choice.
-	
-	//evaluate hand method
-	//checks what type of hand the combination of cards creates. 
-	//make helper methods for each type.
 
-	//poker hands, in order from least to greatest:
+	/**
+	 * draw a full hand of cards, up to hand size.
+	 * @param handSize the number of elements in the hand arraylist.
+	 */
+	public void drawHand(int handSize){
+		for(int i = 0; i < handSize; i++){
+			drawCard();
+		}
+	}
 
-	//highCard
-	//considers highest rank card when no special hand is drawn.
-	//eg. 1, 3, 4, 7, J - Jack is high card.
-	
-	//pair
-	//two cards of the same rank.
+	/**
+	 * sort the cards in the hand using bubble sort.
+	 */
+	public void sortHand(){
+		CardComparator comp = new CardComparator();
+		//bubble sort will work since size is small.
+		ArrayList<Card> theHand = getHand();
+		int handSize = theHand.size();
+		boolean swapped;
+		for(int i = 0; i < handSize - 1; i++){
+			swapped = false;
+			for(int j = i + 1; j < handSize; j++){
+				if(comp.compare(theHand.get(i), theHand.get(j)) > 0){
+					Card temp = theHand.get(i);
+					theHand.set(i, theHand.get(j));
+					theHand.set(j, temp);
+					swapped = true;
+				}
+			}
+			if(!swapped){
+				break;
+			}
+		}
+		setHand(theHand);
+	}
 
-	//two Pair
-	//two pairs.
-	
-	//three of a kind
-	//three cards of the same rank.
+	/**
+	 * checks what type of hand the combination of cards creates and
+	 * calculates the probability of that combination of cards occurring
+	 * from a regular deck of cards.
+	 * @return a String with the hand name and its probability.
+	 */
+	public String evaluateHand(){
 
-	//straight
-	//any 5 cards in sequential order that are not a flush.
+		String result = "";
+		sortHand();
+		ArrayList<Card> theHand = getHand();
+		//poker hands, in order from greatest to least:
+		//make helper methods for each type.
+		//royal flush
+		//10, J, Q, K, A must all be the same suit.
+		//if first card is ace,
+		//if second is ten,
+		//if third is jack,
+		//if fourth is queen,
+		//if fifth is king
+		//and suit=suit=suit=suit=suit,
+		//hand is a royal flush
 
-	//flush
-	//any five cards of the same suit, but not in sequence.
+		//straight flush
+		//a straight of all the same suit.
+		//if a = b - 1,
+		//if b = c - 1,
+		//if c = d - 1,
+		//if d = e - 1,
+		//and suit=suit=suit=suit=suit,
+		//hand is a straight flush
 
-	//full house
-	//three of a kind and a pair.
+		//four of a kind
+		//four cards of the same rank.
+		//after sorting first card should be different.
+		//if b=c=d=e,
+		//hand is four of a kind
 
-	//four of a kind
-	//four cards of the same rank.
+		//full house
+		//three of a kind and a pair.
+		//after sorting two combinations are possible,
+		//AABBB or AAABB
+		//if either is true,
+		//hand is a full house
 
-	//straight flush
-	//a straight of all the same suit.
+		//flush
+		//any five cards of the same suit, but not in sequence.
+		//if a.suit = b,c,d,e suit,
+		//hand is a flush
 
-	//royal flush
-	//10, J, Q, K, A must all be the same suit.
+		//straight
+		//any 5 cards in sequential order that are not a flush.
+		//if a = b - 1,
+		//if b = c - 1,
+		//if c = d - 1,
+		//if d = e - 1,
+		//hand is a straight
+
+		//three of a kind
+		//three cards of the same rank.
+		//three possible combinations,
+		//AAABC or ABBBC or ABCCC
+		//if any are true,
+		//hand is three of a kind
+
+		//two Pair
+		//two pairs.
+		//three combos,
+		//AABBC or ABBCC or AABCC
+		//if any are true,
+		//hand is two pair
+
+		//pair
+		//two cards of the same rank.
+		//four combos,
+		//AABCD or ABBCD or ABCCD or ABCDD
+		//if any are true,
+		//hand is a pair
+
+		//highCard
+		//considers highest rank card when no special hand is drawn.
+		//eg. 1, 3, 4, 7, J - Jack is high card.
+		//if all of the above are false,
+		//hand has high card.
+
+		return result;
+	}
 
 	//dealHands method
 	//deal an amount of hands and evaluate each.
 	//number of hands is user determined
 	//helper method to calculate probability of each hand from the sample
-	//make sure to shuffle the deck after each deal.
+	//make sure to return hand to deck and shuffle the deck after each deal.
 	
-	//handsProbability method
-	//calculates the probability of the achieved combinations of the
-	//current set of drawn hands.
+	//handProbability method
+	//calculates the probability of the drawn hand.
 	//use imported stats library methods to calculate.
 
-	//findNextIndex method
-	//find the next empty index of the hand array
-	//used to add or remove cards from the hand
-	public int findNextIndex(){
-		int index = 0;
-		while(getHand()[index] != null && index < getHand().length){
-			index++;
-		}
-		return index;
-	}
-
+	//shuffle methods emulate real-life shuffling techniques.
+	/*
 	//shuffleDeck method
 	//randomize the elements of the deck array
+
 	public void shuffleDeck(){
 		Card[] shuffledDeck = new Card[FULL_DECK_COUNT];
 		Random cardFromDeck = new Random();
@@ -96,7 +173,8 @@ public class HandEvaluator {
 		for (int i = 0; i < 4; i++) {
 			int pileNumber = i;
 			for(int j = 0; j < 13; j++){
-				piles[i][j] = getDeck()[pileNumber];
+				//put the card into its pile
+				//move to next pile
 				pileNumber += 4;
 			}
 		}
@@ -111,14 +189,40 @@ public class HandEvaluator {
 	//place elements into a new list alternating between which element to place
 	//split the new list into two lists of equal elements and repeat
 
-	//makeDeck method
-	public Card[] makeDeck() {
-		Card[] theDeck = new Card[FULL_DECK_COUNT];
+	 */
+
+	/**
+	 * randomizes (shuffles) the contents of the deck.
+	 */
+	public void shuffleDeck(){
+		Stack<Card> theDeck = getDeck();
+		Stack<Card> shuffledDeck = new Stack<>();
+		Random r = new Random();
+		int i = 0, index;
+		int deckSize = FULL_DECK_COUNT - i;
+		for(i = 0; i < FULL_DECK_COUNT; i++) {
+			index = r.nextInt(1, deckSize);
+			Card toAdd = theDeck.get(index);
+			while (toAdd == null){
+				index = r.nextInt(1, deckSize);
+				toAdd = theDeck.get(index);
+			}
+			shuffledDeck.add(toAdd);
+		}
+		setDeck(shuffledDeck);
+	}
+
+	/**
+	 * populates the deck with the full 52 cards (13 of each suit).
+	 * @return the populated deck object.
+	 */
+	public Stack<Card> makeDeck() {
+		Stack<Card> theDeck = new Stack<>();
 		//loop for each suit to initialize deck contents
-		Suit[] suits = {Suit.Club, Suit.Diamond, Suit.Heart, Suit.Spade};
+		Suit[] suits = {Suit.Clubs, Suit.Diamonds, Suit.Hearts, Suit.Spades};
 		for (Suit suit : suits) {
 			for (int i = 1; i < 14; i++) {
-				theDeck[i] = new Card(suit, i);
+				theDeck.add(new Card(suit, i));
 			}
 		}
 		return theDeck;
@@ -126,25 +230,33 @@ public class HandEvaluator {
 	//constructor
 	public HandEvaluator(int handSize){
 		setDeck(makeDeck());
-		setHand(new Card[handSize]);
+		setHand(new ArrayList<>(handSize));
 	}
 	//getters and setters
-	public Card[] getDeck() {
+	public Stack<Card> getDeck() {
 		return deck;
 	}
-	public void setDeck(Card[] deck) {
+	public void setDeck(Stack<Card> deck) {
 		this.deck = deck;
 	}
-	public Card[] getHand() {
+	public ArrayList<Card> getHand() {
 		return hand;
 	}
-	public void setHand(Card[] hand) {
+	public void setHand(ArrayList<Card> hand) {
 		this.hand = hand;
 	}
 
-	//global variables
-	private Card[] deck;
-	private Card[] hand;
+	/**
+	 * Emulates a deck of 52 playing cards.
+	 */
+	private Stack<Card> deck;
+	/**
+	 * Emulates a hand of playing cards.
+	 */
+	private ArrayList<Card> hand;
+	/**
+	 * Limit for amount of cards in the deck.
+	 */
 	private static final int FULL_DECK_COUNT = 52;
 	 
 	 
