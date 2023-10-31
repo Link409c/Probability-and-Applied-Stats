@@ -37,7 +37,7 @@ public class MonteHall {
             char ourChoice = Character.forDigit(contestantChoice, 8);
             char indexChar;
             for(int j = 0; j < doors.length(); j++){
-                 indexChar = doors.charAt(j);
+                indexChar = doors.charAt(j);
                 if(indexChar == winner || indexChar == ourChoice){
                    doors = doors.replace(doors.charAt(j), ' ');
                 }
@@ -49,7 +49,7 @@ public class MonteHall {
             char[] remainingDoors = doors.toCharArray();
             int[] newChoices = new int[remainingDoors.length];
             for(int j = 0; j < remainingDoors.length; j++) {
-                newChoices[j] = remainingDoors[j];
+                newChoices[j] = (remainingDoors[j] - '0');
             }
             //if change, get a new choice from the doors that are not goats or current choice
             if(change) {
