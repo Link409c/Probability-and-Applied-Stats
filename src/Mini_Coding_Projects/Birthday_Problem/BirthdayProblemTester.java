@@ -16,7 +16,7 @@ public class BirthdayProblemTester {
         try {
             FileReader fileReader = new FileReader(filename);
             BufferedReader bfr = new BufferedReader(fileReader);
-            for (int i = 0; i < 20; i++){
+            for (int i = 0; i < 10; i++){
                 try {
                     people.add(new Person(bfr.readLine(), r.nextInt(1,366)));
                 }catch (IOException e) {
@@ -27,7 +27,8 @@ public class BirthdayProblemTester {
             f.printStackTrace();
         }
         BirthdayProblem birthdayProb = new BirthdayProblem(people);
-        System.out.printf("In the list of %d people, there is a %.3f chance two of them share " +
-                "the same birthday.", people.size(), birthdayProb.calcBdayProblem());
+        double result = birthdayProb.calcBdayProblem() * 100;
+        System.out.printf("In the list of %d people, there is a %.3f percent chance at least two of them share " +
+                "the same birthday.", people.size(), result);
     }
 }
