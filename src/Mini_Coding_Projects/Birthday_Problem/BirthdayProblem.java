@@ -37,8 +37,7 @@ public class BirthdayProblem implements CsvExportable {
         //get 365 factorial and 365 - n factorial
         BigInteger numerator = calcBirthdays.calculateFactorial(days.intValue());
         BigInteger denominator = calcBirthdays.calculateFactorial(difference);
-        //365x364x...x(365-n)x(365-n)! divided by (365-n)! leaves us with first (365-n+n) elements multiplied
-        //divide them to be left with 365x364x...x365-n
+        //365x364x...x(365-n+1)x(365-n)! divided by (365-n)! leaves us with first (365-n) elements multiplied
         BigInteger samplePoints = numerator.divide(denominator);
         //divide sample points by total points to get probability of nobody sharing a birthday
         double noneSharing = samplePoints.doubleValue() / totalPoints.doubleValue();
@@ -51,6 +50,9 @@ public class BirthdayProblem implements CsvExportable {
      */
     public String displayPeople(){
         ArrayList<Person> sharers = new ArrayList<>();
+        //new addition: splitting the groups into subsets
+        //split people who share birthdays into subsets by birthday
+        //ArrayList<Person> tuples = new ArrayList<>();
         String result = "";
         ArrayList<Person> thePeople = getPeople();
         for(Person p : thePeople){
@@ -80,13 +82,13 @@ public class BirthdayProblem implements CsvExportable {
     /**
      * exports the list of people and their birthdays to a csv file.
      * @param fileName the name of the file excluding filetype.
+     * @param header the first line of the csv file explains column values.
      * @return a message informing the user of success or failure.
      */
     @Override
     public String exportObjects(String fileName, String header) throws IOException{
         //string to return
         String successMsg;
-        //surround with try starting here
         if(fileName != null){
             //create the csv file to pass to the constructor
             //using file writer object with the filename input
@@ -104,7 +106,6 @@ public class BirthdayProblem implements CsvExportable {
             }
             csvWriter.close();
             successMsg = fileName + " created in the specified directory.";
-            //end try, follow with catch
         }
         else {
             String errMsg = "File name passed to the export method is null.";
