@@ -617,7 +617,7 @@ public class StatsLibrary{
     questioning the time and budget that does into making these special drinks. Checking their
     sales, customers tried the special drinks 5 percent of the time when ordering. However,
     the baristas claim they spend a lot of time making these special drinks - about a third
-    of their day at the bar. What is the probability that 1 out of every 3 customers will try a special drink?
+    of their day at the bar. What is the probability that 1 out of every 3 customers order a special drink?
 
     p = .05
     y = 3
