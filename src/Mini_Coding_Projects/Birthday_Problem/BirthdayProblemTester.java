@@ -16,7 +16,7 @@ public class BirthdayProblemTester {
         try {
             FileReader fileReader = new FileReader(filename);
             BufferedReader bfr = new BufferedReader(fileReader);
-            for (int i = 0; i < 10; i++){
+            for (int i = 0; i < 50; i++){
                 try {
                     people.add(new Person(bfr.readLine(), r.nextInt(1,366)));
                 }catch (IOException e) {
@@ -33,6 +33,7 @@ public class BirthdayProblemTester {
         System.out.println("\n" + birthdayProb.displayPeople());
         System.out.println(birthdayProb.exportObjects("BirthdayList", "Name,Birthday"));
         //test null case
+        System.out.println("\nTesting null case for exception handling: ");
         System.out.println(birthdayProb.exportObjects(null, "Name,Birthday"));
     }
 }
