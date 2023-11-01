@@ -108,10 +108,10 @@ public class Factory implements CsvExportable {
 	 * @param header the header describing the fields of each column.
 	 * @return a string informing the user the file has been created.
 	 */
+	@Override
 	public String exportObjects(String fileName, String header) throws IOException {
 		//string to return
 		String successMsg;
-		//surround with try starting here
 		if(fileName != null){
 			//create the csv file to pass to the constructor
 			//using file writer object with the filename input
@@ -131,7 +131,6 @@ public class Factory implements CsvExportable {
 			}
 			csvWriter.close();
 			successMsg = fileName + " created in the specified directory.";
-			//end try, follow with catch
 		}
 		else {
 			String errMsg = "File name passed to the export method is null.";
@@ -162,31 +161,16 @@ public class Factory implements CsvExportable {
 		return theCars;
 	}
 
-	public void setTheCars(ArrayList<Car> theCars) {
-		this.theCars = theCars;
-	}
-
 	public String[] getTypes() {
 		return types;
-	}
-
-	public void setTypes(String[] types) {
-		this.types = types;
 	}
 
 	public String[] getColors() {
 		return colors;
 	}
 
-	public void setColors(String[] colors) {
-		this.colors = colors;
-	}
-
 	public int getCurrentYear() {
 		return currentYear;
 	}
 
-	public void setCurrentYear(int currentYear) {
-		this.currentYear = currentYear;
-	}
 }
