@@ -1,5 +1,7 @@
 package Mini_Coding_Projects.Car_Factory;
 
+import Miscellaneous.CsvExportable;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,7 +15,7 @@ import java.util.Random;
  * @author simpso61
  */
 
-public class Factory {
+public class Factory implements CsvExportable {
 
 	/**
 	 * makeCar calls the constructors of the Car class to produce a car object and add it to the list.
@@ -97,15 +99,16 @@ public class Factory {
 	}
 
 	/**
-	 * exportCars writes the contents of the cars arraylist to a csv file
+	 * writes the contents of the cars arraylist to a csv file
 	 * the user can explore and use to visualize and represent data in excel.
 	 * The method is programmed using a relative path for the output file, placing the
 	 * file in the project folder of Factory.java. This can be changed by the user for
 	 * ease of navigation.
 	 * @param fileName the name of the file to create, not including filetype suffix.
+	 * @param header the header describing the fields of each column.
 	 * @return a string informing the user the file has been created.
 	 */
-	public String exportCars(String fileName) throws IOException {
+	public String exportObjects(String fileName, String header) throws IOException {
 		//string to return
 		String successMsg;
 		//surround with try starting here
@@ -116,7 +119,7 @@ public class Factory {
 			FileWriter toCsv = new FileWriter(fileName);
 			BufferedWriter csvWriter = new BufferedWriter(toCsv);
 			//write the headers separated by commas on line 1
-			csvWriter.write("Year,Color,Type,Miles");
+			csvWriter.write(header);
 			//for each car in the list,
 			for (Car c : getTheCars()) {
 				//write each line with the variables in order separated by commas
@@ -131,7 +134,7 @@ public class Factory {
 			//end try, follow with catch
 		}
 		else {
-			String errMsg = "File name passed to the exportCars method is null.";
+			String errMsg = "File name passed to the export method is null.";
 			throw new IOException(errMsg);
 		}
 		return successMsg;
