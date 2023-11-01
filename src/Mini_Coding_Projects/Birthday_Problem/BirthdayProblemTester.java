@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class BirthdayProblemTester {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         String filename = "names.txt";
         Random r = new Random();
@@ -27,8 +27,12 @@ public class BirthdayProblemTester {
             f.printStackTrace();
         }
         BirthdayProblem birthdayProb = new BirthdayProblem(people);
-        double result = birthdayProb.calcBdayProblem() * 100;
+        double result = birthdayProb.calcBDayProblem() * 100;
         System.out.printf("In the list of %d people, there is a %.3f percent chance at least two of them share " +
                 "the same birthday.", people.size(), result);
+        System.out.println("\n" + birthdayProb.displayPeople());
+        System.out.println(birthdayProb.exportObjects("BirthdayList", "Name,Birthday"));
+        //test null case
+        System.out.println(birthdayProb.exportObjects(null, "Name,Birthday"));
     }
 }

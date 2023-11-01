@@ -27,8 +27,9 @@ public class FactoryTester {
         //test exporting to csv
 
         String fileName = "testFile";
+        String header = "Color,Year,Type,Miles";
         try {
-            System.out.println(myFactory.exportCars(fileName));
+            System.out.println(myFactory.exportObjects(fileName, header));
         }
         catch(IOException err){
             err.printStackTrace();
@@ -38,10 +39,8 @@ public class FactoryTester {
 
         System.out.println("\nTesting null case for exception handling: ");
 
-        fileName = null;
-
         try {
-            System.out.println(myFactory.exportCars(fileName));
+            System.out.println(myFactory.exportObjects(null, header));
         }
         catch(IOException err){
             err.printStackTrace();
