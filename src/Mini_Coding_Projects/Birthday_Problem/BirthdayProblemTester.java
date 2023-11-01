@@ -18,7 +18,7 @@ public class BirthdayProblemTester {
             BufferedReader bfr = new BufferedReader(fileReader);
             for (int i = 0; i < 20; i++){
                 try {
-                    people.add(new Person(bfr.readLine(), r.nextInt(1,365)));
+                    people.add(new Person(bfr.readLine(), r.nextInt(1,366)));
                 }catch (IOException e) {
                     e.printStackTrace();
                 }
