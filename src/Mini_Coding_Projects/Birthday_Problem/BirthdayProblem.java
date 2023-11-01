@@ -51,8 +51,4 @@ public class BirthdayProblem {
      * The list of people with birthdays.
      */
     private ArrayList<Person> people;
-    /**
-     * An amount of people who might share a birthday.
-     */
-
 }
