@@ -15,3 +15,6 @@ E3 = 363/365 Third... and so on.
 En = 1 x 364/365 x 363/365 x ... x 365-n/365
 (Conditional Probability) - B Given A in this example is E2|E1, E3|E2, etc.
 Equates to the permutations formula n!/(n - r)!
+
+Examples: 2.7 pg 42
+          2.18 pg 63
