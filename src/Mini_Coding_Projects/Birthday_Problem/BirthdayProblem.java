@@ -87,7 +87,6 @@ public class BirthdayProblem implements CsvExportable {
     public String exportObjects(String fileName, String header) throws IOException{
         //string to return
         String successMsg;
-        //surround with try starting here
         if(fileName != null){
             //create the csv file to pass to the constructor
             //using file writer object with the filename input
@@ -105,7 +104,6 @@ public class BirthdayProblem implements CsvExportable {
             }
             csvWriter.close();
             successMsg = fileName + " created in the specified directory.";
-            //end try, follow with catch
         }
         else {
             String errMsg = "File name passed to the export method is null.";
