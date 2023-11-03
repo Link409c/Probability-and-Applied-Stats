@@ -80,6 +80,7 @@ public class BirthdayProblem implements CsvExportable {
     /**
      * exports the list of people and their birthdays to a csv file.
      * @param fileName the name of the file excluding filetype.
+     * @param header the header of the csv file.
      * @return a message informing the user of success or failure.
      */
     @Override
