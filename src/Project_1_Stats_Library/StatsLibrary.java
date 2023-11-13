@@ -17,7 +17,7 @@ import java.util.Objects;
  * standard deviation, and several forms of calculating probability of given events.
  * --
  * Author: Christian Simpson
- * Version: 10/26/23
+ * Version: 11/1/23
  **/
 public class StatsLibrary{
 

@@ -1,0 +1,17 @@
+Write Programs for Plotting, Salting, Smoothing. Test and document results.
+
+Learn to use matlab. Document the process. Refer to MatLab.txt
+
+COMMON WORK SKILL 3
+using other people's programs through your program AKA IMPORTING LIBRARIES
+getting the .jar files of a repository and pointing your IDE at the directory so you can import them.
+import JFreeChart to use excel in your program.
+import Apache Math Library for statistics calculations.
+
+Write a program that:
+Plots
+Salts
+Smooths
+use JFreeChart and Apache Stats Library to shorthand the work.
+
+Contain the results of the above in a report. Essay form.
