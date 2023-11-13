@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="Hand Evaluator: updated data structures used for variable and object encapsulation. created comparator for card object. coded and tested make deck, shuffle deck, draw card, draw hand, sort hand. laid out pseudocode for hand evaluation method. began debugging shuffle deck method (duplicates card values).">
-      <change afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/Results.PNG" afterDir="false" />
+    <list default="true" id="4ffe925b-1b0c-41f0-8da3-d6d079ffb916" name="Changes" comment="added message before testing exception handling">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BirthdayList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/BirthdayList.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluatorTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluatorTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHallTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHallTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +22,7 @@
       <list>
         <option value="Enum" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -48,15 +50,35 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Coding Projects\Probability and Applied Statistics" />
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src" />
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Homework" />
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_2" />
-      <recent name="E:\Coding Projects\Probability and Applied Statistics\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MonteHallTester">
+  <component name="RunManager" selected="Application.HandEvaluatorTester">
+    <configuration name="BirthdayProblemTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Mini_Coding_Projects.Birthday_Problem.BirthdayProblemTester" />
+      <module name="Probability and Applied Statistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Mini_Coding_Projects.Birthday_Problem.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FactoryTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Mini_Coding_Projects.Car_Factory.FactoryTester" />
       <module name="Probability and Applied Statistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Mini_Coding_Projects.Car_Factory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,20 +122,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StatsLibraryTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project_1_Stats_Library.StatsLibraryTester" />
-      <module name="Probability and Applied Statistics" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MonteHallTester" />
         <item itemvalue="Application.HandEvaluatorTester" />
-        <item itemvalue="Application.HomeworkThree" />
-        <item itemvalue="Application.StatsLibraryTester" />
+        <item itemvalue="Application.BirthdayProblemTester" />
         <item itemvalue="Application.FactoryTester" />
+        <item itemvalue="Application.MonteHallTester" />
+        <item itemvalue="Application.HomeworkThree" />
       </list>
     </recent_temporary>
   </component>
@@ -125,76 +140,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1694481992448</updated>
-    </task>
-    <task id="LOCAL-00001" summary="completed findMean method. laid out some pseudocode for finding mode, median, and std deviation">
-      <created>1694483526901</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1694483526901</updated>
-    </task>
-    <task id="LOCAL-00002" summary="laid out pseudocode for st dev method, intersection, and union">
-      <created>1694653479824</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1694653479824</updated>
-    </task>
-    <task id="LOCAL-00003" summary="laid out pseudocode for st dev method, intersection, and union">
-      <created>1694999244036</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1694999244036</updated>
-    </task>
-    <task id="LOCAL-00004" summary="laid out pseudocode for st dev method, intersection, and union">
-      <created>1695004626997</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1695004626997</updated>
-    </task>
-    <task id="LOCAL-00005" summary="push check to correct repository and url">
-      <created>1695004805294</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1695004805294</updated>
-    </task>
-    <task id="LOCAL-00006" summary="push check to correct repository and url">
-      <created>1695005074610</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1695005074610</updated>
-    </task>
-    <task id="LOCAL-00007" summary="pseudocode for permutations, combinations, and factorial methods">
-      <created>1695057478045</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1695057478045</updated>
-    </task>
-    <task id="LOCAL-00008" summary="pseudocode for permutations, combinations, and factorial methods">
-      <created>1695063336593</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1695063336593</updated>
-    </task>
-    <task id="LOCAL-00009" summary="findSum, findMean, findDifference, std dev methods">
-      <created>1695319128084</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1695319128084</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added Car &amp; Factory Classes">
-      <created>1695403060679</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1695403060679</updated>
     </task>
     <task id="LOCAL-00011" summary="finished all methods in Factory except export to file&#10;&#10;Tested factory methods">
       <created>1695672945324</created>
@@ -371,7 +316,175 @@
       <option name="project" value="LOCAL" />
       <updated>1698717852777</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Monty Hall: Coded most of program and ran initial tests. My initial output had the probabilities of the choices backwards, so I began debugging and somehow made it even worse. Will need more time to adjust conditional statements to correctly eliminate doors as they are chosen by the user and the &quot;host&quot;. Screenshot included.">
+      <created>1698725235355</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1698725235355</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Birthday Problem: Following the examples from the book, finished the program. Added a random names file for reading in. Built main method and began testing. Unfortunately I made some huge error somewhere, and will continue debugging. Current results included in package.">
+      <created>1698726547785</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1698726547785</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Monty Hall: Changed strategy for choosing which goat door to open and how to choose it. Instead of comparing arrays, we will remove elements from an array of all the doors until we are left with our choices for the host.">
+      <created>1698730240314</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1698730240314</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Monty Hall: Coded strategy for changing doors. Testing revealed correct probability now displays for not changing the chosen door, but there are no wins for changing the door. Troubleshooting code revealed typecasting from int to char causing comparison issues. Debugging this section.">
+      <created>1698786735483</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1698786735483</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Monty Hall: Casting issue resolved. Current troubleshooting is focused on the removed doors. Need better implementation of code that simulates what door the host will open.">
+      <created>1698787243951</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1698787243951</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Monty Hall: Implemented new ways to check each door. Winner and user choice are still determined first. Then the host door is picked based on a comparison of the winner and user choice. If they are the same, a switch case handles the two choices the host will be able to randomly make. Otherwise, we make a string (as was originally implemented) and remove the two chosen door characters from it, leaving us with the one choice the host can make. Then, if the user wants to change their door, we just switch their choice to the number that is not the winner.">
+      <created>1698791363281</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1698791363281</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Monty Hall: Created helper method to find the remaining door. Debugging the following: Probability for changing the door and winning is now correct, but probability for not changing the door and winning is too high.">
+      <created>1698792132942</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1698792132942</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Monty Hall: Error in win count was wins variable not being reset between sets of 10000 runs. Fixed and tested successfully.">
+      <created>1698795243551</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1698795243551</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Monty Hall: Added results png">
+      <created>1698795532301</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1698795532301</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Removed dangling javadoc for nonexistent global variable">
+      <created>1698805198813</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1698805198813</updated>
+    </task>
+    <task id="LOCAL-00046" summary="increased bound for random birthday assignment to 366">
+      <created>1698805233923</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1698805233923</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Reevaluated implementation of book example for calculations. Debugging led to the realization the signum of the final big integer value was zero due to division operations, which was returning zero as a result. changing division to double values with big integer methods led to the correct calculation.">
+      <created>1698871942949</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1698871942949</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Tested with multiple values. Probability increases rapidly after 20 people up until 50 people. Then afterward probability only climbs a few percent at a time until it peaks after 100.">
+      <created>1698872413509</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1698872413509</updated>
+    </task>
+    <task id="LOCAL-00049" summary="export test file">
+      <created>1698877623391</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1698877623391</updated>
+    </task>
+    <task id="LOCAL-00050" summary="created the CsvExportable interface to use in any class where exporting lists to excel is useful.">
+      <created>1698877659666</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1698877659666</updated>
+    </task>
+    <task id="LOCAL-00051" summary="adjusted code in export method to match new interface implementation.">
+      <created>1698877703441</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1698877703441</updated>
+    </task>
+    <task id="LOCAL-00052" summary="tested new implementation of export method as well as exception handling.">
+      <created>1698877730464</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1698877730464</updated>
+    </task>
+    <task id="LOCAL-00053" summary="added more names to file for larger sample spaces.">
+      <created>1698877745656</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1698877745656</updated>
+    </task>
+    <task id="LOCAL-00054" summary="example run of the birthday problem program.">
+      <created>1698877760342</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1698877760342</updated>
+    </task>
+    <task id="LOCAL-00055" summary="added page numbers for book examples of calculation">
+      <created>1698877776434</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1698877776434</updated>
+    </task>
+    <task id="LOCAL-00056" summary="small change to example under negative binomial distribution">
+      <created>1698877823380</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1698877823380</updated>
+    </task>
+    <task id="LOCAL-00057" summary="deleted some comments from export method; added some pseudocode for future update to display method">
+      <created>1698882135038</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1698882135038</updated>
+    </task>
+    <task id="LOCAL-00058" summary="deleted some comments from export method; deleted unused setters">
+      <created>1698882228741</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1698882228741</updated>
+    </task>
+    <task id="LOCAL-00059" summary="added message before testing exception handling">
+      <created>1698882271773</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1698882271773</updated>
+    </task>
+    <option name="localTasksCounter" value="60" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -387,31 +500,31 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added Car &amp; Factory Classes" />
-    <MESSAGE value="finished all methods in Factory except export to file&#10;&#10;Tested factory methods" />
-    <MESSAGE value="finished mode, median methods in stats library" />
-    <MESSAGE value="wrote and tested factorial method" />
-    <MESSAGE value="wrote and tested combinations and permutations methods, added zero factorial case to factorial method" />
-    <MESSAGE value="wrote calculateVariance method" />
-    <MESSAGE value="wrote calculateVariance method&#10;&#10;factorial method needs more testing. produces small and negative numbers" />
-    <MESSAGE value="wrote and tested Intersection and Union methods&#10;&#10;Union throws OOB exception in sort and keep unique elements method" />
-    <MESSAGE value="fixed variance method and consolidated these steps in std deviation method&#10;&#10;changed some values in tester for factorial tests in debugging" />
-    <MESSAGE value="further tested and updated union method; no longer throwing out of bounds exceptions for index and values are correct &#10;&#10;factorial method negative and incorrect values due to trailing zeroes in representation - try using built in biginteger methods?" />
-    <MESSAGE value="successfully debugged and tested factorial method. completed and tested binomial and geometric distribution methods. updated javadoc." />
-    <MESSAGE value="started work on poisson distribution." />
-    <MESSAGE value="added minimal pseudocode for chebyshev's." />
-    <MESSAGE value="reorganized files for easier identification within project." />
-    <MESSAGE value="reorganized more files. started Extrav program version 0.01; Wrote short readme on goals of program and application." />
-    <MESSAGE value="Coded probability axioms 1 and 2; Coded Theorem of Total Probability; Added more pseudocode to Extravagance; Reorganized tester into neater sectioned comment blocks." />
-    <MESSAGE value="Coded Poisson Distribution and Poisson Lambda. Added needed comment blocks to tester for the rest of the intended methods." />
-    <MESSAGE value="debugged squareList method which fixed bugs with variance and standard deviation methods. laid out pseudocode for using class with generics. began work on conditional probability." />
-    <MESSAGE value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method." />
-    <MESSAGE value="Stats Library: coded binomialMean and binomialVariance. separated variable initialization from calculation steps for various methods to make declarations understandable. Birthday Problem: Separated Birthday Problem notes into txt file. Added some javaDoc notes to Person class. Car Factory: separated variable initialization from calculation steps to make declarations understandable. programmed and tested exportCars method. added image file of factory tester output to package." />
-    <MESSAGE value="Stats Library: continued work on Conditional Probability. Programmed compliment method. Hand Evaluator: Listed the correct types of hands. Created Deck class to implement in the future. Monte Hall: Copied assignment instructions from textbook." />
-    <MESSAGE value="Birthday Problem: Changed documentation to reflect current functionality of program - a pair of people sharing a birthday. Extravagance: Updated doc to reflect use of hyper geometric distribution. Homework: Worked out first two sets and started on third. Created a class for each to test in. Stats Library: added comments for hyper geometric distribution. Library Tester: moved some variable declarations outside comment blocks for ease of use in testing sections." />
-    <MESSAGE value="Stats Library: coded hypergeometric distribution, negative binomial distribution, and Tchebysheff's theorem and their associated mean and standard deviation methods and helper methods." />
-    <MESSAGE value="Stats Library: Finished coding Tchebysheff's." />
-    <MESSAGE value="Hand Evaluator: updated data structures used for variable and object encapsulation. created comparator for card object. coded and tested make deck, shuffle deck, draw card, draw hand, sort hand. laid out pseudocode for hand evaluation method. began debugging shuffle deck method (duplicates card values)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Hand Evaluator: updated data structures used for variable and object encapsulation. created comparator for card object. coded and tested make deck, shuffle deck, draw card, draw hand, sort hand. laid out pseudocode for hand evaluation method. began debugging shuffle deck method (duplicates card values)." />
+    <MESSAGE value="Monty Hall: Coded most of program and ran initial tests. My initial output had the probabilities of the choices backwards, so I began debugging and somehow made it even worse. Will need more time to adjust conditional statements to correctly eliminate doors as they are chosen by the user and the &quot;host&quot;. Screenshot included." />
+    <MESSAGE value="Birthday Problem: Following the examples from the book, finished the program. Added a random names file for reading in. Built main method and began testing. Unfortunately I made some huge error somewhere, and will continue debugging. Current results included in package." />
+    <MESSAGE value="Monty Hall: Changed strategy for choosing which goat door to open and how to choose it. Instead of comparing arrays, we will remove elements from an array of all the doors until we are left with our choices for the host." />
+    <MESSAGE value="Monty Hall: Coded strategy for changing doors. Testing revealed correct probability now displays for not changing the chosen door, but there are no wins for changing the door. Troubleshooting code revealed typecasting from int to char causing comparison issues. Debugging this section." />
+    <MESSAGE value="Monty Hall: Casting issue resolved. Current troubleshooting is focused on the removed doors. Need better implementation of code that simulates what door the host will open." />
+    <MESSAGE value="Monty Hall: Implemented new ways to check each door. Winner and user choice are still determined first. Then the host door is picked based on a comparison of the winner and user choice. If they are the same, a switch case handles the two choices the host will be able to randomly make. Otherwise, we make a string (as was originally implemented) and remove the two chosen door characters from it, leaving us with the one choice the host can make. Then, if the user wants to change their door, we just switch their choice to the number that is not the winner." />
+    <MESSAGE value="Monty Hall: Created helper method to find the remaining door. Debugging the following: Probability for changing the door and winning is now correct, but probability for not changing the door and winning is too high." />
+    <MESSAGE value="Monty Hall: Error in win count was wins variable not being reset between sets of 10000 runs. Fixed and tested successfully." />
+    <MESSAGE value="Monty Hall: Added results png" />
+    <MESSAGE value="Removed dangling javadoc for nonexistent global variable" />
+    <MESSAGE value="increased bound for random birthday assignment to 366" />
+    <MESSAGE value="Reevaluated implementation of book example for calculations. Debugging led to the realization the signum of the final big integer value was zero due to division operations, which was returning zero as a result. changing division to double values with big integer methods led to the correct calculation." />
+    <MESSAGE value="Tested with multiple values. Probability increases rapidly after 20 people up until 50 people. Then afterward probability only climbs a few percent at a time until it peaks after 100." />
+    <MESSAGE value="export test file" />
+    <MESSAGE value="created the CsvExportable interface to use in any class where exporting lists to excel is useful." />
+    <MESSAGE value="adjusted code in export method to match new interface implementation." />
+    <MESSAGE value="tested new implementation of export method as well as exception handling." />
+    <MESSAGE value="added more names to file for larger sample spaces." />
+    <MESSAGE value="example run of the birthday problem program." />
+    <MESSAGE value="added page numbers for book examples of calculation" />
+    <MESSAGE value="small change to example under negative binomial distribution" />
+    <MESSAGE value="deleted some comments from export method; added some pseudocode for future update to display method" />
+    <MESSAGE value="deleted some comments from export method" />
+    <MESSAGE value="deleted some comments from export method; deleted unused setters" />
+    <MESSAGE value="added message before testing exception handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="added message before testing exception handling" />
   </component>
 </project>
