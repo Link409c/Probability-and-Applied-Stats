@@ -1,5 +1,6 @@
 package Project_1_Stats_Library;
 
+import Project_1_Stats_Library.Custom_Exceptions.NegativeProbabilityException;
 import Project_1_Stats_Library.Custom_Exceptions.TotalProbabilityException;
 import Project_1_Stats_Library.Custom_Exceptions.WithinNumberException;
 
@@ -260,6 +261,7 @@ public class StatsLibrary{
     //addition rule
     //P(AuB) = P(A) + P(B) - P(AnB)
 
+
     //multiplication rule
     //P(AnB) = P(A)P(B|A) or P(B)P(A|B)
 
@@ -366,15 +368,30 @@ public class StatsLibrary{
         return findListSum(probabilities) == 1.0;
     }
 
-    //independence or dependency
-    //given two events, P(A) and P(B)
-    //if P(A|B) = P(A)
-    //or P(B|A) = P(B)
-    //or P(AnB) = P(A)P(B)
-    //the events are independent
-    //otherwise they are dependent.
+    //dependence notes
+    /*
+    independence or dependency
+    given two events, P(A) and P(B)
+    if P(A|B) = P(A)
+    or P(B|A) = P(B)
+    or P(AnB) = P(A)P(B)
+    the events are independent
+    otherwise they are dependent.
+    */
+
+    /**
+     * with the probabilities of two events, A and B, in a sample space, determines wether or not those
+     * events are independent (do not influence each other), or dependent (influence each other). Three
+     * conditions of independence can occur: P(A|B) = P(A); P(B|A) = P(B); P(AnB) = P(A)P(B).
+     * @param probA the probability of some event "A"
+     * @param probB the probability of some event "B"
+     * @return true if the events are independent, false otherwise.
+     */
     public boolean isIndependent(double probA, double probB){
-        return false;
+        double aGivenB = conditionalProb(probA, probB);
+        double bGivenA = conditionalProb(probB, probA);
+        double aNB = probIntersection(probA, probB);
+        return aGivenB == probA || bGivenA == probB || aNB == probA * probB;
     }
 
     //theorem of total Probability method
@@ -425,24 +442,36 @@ public class StatsLibrary{
      * @return the conditional probability of A given B, or P(A|B).
      */
     public double conditionalProb(double probAnB, double probB){
-        //probB must be > 0
         return probAnB / probB;
     }
 
-    //bayesTheorem method
-    //P(B|A) = P(A|B)P(B) / P(A) or...
-    //P(A|B) = P(B|A)P(A) / P(B)
-    /* the probability of an event B, given an event A has occurred is...
-    the probability of an event A, given an event B has occurred times the probability of an event B */
-    //all over the probability of an event A
-    //multiply P(AnB) x P(B)
-    //divide by P(A)
+    //bayes notes
+    /*
+    bayesTheorem method
+    P(B|A) = P(A|B)P(B) / P(A) or...
+    P(A|B) = P(B|A)P(A) / P(B)
+    the probability of an event B, given an event A has occurred is...
+    the probability of an event A, given an event B has occurred times the probability of an event B
+    all over the probability of an event A
+    multiply P(AnB) x P(B)
+    divide by P(A)
+    */
 
+    /**
+     * Bayes' Theorem calculates conditional probability of an event using information known
+     * about other probabilities concerning that event, most notably the converse of the
+     * conditional probability to be calculated.
+     * @param probA the probability of some event "A"
+     * @param probB the probability of some event "B"
+     * @return the conditional probability of B given A occurred.
+     */
     public double bayesTheorem(double probA, double probB){
-        //get the intersection of the two probabilities
+        //get intersection of A and B
+        double aAndB = probIntersection(probA, probB);
         //multiply the intersection by the probability of B
+        double aUBTimesB = aAndB * probB;
         //divide by the probability of A
-        return 0;
+        return aUBTimesB / probA;
     }
 
     /**
