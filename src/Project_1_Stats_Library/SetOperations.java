@@ -70,7 +70,20 @@ public class SetOperations<E> {
         return sortAndKeepUniqueElements(intersection);
     }
 
-    //compliment
+    /**
+     * calculates the compliment of a passed space of events in relation to the total space.
+     * @param listA the total space of events to consider.
+     * @param listB some subset of events or elements within the total space.
+     * @return the events which are part of the total space but not part of the sample space.
+     */
+    public ArrayList<Double> findCompliment(ArrayList<Double> listA, ArrayList<Double> listB){
+        //create a new list of listA elements
+        //for each element of listB,
+            //compare it to each element of newListA
+            //if match, remove that element from newListA
+        //once all elements of B have been removed, we have the compliment
+        return null;
+    }
 
     /**
      * sorts the passed list and compares each pair of adjacent elements, removing any
