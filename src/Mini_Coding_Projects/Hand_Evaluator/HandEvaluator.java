@@ -32,19 +32,13 @@ public class HandEvaluator {
 		//bubble sort will work since size is small.
 		ArrayList<Card> theHand = getHand();
 		int handSize = theHand.size();
-		boolean swapped;
 		for(int i = 0; i < handSize - 1; i++){
-			swapped = false;
 			for(int j = i + 1; j < handSize; j++){
 				if(comp.compare(theHand.get(i), theHand.get(j)) > 0){
 					Card temp = theHand.get(i);
 					theHand.set(i, theHand.get(j));
 					theHand.set(j, temp);
-					swapped = true;
 				}
-			}
-			if(!swapped){
-				break;
 			}
 		}
 		setHand(theHand);
@@ -148,7 +142,7 @@ public class HandEvaluator {
 	//calculates the probability of the drawn hand.
 	//use imported stats library methods to calculate.
 
-	//shuffle methods emulate real-life shuffling techniques.
+	//shuffle methods to emulate real-life shuffling techniques.
 	/*
 	//shuffleDeck method
 	//randomize the elements of the deck array
@@ -196,20 +190,32 @@ public class HandEvaluator {
 	 */
 	public void shuffleDeck(){
 		Stack<Card> theDeck = getDeck();
-		Stack<Card> shuffledDeck = new Stack<>();
-		Random r = new Random();
-		int i = 0, index;
-		int deckSize = FULL_DECK_COUNT - i;
-		for(i = 0; i < FULL_DECK_COUNT; i++) {
-			index = r.nextInt(1, deckSize);
-			Card toAdd = theDeck.get(index);
-			while (toAdd == null){
-				index = r.nextInt(1, deckSize);
-				toAdd = theDeck.get(index);
-			}
-			shuffledDeck.add(toAdd);
+		//make an array of the deck
+		Card[] deckArray = new Card[FULL_DECK_COUNT];
+		for(int i = 0; i < FULL_DECK_COUNT; i++){
+			deckArray[i] = theDeck.pop();
 		}
-		setDeck(shuffledDeck);
+		Random r = new Random();
+		int shuffleSlot;
+		//for each index,
+		for(int i = 0; i < FULL_DECK_COUNT; i++) {
+			//get a random number in the index bounds
+			shuffleSlot = r.nextInt(0, FULL_DECK_COUNT);
+			//ensure it is not the current index
+			while(shuffleSlot == i){
+				shuffleSlot = r.nextInt(0, FULL_DECK_COUNT);
+			}
+			//switch the current index with that random number
+			Card temp = deckArray[i];
+			deckArray[i] = deckArray[shuffleSlot];
+			deckArray[shuffleSlot] = temp;
+		}
+		//populate a new stack with the randomized deck
+		for(Card c : deckArray){
+			theDeck.push(c);
+		}
+		//set the randomized deck as the deck global
+		setDeck(theDeck);
 	}
 
 	/**
