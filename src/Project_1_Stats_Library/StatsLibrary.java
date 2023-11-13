@@ -17,7 +17,7 @@ import java.util.Objects;
  * standard deviation, and several forms of calculating probability of given events.
  * --
  * Author: Christian Simpson
- * Version: 11/1/23
+ * Version: 11/13/23
  **/
 public class StatsLibrary{
 
@@ -191,6 +191,20 @@ public class StatsLibrary{
     }
 
     /**
+     * calculates the three central tendency values of a space and provides a
+     * String representation of the output.
+     * @param anArrayList the values of our space in a list
+     * @return the mean, median, and mode of the space.
+     */
+    public String centralTendency(ArrayList<Double> anArrayList){
+        String result = "";
+        //call mean, median, mode methods
+        //output each value and add it to the string
+        //format the output
+        return result;
+    }
+
+    /**
      * calculates the factorial representation of a number returning a BigInteger object.
      * This allows the method to avoid any overflow that would occur if using primitive
      * datatypes.
@@ -231,84 +245,27 @@ public class StatsLibrary{
         return anArrayList;
     }
 
-    /**
-     * from two sets, finds each element which exists in both sets and returns this sorted list of items.
-     * @param listA the first list
-     * @param listB the second list
-     * @return a list of elements which occur in both sets.
-     */
-    public ArrayList<Double> findIntersection(ArrayList<Double> listA, ArrayList<Double> listB){
-        //create new list object to return
-        ArrayList<Double> intersection = new ArrayList<>();
-        //find same elements and add to new list
-        for(Double first : listA){
-            for(Double second : listB){
-                if(first.equals(second)){
-                    intersection.add(first);
-                }
-            }
-        }
-        //sort and remove repeat elements
-        return sortAndKeepUniqueElements(intersection);
+    //intersection also refers to multiplying probabilities
+    //ex P1 and P2 and P3 = P1 x P2 x P3 = P1nP2nP3
+    public double probIntersection(double probA, double probB){
+        return probA * probB;
     }
 
     //union also refers to adding probabilites.
-    //ex P1 or P2 or P3 = P1 + P2 + P3
-
-    /**
-     * from two sets, creates a new set of elements consisting of the elements of both sets.
-     * @param listA the first set
-     * @param listB the second set
-     * @return the elements of both sets
-     */
-    public ArrayList<Double> findUnion(ArrayList<Double> listA, ArrayList<Double> listB){
-        //create new list object to return
-        ArrayList<Double> union = new ArrayList<>();
-        //add each element of A to union
-        for(Double first : listA){
-            union.add(first);
-        }
-        boolean match;
-        int index;
-        //for each element in B,
-        for(Double second : listB){
-            match = false;
-            index = 0;
-            //compare to each element in union
-            while(index < union.size() && !match) {
-                if(!second.equals(union.get(index))){
-                    index++;
-                    //if end of listB is reached,
-                    if(index == union.size()){
-                        //no match found
-                        //add this unique element to union
-                        union.add(second);
-                    }
-                }
-                else{
-                    match = true;
-                }
-            }
-        }
-        //finally sort and return union
-        Collections.sort(union);
-        return union;
+    //ex P1 or P2 or P3 = P1 + P2 + P3 = P1uP2uP3
+    public double probUnion(double probA, double probB){
+        return probA + probB;
     }
 
-    /**
-     * calculates the three central tendency values of a space and provides a
-     * String representation of the output.
-     * @param anArrayList the values of our space in a list
-     * @return the mean, median, and mode of the space.
-     */
-    public String centralTendency(ArrayList<Double> anArrayList){
-        String result = "";
-        //call mean, median, mode methods
-        //output each value and add it to the string
-        //format the output
-        return result;
-    }
+    //addition rule
+    //P(AuB) = P(A) + P(B) - P(AnB)
 
+    //multiplication rule
+    //P(AnB) = P(A)P(B|A) or P(B)P(A|B)
+
+    //independent Vs Dependent intersection
+
+    //exclusive vs not exclusive union ( i programmed exclusive already )
 
     /**
      * the compliment of the probability of an event is the total probability of the
@@ -319,14 +276,6 @@ public class StatsLibrary{
     public double complimentOfEvent(double probEvent){
         return 1 - probEvent;
     }
-
-    //listSubsets method
-        //method to return a string of individual subsets from a given set
-        //should always include the empty set
-        //dont need this for formal project
-
-    //isProperSubset method
-        //dont need this for formal project
 
     /**
      * calculates the ways a sample space can be split into different groupings of elements
@@ -417,6 +366,17 @@ public class StatsLibrary{
         return findListSum(probabilities) == 1.0;
     }
 
+    //independence or dependency
+    //given two events, P(A) and P(B)
+    //if P(A|B) = P(A)
+    //or P(B|A) = P(B)
+    //or P(AnB) = P(A)P(B)
+    //the events are independent
+    //otherwise they are dependent.
+    public boolean isIndependent(double probA, double probB){
+        return false;
+    }
+
     //theorem of total Probability method
     //                    n
     //representing P(A) = E  P(A|Bi)P(Bi)
@@ -457,12 +417,6 @@ public class StatsLibrary{
         }
     }
 
-    //addition rule
-    //P(AuB) = P(A) + P(B) - P(AnB)
-
-    //multiplication rule
-    //P(AnB) = P(A)P(B|A) or P(B)P(A|B)
-
     /**
      * calculates the probability of an event occurring, given another event has
      * already occurred. represented by the formula P(A|B) = P(AnB) / P(B) .
@@ -490,17 +444,6 @@ public class StatsLibrary{
         //divide by the probability of A
         return 0;
     }
-
-    //independent Vs Dependent intersection
-    //exclusive vs not exclusive union ( i programmed exclusive already )
-
-    //independence or dependency
-    //given two events, P(A) and P(B)
-    //if P(A|B) = P(A)
-    //or P(B|A) = P(B)
-    //or P(AnB) = P(A)P(B)
-    //the events are independent
-    //otherwise they are dependent.
 
     /**
      * calculates the binomial distribution for a set of values. Useful when data deals
