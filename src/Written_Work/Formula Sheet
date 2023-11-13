@@ -193,5 +193,5 @@ Tchebysheff's Theorem: calculates the probability that a number of observations 
 
     The "Within Number": the difference between the two bounds of the interval and the mean.
 
-        w = lower bound - μ
+        w = μ - lower bound
         w = upper bound - μ
