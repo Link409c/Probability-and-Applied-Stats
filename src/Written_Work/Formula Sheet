@@ -1,0 +1,197 @@
+Probability and Applied Statistics
+
+Formula Sheet
+
+Mean: The average of a set of values. μ
+
+    Σ x / n
+    The sum of all elements over the total
+    number of elements.
+
+Median: The middle value in a set.
+
+Mode: The most represented value in a set.
+
+Variance: How far a value is from the mean of a set of data. σ^2
+
+    Σ (xi-μ)^2 / n
+    --
+    The sum of differences of all data points and the mean squared,
+    all over the total number of elements.
+
+Standard Deviation: The distribution of data around the mean. σ
+
+    √σ^2
+    --
+    The square root of the variance.
+
+Union: In probability, OR can be interpreted as adding probabilities.
+
+    P(AuB) = P(A) + P(B)
+
+Intersection: In probability, AND can be interpreted as multiplying probabilities.
+
+    P(AnB) = P(A)P(B)
+
+Multiplication Rule: The intersection of two probabilities is equal to the probability
+    of the first, multiplied by the probability of the second given the first has occurred.
+
+    P(AnB) = P(A)P(B|A)
+
+Addition Rule: The union of two probabilities is equal to the sum of those two probabilities,
+    minus the intersection of the two probabilities.
+
+    P(AuB) = P(A) + P(B) - P(AnB)
+
+Compliment: In probability, the compliment is the remaining probability of events in a space
+    when subtracting some probability of certain events from the total, which should be 1.
+
+    P(B) = 1 - P(A)
+
+Permutations: The number of ways you may order a set of elements, where ordering in an individual
+    set matters and elements cannot repeat.
+
+    Example: ordering the letters of a word.
+
+    n = total number of elements | r = number of choices
+
+    n! / (n-r)!
+
+Combinations: The number of ways you may order a set of elements, where ordering in an individual set
+    does not matter and elements can repeat.
+
+    Example: Drawing a hand from a deck of cards.
+
+    n = total number of elements | r = number of choices
+
+    n! / r!(n-r)!
+
+Probability Axioms: The rules on which simple probability is founded. If any of these axioms are broken,
+    calculating the probability of associated events becomes impossible.
+
+    Total Probability:     The probability of an event occurring cannot be less than zero. P(A) >= 0
+    Negative Probability:  The total probability of events occurring in a set must be 100%. P(S) = 1
+    Exclusivity:           Probability of pairwise exclusive events are the sum of the possibilities.
+                           eg. rolling an odd number on a 1d6 = 1/6 + 1/6 + 1/6 = 3/6 or 1/2
+
+Theorem of Total Probability: The probability of all occurrences of an event in a space is equal to
+    the sum of each occurrence of the event given another occurred, multiplied by the probability of
+    said event.
+
+    Example: With three bags of balls, calculating the chance of pulling a red ball from any bag,
+             if choosing a bag has some probability.
+
+    Σ P(A|Bi)P(Bi)
+
+Conditional Probability: Given another event has occurred, the probability of some event is equal to
+    the intersection of the two events, divided by the probability of the "given" event.
+
+    Example: With three bags of balls, calculating the chance of pulling a red ball from a certain bag.
+
+    P(A|B) = P(AnB) / P(B)
+
+Bayes' Theorem: Given an event has occurred, the probability of another event within the sample space
+    is equal to the probability of the first event occurring given the second has occurred, times the
+    probability of the first event, all over the probability of the second event.
+
+    Example: Calculating the Conditional Probability of an event when you have knowledge on other
+        event probabilities in the space, specifically the conditional probability when the events
+        are swapped.
+
+    P(B|A) = P(A|B)P(B) / P(A)
+
+    P(A|B) = P(B|A)P(A) / P(B)
+
+Binomial Distribution: calculates the probability of finding some number of successes when conducting
+    a specific amount of independent, binary trials of an event.
+
+    Example: Pulling a specific plush toy from a blind box.
+
+    n: number of trials conducted p: chance of one success
+    q: chance of failure y: the intended number of successes
+
+    [nCy][p^y][q^y-1]
+
+    Binomial Mean: the average rate of success within the space when calculating Binomial Distribution.
+
+    p: the chance of one success
+
+    μ = 1 / p
+
+    Binomial Variance: the distribution of values about the mean when calculating Binomial Distribution.
+
+    σ^2 = (1 - p) / p^2
+
+Geometric Distribution: calculates the probability of finding a single success as the last trial when
+    conducting a specific amount of independent, binary trials within a sample space.
+
+    Example: Flipping a coin and landing a tails on the fifth try.
+
+    y: the number of trials conducted p: the probability of success
+
+    [q^(y-1)][p]
+
+Hyper Geometric Distribution: calculates the probability of finding a certain number of successes when
+    conducting a specific amount of dependent, binary trials within a sample space.
+
+    Example: choosing three winners in a raffle where the interest pertains to the age of the participants.
+             calculating the probability of choosing certain cards from a selection of 15 where a number of
+             cards are removed one by one.
+
+    t: the total number of elements in the space c: the total number of choices that can be made
+    y: the number of elements selected from the sample n: the number of elements in the sample
+
+    [nCy][(t-n)C(c-y)] / [tCn]
+
+Negative Binomial Distribution: calculates the probability of finding the number of failures that will
+    occur before we see a specific number of successes in some amount of independent, binary trials.
+
+    Example: In ten trials, calculating how many times we flip a tails before we flip three heads.
+             Calculating the number of days a machine will work until it breaks.
+
+    Negative Binomial Mean: the average rate of success when calculating negative binomial distribution.
+
+        r: the number of trials conducted | p: the probability of success
+
+        μ = r / p
+
+    Negative Binomial Variance: the distribution of the values about the mean when calculating negative
+        binomial distribution.
+
+        σ^2 = r * (1 - p) / p^2
+
+Poisson Distribution: calculates the probability of success of events in a sample space when dealing with events
+    occurring over time.
+
+    Example: calculating the probability of the number of car crashes per hour at an intersection.
+
+    Note: The probability of success is inversely proportional to the size of the sample space.
+
+    λ: "Lambda"; Mean and also Variance | n: the number of trials | e: Euler's Number
+
+    [λ^n][e^(-λ)] / n!
+
+    Poisson Lambda: the lambda represents both the mean and the variance of the data in respect
+        to calculations of Poisson Distribution. It is read as events per unit.
+
+        k: the number of events | n: the units of measurement, per unit
+
+        λ = k / n
+
+Tchebysheff's Theorem: calculates the probability that a number of observations lie in the given interval
+    about the mean, also interpreted as the number of standard deviations about the mean.
+
+    Example: Knowing the average number of customers received on any given day, calculating
+        the probability that the customer count will fall between a number of standard
+        deviations about that average on another day.
+
+    w: the within number | k: the number of standard deviations
+
+    k = w / σ
+
+    1 - [1 / (1 - k^2)]
+
+    The "Within Number": the difference between the two bounds of the interval and the mean.
+
+        w = lower bound - μ
+        w = upper bound - μ
