@@ -34,8 +34,5 @@ public class HandEvaluatorTester {
         for(Card c : pokerHands.getHand()) {
             System.out.println(c.getValue() + " of " + c.getSuit().toString());
         }
-
     }
-
-
 }
