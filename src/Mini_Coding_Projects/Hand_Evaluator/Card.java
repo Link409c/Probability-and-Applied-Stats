@@ -5,6 +5,22 @@ package Mini_Coding_Projects.Hand_Evaluator;
  * A Data Container emulating a playing card. Has an enum Suit and a value.
  */
 public class Card {
+	/**
+	 * provides a string output for face cards.
+	 * @return the name of a face card as determined by its value.
+	 */
+	public String valueToFace(){
+		if(getValue() == 1){
+			return "Ace";
+		}else if(getValue() == 11){
+			return "Jack";
+		}else if(getValue() == 12){
+			return "Queen";
+		}else if(getValue() == 13){
+			return "King";
+		}
+		return String.valueOf(getValue());
+	}
 
 	public Card(Suit theSuit, int theValue) {
 		setSuit(theSuit);
