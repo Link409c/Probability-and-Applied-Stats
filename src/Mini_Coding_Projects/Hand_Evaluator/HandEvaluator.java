@@ -60,6 +60,10 @@ public class HandEvaluator {
 		if (isRoyalFlush()) {
 			result = "Royal Flush";
 		}
+
+		//string comparison in the straight, two pair, pair methods is checking single chars
+		//changing this should correct comparison issues
+
 		//straight flush
 		else if (isStraightFlush()) {
 			result = "Straight Flush";
