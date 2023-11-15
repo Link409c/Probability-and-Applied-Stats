@@ -8,7 +8,7 @@ import java.util.function.ToLongFunction;
 
 public class CardComparator implements Comparator<Card> {
     /**
-     * compares the face values of two card objects.
+     * compares two card objects.
      */
     @Override
     public int compare(Card o1, Card o2) {
@@ -23,6 +23,24 @@ public class CardComparator implements Comparator<Card> {
      */
     public boolean compareSuits(Card o1, Card o2){
         return o1.getSuit().equals(o2.getSuit());
+    }
+
+    /**
+     * compares the values of two card objects.
+     * @param o1 the first card
+     * @param o2 the second card
+     * @return true if equal, false otherwise
+     */
+    public boolean compareValues(Card o1, Card o2){ return o1.getValue() == (o2.getValue());}
+
+    /**
+     * checks if the value of a card is one less than another.
+     * @param o1 the lesser card
+     * @param o2 the greater card
+     * @return true if o2.value - o1.value = 1, false otherwise
+     */
+    public boolean oneLess(Card o1, Card o2){
+        return o2.getValue() - o1.getValue() == 1;
     }
 
     @Override
