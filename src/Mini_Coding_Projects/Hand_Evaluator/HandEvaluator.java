@@ -1,10 +1,18 @@
 package Mini_Coding_Projects.Hand_Evaluator;
+import Miscellaneous.CsvExportable;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Stack;
 
-public class HandEvaluator {
+/**
+ * This program calculates the probability of drawing hands of playing cards.
+ * The user may determine the number of hands to draw. The amount of each hand
+ * will be recorded and exported to a CSV file to display using excel or another
+ * plotting software.
+ */
+public class HandEvaluator implements CsvExportable {
 
 	/**
 	 * adds one card object from the stack to the hand.
@@ -29,13 +37,12 @@ public class HandEvaluator {
 	 * sort the cards in the hand using bubble sort.
 	 */
 	public void sortHand() {
-		CardComparator comp = new CardComparator();
 		//bubble sort will work since size is small.
 		ArrayList<Card> theHand = getHand();
 		int handSize = theHand.size();
 		for (int i = 0; i < handSize - 1; i++) {
 			for (int j = i + 1; j < handSize; j++) {
-				if (comp.compare(theHand.get(i), theHand.get(j)) > 0) {
+				if(theHand.get(i).getValue() > theHand.get(j).getValue()) {
 					Card temp = theHand.get(i);
 					theHand.set(i, theHand.get(j));
 					theHand.set(j, temp);
@@ -53,119 +60,108 @@ public class HandEvaluator {
 	 * @return a String with the hand name and its probability.
 	 */
 	public String evaluateHand() {
-		String result = "";
+		String result;
 		sortHand();
+		CardComparator cardComparator = new CardComparator();
 		//poker hands, in order from greatest to least:
-		//royal flush
-		if (isRoyalFlush()) {
+		if (isRoyalFlush(cardComparator)) {
 			result = "Royal Flush";
 		}
-
-		//string comparison in the straight, two pair, pair methods is checking single chars
-		//changing this should correct comparison issues
-
-		//straight flush
-		else if (isStraightFlush()) {
+		else if (isStraightFlush(cardComparator)) {
 			result = "Straight Flush";
 		}
-		//four of a kind
-		else if (isFourOfAKind()) {
+		else if (isFourOfAKind(cardComparator)) {
 			result = "Four of a Kind";
 		}
-		//full house
-		else if (isFullHouse()) {
+		else if (isFullHouse(cardComparator)) {
 			result = "Full House";
 		}
-		//flush
-		else if (isFlush()) {
+		else if (isFlush(cardComparator)) {
 			result = "Flush";
 		}
-		//straight
-		else if (isStraight()) {
+		else if (isStraight(cardComparator)) {
 			result = "Straight";
 		}
-		//three of a kind
-		else if (isThreeOfAKind()) {
+		else if (isThreeOfAKind(cardComparator)) {
 			result = "Three of a Kind";
 		}
-		//two Pair
-		else if (isTwoPair()){
+		else if (isTwoPair(cardComparator)){
 			result = "Two Pair";
 		}
-		//pair
-		else if (isPair()){
+		else if (isPair(cardComparator)){
 			result = "One Pair";
 		}
-		//highCard
 		else {
 			result = highCard();
 		}
+		//include probability calculation here
+		//append to result
 		return result;
 	}
 
-	//10, J, Q, K, A must all be the same suit.
-	public boolean isRoyalFlush () {
+	/**
+	 * a Royal Flush is the hand 10,J,Q,K,A where every
+	 * card has the same suit.
+	 * @param cardComparator the comparator object
+	 * @return true if hand is a Royal Flush
+	 */
+	public boolean isRoyalFlush (CardComparator cardComparator) {
 		//get hand as string
 		String currHand = handToString();
 		//compare string to given
 		String royalFlush = "110111213";
 		//if match, compare suits
 		if (currHand.equals(royalFlush)) {
-			return isFlush();
+			return isFlush(cardComparator);
 		} else {
 			return false;
 		}
 	}
 
-	//a straight of all the same suit.
-	//if a = b - 1,
-	//if b = c - 1,
-	//if c = d - 1,
-	//if d = e - 1,
-	//and suit=suit=suit=suit=suit,
-	//hand is a straight flush
-	public boolean isStraightFlush () {
-		return isStraight() && isFlush();
+	/**
+	 * a Straight is any 5 cards of the same suit in numeric order
+	 * that is not a Royal Flush.
+	 * @param cardComparator the comparator object
+	 * @return true if hand is Straight Flush.
+	 */
+	public boolean isStraightFlush (CardComparator cardComparator) {
+		return isStraight(cardComparator) && isFlush(cardComparator);
 	}
 
-	//four cards of the same rank.
-	//after sorting first or last card should be different.
-	//if a=b=c=d or b=c=d=e,
-	//hand is four of a kind
-	public boolean isFourOfAKind () {
-		//get hand as string
-		String currHand = handToString();
-		//if char 0 = char 3 or char 1 = char 4, return true
-		return currHand.charAt(0) == currHand.charAt(3) || currHand.charAt(1) == currHand.charAt(4);
+	/**
+	 * Four of a Kind is any four cards of the same value.
+	 * @param cardComparator the comparator object
+	 * @return true if hand has Four of a Kind.
+	 */
+	public boolean isFourOfAKind (CardComparator cardComparator) {
+		return cardComparator.compareValues(getHand().get(0), getHand().get(3))
+				|| cardComparator.compareValues(getHand().get(1), getHand().get(4));
 	}
 
-	//three of a kind and a pair.
-	//after sorting two combinations are possible,
-	//AABBB or AAABB
-	//if either is true,
-	//hand is a full house
-	public boolean isFullHouse () {
-		//get first and last card values
-		int first = getHand().get(0).getValue();
-		int last = getHand().get(4).getValue();
-		//return comparison of hand to either AABBB or AAABB
-		String currHand = handToString();
-		return currHand.equals(String.valueOf(first) + first + last + last + last)
-				|| currHand.equals(String.valueOf(first) + first + first + last + last);
+	/**
+	 * a Full House is a hand containing a pair and a three of a kind.
+	 * @param cardComparator the comparator object
+	 * @return true if hand is a Full House.
+	 */
+	public boolean isFullHouse (CardComparator cardComparator) {
+		boolean[] pairs = getPairs(cardComparator);
+		return (pairs[0] && cardComparator.compareValues(getHand().get(2), getHand().get(4)))
+				|| (cardComparator.compareValues(getHand().get(0), getHand().get(2)) && pairs[3]);
 	}
 
-	//any five cards of the same suit, but not in sequence.
-	//if a.suit = b,c,d,e suit,
-	//hand is a flush
-	public boolean isFlush () {
-		CardComparator crp = new CardComparator();
+	/**
+	 * a Flush is any 5 cards of the same suit not in numeric order.
+	 * @param cardComparator the comparator object
+	 * @return true if hand is a Flush.
+	 */
+	public boolean isFlush (CardComparator cardComparator) {
 		int handSize = getHand().size();
 		Card ace = getHand().get(0);
 		Card next;
 		boolean sameSuit = false;
 		for (int i = 1; i < handSize; i++) {
 			next = getHand().get(i);
-			sameSuit = crp.compareSuits(ace, next);
+			sameSuit = cardComparator.compareSuits(ace, next);
 			if (!sameSuit) {
 				break;
 			}
@@ -173,76 +169,79 @@ public class HandEvaluator {
 		return sameSuit;
 	}
 
-	//any 5 cards in sequential order that are not a flush.
-	//if a = b - 1,
-	//if b = c - 1,
-	//if c = d - 1,
-	//if d = e - 1,
-	//hand is a straight
-	public boolean isStraight () {
-		boolean oneLess = true;
-		for (int i = 0; i < getHand().size(); i++) {
-			int first = getHand().get(i).getValue();
-			int second = getHand().get(i + 1).getValue();
-			oneLess = (first == second);
-			if (!oneLess) {
-				break;
+	/**
+	 * a Straight is a hand with five cards in numeric order of
+	 * different suits.
+	 * @param cardComparator the comparator object
+	 * @return true if hand is a Straight.
+	 */
+	public boolean isStraight (CardComparator cardComparator) {
+		int bound = getHand().size() - 1;
+		for (int i = 0; i < bound; i++) {
+			Card first = getHand().get(i);
+			Card second = getHand().get(i + 1);
+			if(!cardComparator.oneLess(first, second)){
+				return false;
 			}
 		}
-		return oneLess;
+		return true;
 	}
 
-	//three cards of the same rank.
-	//three possible combinations,
-	//AAABC or ABBBC or ABCCC
-	//if any are true,
-	//hand is three of a kind
-	public boolean isThreeOfAKind () {
-		//get hand as string
-		String currHand = handToString();
-		//compare first char to last char of possible groupings
-		return currHand.charAt(0) == currHand.charAt(2) || currHand.charAt(1) == currHand.charAt(3)
-				|| currHand.charAt(2) == currHand.charAt(4);
+	/**
+	 * Three of a Kind is a hand with three cards of the same value.
+	 * @param cardComparator the comparator object
+	 * @return true if hand has Three of a Kind.
+	 */
+	public boolean isThreeOfAKind (CardComparator cardComparator) {
+		//compare possible groupings
+		//(0,2), (1,3), (2,4)
+		return cardComparator.compareValues(getHand().get(0), getHand().get(2))
+				|| cardComparator.compareValues(getHand().get(1), getHand().get(3))
+				|| cardComparator.compareValues(getHand().get(2), getHand().get(4));
 	}
 
-	//two pairs.
-	//three combos,
-	//AABBC or ABBCC or AABCC
-	//if any are true,
-	//hand is two pair
-	public boolean isTwoPair () {
-		//get hand as string
-		String currHand = handToString();
+	/**
+	 * Two Pairs are any two pairs of cards with the same value.
+	 * @param cardComparator the comparator object
+	 * @return true if hand has two pairs.
+	 */
+	public boolean isTwoPair (CardComparator cardComparator) {
 		//compare 0,1 & 2,3 or 1,2 & 3,4 or 0,1 & 3,4
-		boolean pairsA = (currHand.charAt(0) == currHand.charAt(1)
-				&& currHand.charAt(2) == currHand.charAt(3));
-		boolean pairsB = (currHand.charAt(1) == currHand.charAt(2)
-				&& currHand.charAt(3) == currHand.charAt(4));
-		boolean pairsC = (currHand.charAt(0) == currHand.charAt(1)
-				&& currHand.charAt(3) == currHand.charAt(4));
-		return pairsA || pairsB || pairsC;
+		boolean[] pairs = getPairs(cardComparator);
+		return (pairs[0] && pairs[2]) || (pairs[1] && pairs[3]) || (pairs[0] && pairs[3]);
 	}
 
-	//two cards of the same rank.
-	//four combos,
-	//AABCD or ABBCD or ABCCD or ABCDD
-	//if any are true,
-	//hand is a pair
-	public boolean isPair () {
-		//get hand as string
-		String currHand = handToString();
+	/**
+	 * a pair is any two cards of the same value.
+	 * @param cardComparator the comparator object
+	 * @return true if hand has one pair.
+	 */
+	public boolean isPair (CardComparator cardComparator) {
 		//compare 0,1 or 1,2 or 2,3 or 3,4
-		boolean pairA = currHand.charAt(0) == currHand.charAt(1);
-		boolean pairB = currHand.charAt(1) == currHand.charAt(2);
-		boolean pairC = currHand.charAt(2) == currHand.charAt(3);
-		boolean pairD = currHand.charAt(3) == currHand.charAt(4);
-		return pairA || pairB || pairC || pairD;
+		boolean[] pairs = getPairs(cardComparator);
+		return pairs[0] || pairs[1] || pairs[2] || pairs[3];
 	}
 
-	//considers highest rank card when no special hand is drawn.
-	//eg. 1, 3, 4, 7, J - Jack is high card.
-	//if all of the above are false,
-	//hand has high card.
+	/**
+	 * using the custom card comparator, determines what slots of a hand contain
+	 * matching pairs of cards. possible combinations are one or two pairs in a hand.
+	 * @param cardComparator the comparator object.
+	 * @return an array of truth values.
+	 */
+	public boolean[] getPairs(CardComparator cardComparator){
+		boolean[] pairs = new boolean[4];
+		int bound = pairs.length;
+		for(int i = 0; i < bound; i++) {
+			pairs[i] = cardComparator.compareValues(getHand().get(i), getHand().get(i + 1));
+		}
+		return pairs;
+	}
+
+	/**
+	 * if a hand has none of the higher valued combinations, the highest
+	 * value card is considered.
+	 * @return the highest value card of the hand.
+	 */
 	public String highCard(){
 		Card highCard = getHand().get(4);
 		String result = "";
@@ -287,49 +286,6 @@ public class HandEvaluator {
 		//use combinations to calculate result
 		return 0;
 	}
-
-	//shuffle methods to emulate real-life shuffling techniques.
-	/*
-	//shuffleDeck method
-	//randomize the elements of the deck array
-
-	public void shuffleDeck(){
-		Card[] shuffledDeck = new Card[FULL_DECK_COUNT];
-		Random cardFromDeck = new Random();
-		int[] chosenIndices = new int[FULL_DECK_COUNT];
-		//randomly assign a new index to get a card from the deck
-		int index = cardFromDeck.nextInt();
-		//add this index to a list
-		//while deck[index] is not null and index is not in the list of used indices,
-		//add this element to the shuffled deck
-		//repeats until all indexes are chosen
-
-	}
-
-	//pileShuffle method
-	public void pileShuffle() {
-		//divide the deck into four equal arrays
-		Card[][] piles = new Card[4][];
-		for (int i = 0; i < 4; i++) {
-			int pileNumber = i;
-			for(int j = 0; j < 13; j++){
-				//put the card into its pile
-				//move to next pile
-				pileNumber += 4;
-			}
-		}
-
-		//combine piles 1 and 3 and riffle shuffle
-		//combine piles 2 and 4 and riffle shuffle
-		//combine the combined piles and riffle shuffle
-	}
-
-	//riffleShuffle method
-	//given two lists of elements
-	//place elements into a new list alternating between which element to place
-	//split the new list into two lists of equal elements and repeat
-
-	 */
 
 	/**
 	 * randomizes (shuffles) the contents of the deck.
@@ -391,6 +347,20 @@ public class HandEvaluator {
 		}
 		return currHand;
 	}
+
+	/**
+	 * exports the results of a run of the program to a CSV file to be used
+	 * in Microsoft Excel or similar software.
+	 * @param fileName the desired filename without extension.
+	 * @param header the header for column names.
+	 * @return a message informing the user if the export is successful.
+	 * @throws IOException informs the user if the passed filename is null.
+	 */
+	@Override
+	public String exportObjects(String fileName, String header) throws IOException {
+		return null;
+	}
+
 	//constructor
 	public HandEvaluator( int handSize){
 		setDeck(makeDeck());
