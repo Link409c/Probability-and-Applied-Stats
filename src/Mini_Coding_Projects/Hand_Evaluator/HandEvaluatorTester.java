@@ -41,32 +41,32 @@ public class HandEvaluatorTester {
         String testResult = "Royal Flush";
         //royal flush
         ArrayList<Card> testHand = new ArrayList<>();
-        testHand.add(new Card(Suit.Hearts, 1));
         testHand.add(new Card(Suit.Hearts, 10));
-        testHand.add(new Card(Suit.Hearts, 11));
-        testHand.add(new Card(Suit.Hearts, 12));
         testHand.add(new Card(Suit.Hearts, 13));
+        testHand.add(new Card(Suit.Hearts, 1));
+        testHand.add(new Card(Suit.Hearts, 12));
+        testHand.add(new Card(Suit.Hearts, 11));
         pokerHands.setHand(testHand);
         System.out.println("\nTesting Hand Evaluation:\n");
         System.out.println("Royal Flush: " + pokerHands.evaluateHand().equals(testResult));
         //straight flush
         testHand.clear();
         testResult = "Straight Flush";
-        testHand.add(new Card(Suit.Spades, 1));
-        testHand.add(new Card(Suit.Spades, 2));
-        testHand.add(new Card(Suit.Spades, 3));
         testHand.add(new Card(Suit.Spades, 4));
+        testHand.add(new Card(Suit.Spades, 3));
+        testHand.add(new Card(Suit.Spades, 2));
+        testHand.add(new Card(Suit.Spades, 1));
         testHand.add(new Card(Suit.Spades, 5));
         pokerHands.setHand(testHand);
         System.out.println("Straight Flush: " + pokerHands.evaluateHand().equals(testResult));
         //4 of a kind
         testHand.clear();
         testResult = "Four of a Kind";
-        testHand.add(new Card(Suit.Spades, 1));
-        testHand.add(new Card(Suit.Hearts, 1));
+        testHand.add(new Card(Suit.Spades, 10));
+        testHand.add(new Card(Suit.Hearts, 10));
         testHand.add(new Card(Suit.Spades, 3));
-        testHand.add(new Card(Suit.Diamonds, 1));
-        testHand.add(new Card(Suit.Clubs, 1));
+        testHand.add(new Card(Suit.Diamonds, 10));
+        testHand.add(new Card(Suit.Clubs, 10));
         pokerHands.setHand(testHand);
         System.out.println("Four of a Kind: " + pokerHands.evaluateHand().equals(testResult));
         //full house
@@ -75,7 +75,7 @@ public class HandEvaluatorTester {
         testHand.add(new Card(Suit.Spades, 1));
         testHand.add(new Card(Suit.Hearts, 1));
         testHand.add(new Card(Suit.Spades, 2));
-        testHand.add(new Card(Suit.Diamonds, 2));
+        testHand.add(new Card(Suit.Diamonds, 1));
         testHand.add(new Card(Suit.Clubs, 2));
         pokerHands.setHand(testHand);
         System.out.println("Full House: " + pokerHands.evaluateHand().equals(testResult));
@@ -112,10 +112,10 @@ public class HandEvaluatorTester {
         //2 pair
         testHand.clear();
         testResult = "Two Pair";
-        testHand.add(new Card(Suit.Spades, 1));
-        testHand.add(new Card(Suit.Hearts, 2));
-        testHand.add(new Card(Suit.Clubs, 1));
-        testHand.add(new Card(Suit.Diamonds, 2));
+        testHand.add(new Card(Suit.Spades, 10));
+        testHand.add(new Card(Suit.Hearts, 12));
+        testHand.add(new Card(Suit.Clubs, 10));
+        testHand.add(new Card(Suit.Diamonds, 12));
         testHand.add(new Card(Suit.Clubs, 11));
         pokerHands.setHand(testHand);
         System.out.println("Two Pair: " + pokerHands.evaluateHand().equals(testResult));
@@ -123,10 +123,10 @@ public class HandEvaluatorTester {
         testHand.clear();
         testResult = "One Pair";
         testHand.add(new Card(Suit.Spades, 13));
-        testHand.add(new Card(Suit.Hearts, 1));
+        testHand.add(new Card(Suit.Hearts, 10));
         testHand.add(new Card(Suit.Spades, 6));
         testHand.add(new Card(Suit.Diamonds, 9));
-        testHand.add(new Card(Suit.Clubs, 1));
+        testHand.add(new Card(Suit.Clubs, 10));
         pokerHands.setHand(testHand);
         System.out.println("One Pair: " + pokerHands.evaluateHand().equals(testResult));
         //high card
