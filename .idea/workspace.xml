@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="debugged and tested all hand evaluation methods successfully.">
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="created generic data container to use with plotter, salter, and smoother.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Miscellaneous/InsertionSorter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Miscellaneous/MyElement.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +45,7 @@
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Written_Work" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.SetOpsTester">
     <configuration name="HandEvaluatorTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Mini_Coding_Projects.Hand_Evaluator.HandEvaluatorTester" />
       <module name="Probability and Applied Statistics" />
@@ -56,8 +59,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SetOpsTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project_1_Stats_Library.SetOpsTester" />
+      <module name="Probability and Applied Statistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project_1_Stats_Library.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SetOpsTester" />
         <item itemvalue="Application.HandEvaluatorTester" />
       </list>
     </recent_temporary>
@@ -197,7 +214,63 @@
       <option name="project" value="LOCAL" />
       <updated>1700012944566</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="workspace commit">
+      <created>1700012966114</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1700012966114</updated>
+    </task>
+    <task id="LOCAL-00020" summary="created tester for plot / salt / smooth programs.">
+      <created>1700098139243</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1700098139243</updated>
+    </task>
+    <task id="LOCAL-00021" summary="programmed calculate function method and plot function method. added getters / setters and tuple object to hold pairs of points for output.">
+      <created>1700098226257</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1700098226257</updated>
+    </task>
+    <task id="LOCAL-00022" summary="added tuple object to hold pairs of points for output.">
+      <created>1700098248142</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1700098248142</updated>
+    </task>
+    <task id="LOCAL-00023" summary="made class generic. made union method non-exclusive. streamlined compliment method.">
+      <created>1700098317787</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1700098317787</updated>
+    </task>
+    <task id="LOCAL-00024" summary="successfully tested all methods.">
+      <created>1700098333513</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1700098333513</updated>
+    </task>
+    <task id="LOCAL-00025" summary="programmed addition rule and multiplication rule methods.">
+      <created>1700098417958</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1700098417958</updated>
+    </task>
+    <task id="LOCAL-00026" summary="created generic data container to use with plotter, salter, and smoother.">
+      <created>1700098466204</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1700098466204</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,7 +285,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="restructured project and recreated idea directory after hastily merging to repository without including idea files." />
     <MESSAGE value="sequestered simple set operations to their own class." />
     <MESSAGE value="created tester for set operations" />
     <MESSAGE value="removed simple set operations. regrouped certain methods to clarify usage. coded intersection and union for probability. added dependence method." />
@@ -230,6 +302,14 @@
     <MESSAGE value="updated comparator, adding methods to compare values and difference in card values equal to 1." />
     <MESSAGE value="removed comparator from sortHand method. changed implementation of evaluateHand method and its helper methods to utilize the card comparator. now instead of string matching, the methods of the comparator determine hand types. enclosed pair matching steps in getPairs method to reduce method bloat. removed commented-out shuffle methods. added pseudocode for exportObjects implementation. completed javadoc for finished methods." />
     <MESSAGE value="debugged and tested all hand evaluation methods successfully." />
-    <option name="LAST_COMMIT_MESSAGE" value="debugged and tested all hand evaluation methods successfully." />
+    <MESSAGE value="workspace commit" />
+    <MESSAGE value="created tester for plot / salt / smooth programs." />
+    <MESSAGE value="programmed calculate function method and plot function method. added getters / setters and tuple object to hold pairs of points for output." />
+    <MESSAGE value="added tuple object to hold pairs of points for output." />
+    <MESSAGE value="made class generic. made union method non-exclusive. streamlined compliment method." />
+    <MESSAGE value="successfully tested all methods." />
+    <MESSAGE value="programmed addition rule and multiplication rule methods." />
+    <MESSAGE value="created generic data container to use with plotter, salter, and smoother." />
+    <option name="LAST_COMMIT_MESSAGE" value="created generic data container to use with plotter, salter, and smoother." />
   </component>
 </project>
