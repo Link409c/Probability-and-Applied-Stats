@@ -1,13 +1,12 @@
 package Project_1_Stats_Library;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Objects;
 
 /**
  * A program which can perform simple operations on sets of elements.
  */
-public class SetOperations<E> {
+public class SetOperations<T> {
 
     /**
      * from two sets, creates a new set of elements consisting of the elements of both sets.
@@ -15,17 +14,17 @@ public class SetOperations<E> {
      * @param listB the second set
      * @return the elements of both sets
      */
-    public ArrayList<Double> findUnion(ArrayList<Double> listA, ArrayList<Double> listB){
+    public ArrayList<T> findUnion(ArrayList<T> listA, ArrayList<T> listB){
         //create new list object to return
-        ArrayList<Double> union = new ArrayList<>();
+        ArrayList<T> union = new ArrayList<>();
         //add each element of A to union
-        for(Double first : listA){
+        for(T first : listA){
             union.add(first);
         }
         boolean match;
         int index;
         //for each element in B,
-        for(Double second : listB){
+        for(T second : listB){
             match = false;
             index = 0;
             //compare to each element in union
@@ -44,8 +43,6 @@ public class SetOperations<E> {
                 }
             }
         }
-        //finally sort and return union
-        Collections.sort(union);
         return union;
     }
 
@@ -55,19 +52,18 @@ public class SetOperations<E> {
      * @param listB the second list
      * @return a list of elements which occur in both sets.
      */
-    public ArrayList<Double> findIntersection(ArrayList<Double> listA, ArrayList<Double> listB){
+    public ArrayList<T> findIntersection(ArrayList<T> listA, ArrayList<T> listB){
         //create new list object to return
-        ArrayList<Double> intersection = new ArrayList<>();
+        ArrayList<T> intersection = new ArrayList<>();
         //find same elements and add to new list
-        for(Double first : listA){
-            for(Double second : listB){
+        for(T first : listA){
+            for(T second : listB){
                 if(first.equals(second)){
                     intersection.add(first);
                 }
             }
         }
-        //sort and remove repeat elements
-        return sortAndKeepUniqueElements(intersection);
+        return intersection;
     }
 
     /**
@@ -76,13 +72,13 @@ public class SetOperations<E> {
      * @param listB some subset of events or elements within the total space.
      * @return the events which are part of the total space but not part of the sample space.
      */
-    public ArrayList<Double> findCompliment(ArrayList<Double> listA, ArrayList<Double> listB){
-        //create a new list of listA elements
+    public ArrayList<T> findCompliment(ArrayList<T> listA, ArrayList<T> listB){
         //for each element of listB,
-            //compare it to each element of newListA
-            //if match, remove that element from newListA
+        for(T t : listB) {
+            listA.remove(t);
+        }
         //once all elements of B have been removed, we have the compliment
-        return null;
+        return listA;
     }
 
     /**
@@ -91,8 +87,7 @@ public class SetOperations<E> {
      * @param anArrayList the list to sort and sift for unique values.
      * @return the list of unique values.
      */
-    public ArrayList<Double> sortAndKeepUniqueElements(ArrayList<Double> anArrayList){
-        Collections.sort(anArrayList);
+    public ArrayList<T> sortAndKeepUniqueElements(ArrayList<T> anArrayList){
         int j;
         for(int i = 0; i < anArrayList.size() - 1; i++){
             j = i + 1;
