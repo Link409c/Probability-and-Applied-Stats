@@ -1,6 +1,5 @@
 package Project_1_Stats_Library;
 
-import Project_1_Stats_Library.Custom_Exceptions.NegativeProbabilityException;
 import Project_1_Stats_Library.Custom_Exceptions.TotalProbabilityException;
 import Project_1_Stats_Library.Custom_Exceptions.WithinNumberException;
 
@@ -260,10 +259,15 @@ public class StatsLibrary{
 
     //addition rule
     //P(AuB) = P(A) + P(B) - P(AnB)
-
+    public double unionAdditionRule(double probA, double probB){
+        return probUnion(probA, probB) - probIntersection(probA, probB);
+    }
 
     //multiplication rule
     //P(AnB) = P(A)P(B|A) or P(B)P(A|B)
+    public double intscMultRule(double probA, double probB){
+        return probA * conditionalProb(probIntersection(probA, probB), probA);
+    }
 
     //independent Vs Dependent intersection
 
