@@ -1,0 +1,19 @@
+Part 1
+
+1. Go to Yahoo Finance
+2. Find a stock you want to monitor
+3. Download historical data to get CSV.
+4. Open the CSV in excel and graph things.
+5. Use your existing CSV loading code, load the data into several arraylists.
+  * or, write a data structure to hold values for any given day, and load the data structure.
+6. Call your smoothing algorithm on it. 
+
+
+Part 2
+
+1. Continuing after you load CSV data
+2. Write a program where you initialize a starting balance
+3. Read one line of the CSV at a time
+4. at each line of the CSV, your program has a job. it will either buy some amount of shares, sell, or do nothing.
+5. Come up with some idea or pattern when the program should buy, sell, or do nothing.
+6. Track your total net worth. (ie. every run updates the total based on your held shares of stocks)
