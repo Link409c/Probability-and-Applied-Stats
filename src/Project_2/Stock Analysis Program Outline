@@ -17,4 +17,17 @@ Part 2
 3. Read one line of the CSV at a time
 4. at each line of the CSV, your program has a job. it will either buy some amount of shares, sell, or do nothing.
 5. Come up with some idea or pattern when the program should buy, sell, or do nothing.
+ * Use Heuristics to help decision:
+  What's the mean so far?
+  Variance? Std Dev?
 6. Track your total net worth. (ie. every run updates the total based on your held shares of stocks)
+
+Software Engineering Side:
+1. Write a program with a loop loading single lines of csv.
+2. Load the data into a data structure of your choice.
+3. Write a method updateIUnternalData: Update calculations of heuristics to mean, etc.
+4. Abstract out into its own method the tradeEvaliator which will return the number of shares to buy or sell.
+ * represent as an int that's positive (buy) or negative (sell) or 0 (do nothing).
+   * use step 4 results that are stored in memory to make a decision.
+   * keep it simple!
+   * you can write more than one evaluator and test different ideas. 
