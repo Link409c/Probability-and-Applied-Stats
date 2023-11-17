@@ -6,7 +6,8 @@ Part 1
 4. Open the CSV in excel and graph things.
 5. Use your existing CSV loading code, load the data into several arraylists.
   * or, write a data structure to hold values for any given day, and load the data structure.
-6. Call your smoothing algorithm on it. 
+6. Call your smoothing algorithm on it.
+7. Overlay the different pieces in Excel with the smoothed counterpart.
 
 
 Part 2
