@@ -4,10 +4,16 @@ import java.io.IOException;
 
 /**
  * An interface designed to support classes which may create some data the user
- * wants to export to a .csv file for use in excel.
+ * wants to import from, or export to, a .csv file for use in excel.
  */
-public interface CsvExportable {
+public interface CsvAble {
 
+    /**
+    * importObjects takes a filename from parameters or input by the user and loads data
+    * from lines of a .csv into a data structure. 
+    */
+    void importObjects(String fileName) throws IOException;
+    
     /**
      * exportObjects creates a .csv file from a list of objects and their associated fields.
      * Assume the method throws an IOException due to the use of fileReader or BufferedReader.
