@@ -1,6 +1,6 @@
 package Mini_Coding_Projects.Birthday_Problem;
 
-import Miscellaneous.CsvExportable;
+import Miscellaneous.CsvAble;
 import Project_1_Stats_Library.StatsLibrary;
 
 import java.io.BufferedWriter;
@@ -14,7 +14,7 @@ import java.util.ArrayList;
  * This program models the "Birthday Problem", an experiment that finds the probability of
  * two individuals within a group sharing a birthday.
  */
-public class BirthdayProblem implements CsvExportable {
+public class BirthdayProblem implements CsvAble {
     /**
      * calculates the probability that in the sample space of people, some
      * number of them share a birthday. Uses methods defined in the Stats
@@ -78,6 +78,7 @@ public class BirthdayProblem implements CsvExportable {
         return result;
     }
 
+    public void importObjects(String fileName){}
 
     /**
      * exports the list of people and their birthdays to a csv file.
@@ -85,7 +86,6 @@ public class BirthdayProblem implements CsvExportable {
      * @param header the first line of the csv file explains column values.
      * @return a message informing the user of success or failure.
      */
-    @Override
     public String exportObjects(String fileName, String header) throws IOException{
         //string to return
         String successMsg;

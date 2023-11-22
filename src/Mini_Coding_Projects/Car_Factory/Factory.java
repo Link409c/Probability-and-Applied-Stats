@@ -1,6 +1,6 @@
 package Mini_Coding_Projects.Car_Factory;
 
-import Miscellaneous.CsvExportable;
+import Miscellaneous.CsvAble;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -15,7 +15,7 @@ import java.util.Random;
  * @author simpso61
  */
 
-public class Factory implements CsvExportable {
+public class Factory implements CsvAble {
 
 	/**
 	 * makeCar calls the constructors of the Car class to produce a car object and add it to the list.
@@ -98,6 +98,10 @@ public class Factory implements CsvExportable {
 		return r.nextInt(0, upperMilesBound);
 	}
 
+	public void importObjects(String fileName) throws IOException {
+
+	}
+
 	/**
 	 * writes the contents of the cars arraylist to a csv file
 	 * the user can explore and use to visualize and represent data in excel.
@@ -137,6 +141,9 @@ public class Factory implements CsvExportable {
 			throw new IOException(errMsg);
 		}
 		return successMsg;
+	}
+
+	public void importObjects(){
 	}
 
 	//constructors

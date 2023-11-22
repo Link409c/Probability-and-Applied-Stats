@@ -1,7 +1,8 @@
 package Project_2;
 
-import Miscellaneous.CsvExportable;
+import Miscellaneous.CsvAble;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 *
 **/
 
-public class Plotter implements CsvExportable {
+public class Plotter implements CsvAble {
   
   //function method
   //testing with simple parabola.
@@ -34,6 +35,10 @@ public class Plotter implements CsvExportable {
       Tuple<Double> t = new Tuple<>(input, output);
       getOutputPoints().add(t);
     }
+  }
+
+  public void importObjects(String fileName) throws IOException {
+
   }
 
   public String exportObjects(String fileName, String header){

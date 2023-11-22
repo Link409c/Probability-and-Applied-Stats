@@ -1,5 +1,5 @@
 package Mini_Coding_Projects.Hand_Evaluator;
-import Miscellaneous.CsvExportable;
+import Miscellaneous.CsvAble;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.Stack;
  * will be recorded and exported to a CSV file to display using excel or another
  * plotting software.
  */
-public class HandEvaluator implements CsvExportable {
+public class HandEvaluator implements CsvAble {
 
 	/**
 	 * adds one card object from the stack to the hand.
@@ -348,6 +348,11 @@ public class HandEvaluator implements CsvExportable {
 		return currHand;
 	}
 
+
+	public void importObjects(String fileName) throws IOException {
+
+	}
+
 	/**
 	 * exports the results of a run of the program to a CSV file to be used
 	 * in Microsoft Excel or similar software.
@@ -356,7 +361,7 @@ public class HandEvaluator implements CsvExportable {
 	 * @return a message informing the user if the export is successful.
 	 * @throws IOException informs the user if the passed filename is null.
 	 */
-	@Override
+
 	public String exportObjects(String fileName, String header) throws IOException {
 		return null;
 	}
