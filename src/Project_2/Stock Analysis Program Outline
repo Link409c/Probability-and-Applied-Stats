@@ -25,8 +25,8 @@ Part 2
 Software Engineering Side:
 1. Write a program with a loop loading single lines of csv.
 2. Load the data into a data structure of your choice.
-3. Write a method updateIUnternalData: Update calculations of heuristics to mean, etc.
-4. Abstract out into its own method the tradeEvaliator which will return the number of shares to buy or sell.
+3. Write a method updateInternalData: Update calculations of heuristics to mean, etc.
+4. Abstract out into its own method the tradeEvaluator which will return the number of shares to buy or sell.
  * represent as an int that's positive (buy) or negative (sell) or 0 (do nothing).
    * use step 4 results that are stored in memory to make a decision.
    * keep it simple!
