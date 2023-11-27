@@ -30,7 +30,9 @@ Software Engineering Side:
  * represent as an int that's positive (buy) or negative (sell) or 0 (do nothing).
    * use step 4 results that are stored in memory to make a decision.
    * keep it simple!
-   * you can write more than one evaluator and test different ideas. 
+   * you can write more than one evaluator and test different ideas.
+5. write a method to calculate Relative Strength Index.
+   * search Google macroption.com for calculation steps.
 
 Ideas for buying selling or staying
 * closing average
