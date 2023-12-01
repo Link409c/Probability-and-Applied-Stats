@@ -4,14 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 11/21/23">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Miscellaneous/InsertionSorter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Miscellaneous/MyElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/PlotSaltSmoothTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/PlotSaltSmoothTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Plotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plotter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Salter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Salter.java" afterDir="false" />
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="moved program to individual folder within project 2">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,16 +26,18 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Y6gf27b4Ll1pYrsBFo51swpprj" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Stats_Library" />
@@ -308,7 +304,47 @@
       <option name="project" value="LOCAL" />
       <updated>1700624426397</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="separated programs into individual packages">
+      <option name="closed" value="true" />
+      <created>1701439922550</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1701439922550</updated>
+    </task>
+    <task id="LOCAL-00033" summary="created new data container for stocks csv values">
+      <option name="closed" value="true" />
+      <created>1701439944286</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1701439944286</updated>
+    </task>
+    <task id="LOCAL-00034" summary="moved program to individual folder. updated global variables and added new methods.">
+      <option name="closed" value="true" />
+      <created>1701440157954</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1701440157954</updated>
+    </task>
+    <task id="LOCAL-00035" summary="renamed exportObjects method">
+      <option name="closed" value="true" />
+      <created>1701440177986</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1701440177986</updated>
+    </task>
+    <task id="LOCAL-00036" summary="moved program to individual folder within project 2">
+      <option name="closed" value="true" />
+      <created>1701440197065</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1701440197065</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -323,11 +359,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="moved to Project 1 Folder" />
-    <MESSAGE value="pseudocode for compliment method" />
-    <MESSAGE value="corrected within number formula on formula sheet" />
-    <MESSAGE value="corrected dependence and bayes' theorem methods." />
-    <MESSAGE value="programmed all hand type methods. programmed handToString method. laid out pseudocode for hand probability method. laid out pseudocode for deal hands method." />
     <MESSAGE value="programmed value to face method." />
     <MESSAGE value="tested all hand evaluation methods. straight, two pair, pair, and high card need debugging." />
     <MESSAGE value="exported a larger population of results." />
@@ -348,6 +379,11 @@
     <MESSAGE value="refactored interface name and import statement. temporary implementation of importObjects method" />
     <MESSAGE value="corrected typos in instructions" />
     <MESSAGE value="workspace commit 11/21/23" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 11/21/23" />
+    <MESSAGE value="separated programs into individual packages" />
+    <MESSAGE value="created new data container for stocks csv values" />
+    <MESSAGE value="moved program to individual folder. updated global variables and added new methods." />
+    <MESSAGE value="renamed exportObjects method" />
+    <MESSAGE value="moved program to individual folder within project 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved program to individual folder within project 2" />
   </component>
 </project>
