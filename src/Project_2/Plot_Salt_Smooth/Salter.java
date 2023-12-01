@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Salter takes a csv file input and "salts" the data by adding or subtracting from
@@ -14,7 +15,6 @@ import java.util.ArrayList;
 
 public class Salter implements CsvAble {
 
-  //method to input the data
   public void importObjects(String fileName) throws IOException {
     FileReader fileReader = new FileReader(fileName);
     BufferedReader bfr = new BufferedReader(fileReader);
@@ -36,12 +36,27 @@ public class Salter implements CsvAble {
     setSaltedPoints(plottedPoints);
   }
 
-  //method to salt each data point
+  /**
+   * changes the values of each output point by randomly
+   * adding or subtracting from them.
+   */
   public void salt(){
+    ArrayList<Tuple<Double>> points = getSaltedPoints();
+    Random r = new Random();
+    int rand;
     //get each point from the list
-    //add a random value to the y value
-    //be able to configure the range of salt values
-    //loop thru y values and +/- from each
+    for(Tuple<Double> t : points) {
+      //add or subtract a random value from the y value
+      rand = r.nextInt(0, 101);
+      if(rand <= 50) {
+        t.setOutput(t.getOutput() + r.nextInt((int) (t.getOutput()*2.0)));
+      }
+      else{
+        t.setOutput(t.getOutput() - r.nextInt((int) (t.getOutput()*2.0)));
+      }
+      //be able to configure the range of salt values
+    }
+    setSaltedPoints(points);
   }
 
   //method to output the data
