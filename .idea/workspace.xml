@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="Set Operations Test Results">
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 11/21/23">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Miscellaneous/InsertionSorter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Miscellaneous/MyElement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Stock Analysis Program Outline" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Stock Analysis Program Outline" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/PlotSaltSmoothTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/PlotSaltSmoothTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plotter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Salter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Salter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -285,7 +287,28 @@
       <option name="project" value="LOCAL" />
       <updated>1700100292141</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="refactored interface name and import statement. temporary implementation of importObjects method">
+      <created>1700624387271</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1700624387271</updated>
+    </task>
+    <task id="LOCAL-00030" summary="corrected typos in instructions">
+      <created>1700624412217</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1700624412217</updated>
+    </task>
+    <task id="LOCAL-00031" summary="workspace commit 11/21/23">
+      <created>1700624426397</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1700624426397</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -300,9 +323,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="removed simple set operations. regrouped certain methods to clarify usage. coded intersection and union for probability. added dependence method." />
-    <MESSAGE value="Forgot to include Formula Sheet with submission. Added to IDE for commit." />
-    <MESSAGE value="created custom exception for negative axiom." />
     <MESSAGE value="moved to Project 1 Folder" />
     <MESSAGE value="pseudocode for compliment method" />
     <MESSAGE value="corrected within number formula on formula sheet" />
@@ -325,6 +345,9 @@
     <MESSAGE value="created generic data container to use with plotter, salter, and smoother." />
     <MESSAGE value="11/15 workspace commit" />
     <MESSAGE value="Set Operations Test Results" />
-    <option name="LAST_COMMIT_MESSAGE" value="Set Operations Test Results" />
+    <MESSAGE value="refactored interface name and import statement. temporary implementation of importObjects method" />
+    <MESSAGE value="corrected typos in instructions" />
+    <MESSAGE value="workspace commit 11/21/23" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 11/21/23" />
   </component>
 </project>
