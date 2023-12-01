@@ -45,7 +45,7 @@ public class Salter implements CsvAble {
   }
 
   //method to output the data
-  public String outputObjects(String fileName, String header){
+  public String exportObjects(String fileName, String header){
     String successMsg = "";
     return successMsg;
   }
