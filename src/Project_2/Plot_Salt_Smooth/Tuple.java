@@ -2,7 +2,8 @@ package Project_2.Plot_Salt_Smooth;
 
 /**
  * a data container for related pairs of values.
- * @param <E>
+ * @param <E> some generic value that can relate to
+ *           an output when input to a function.
  */
 public class Tuple<E> {
 
