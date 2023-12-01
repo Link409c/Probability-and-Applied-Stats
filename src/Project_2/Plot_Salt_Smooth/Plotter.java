@@ -1,4 +1,4 @@
-package Project_2;
+package Project_2.Plot_Salt_Smooth;
 
 import Miscellaneous.CsvAble;
 
