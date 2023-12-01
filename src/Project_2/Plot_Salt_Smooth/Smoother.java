@@ -1,4 +1,4 @@
-package Project_2;
+package Project_2.Plot_Salt_Smooth;
 
 /**
  * Smoother takes a list of data points, and using averages, "smooths" the scattering of the plot

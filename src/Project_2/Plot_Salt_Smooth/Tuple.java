@@ -1,4 +1,4 @@
-package Project_2;
+package Project_2.Plot_Salt_Smooth;
 
 /**
  * a data container for related pairs of values.
