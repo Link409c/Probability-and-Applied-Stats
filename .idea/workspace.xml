@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="moved program to individual folder within project 2">
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/1/23">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Salter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Salter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Tuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Tuple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/StockAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Stocks/StockAnalyzer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +44,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\Stocks" />
+      <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\MatLab" />
+      <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\Final_Project" />
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Stats_Library" />
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Written_Work" />
     </key>
@@ -344,7 +351,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701440197065</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="moved files to correct package folders within project 2">
+      <option name="closed" value="true" />
+      <created>1701440374795</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1701440374795</updated>
+    </task>
+    <task id="LOCAL-00038" summary="workspace commit 12/1/23">
+      <option name="closed" value="true" />
+      <created>1701440387081</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1701440387081</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -359,8 +382,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="programmed value to face method." />
-    <MESSAGE value="tested all hand evaluation methods. straight, two pair, pair, and high card need debugging." />
     <MESSAGE value="exported a larger population of results." />
     <MESSAGE value="note for debugging: check string comparisons - they are using single characters. remember some values are two digits" />
     <MESSAGE value="updated comparator, adding methods to compare values and difference in card values equal to 1." />
@@ -384,6 +405,8 @@
     <MESSAGE value="moved program to individual folder. updated global variables and added new methods." />
     <MESSAGE value="renamed exportObjects method" />
     <MESSAGE value="moved program to individual folder within project 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="moved program to individual folder within project 2" />
+    <MESSAGE value="moved files to correct package folders within project 2" />
+    <MESSAGE value="workspace commit 12/1/23" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 12/1/23" />
   </component>
 </project>
