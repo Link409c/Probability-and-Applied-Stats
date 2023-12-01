@@ -43,7 +43,9 @@ public class StockAnalyzer implements CsvAble{
     /**
      * calculates the Relative Strength Index of the stock.
      */
-    public void calculateRSI(){}
+    public void calculateRSI(){
+
+    }
 
     /**
      * The simulated amount of money we have.
