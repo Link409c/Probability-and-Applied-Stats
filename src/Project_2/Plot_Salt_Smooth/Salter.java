@@ -2,9 +2,7 @@ package Project_2.Plot_Salt_Smooth;
 
 import Miscellaneous.CsvAble;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -15,6 +13,13 @@ import java.util.Random;
 
 public class Salter implements CsvAble {
 
+  /**
+   * gets a list of input and output points from a .csv file
+   * and adds them as tuples to the global list variable of the
+   * salter.
+   * @param fileName the name of the file to import values from.
+   * @throws IOException if the fileName is null or invalid.
+   */
   public void importObjects(String fileName) throws IOException {
     FileReader fileReader = new FileReader(fileName);
     BufferedReader bfr = new BufferedReader(fileReader);
@@ -37,31 +42,76 @@ public class Salter implements CsvAble {
   }
 
   /**
-   * changes the values of each output point by randomly
-   * adding or subtracting from them.
+   * changes the values of each output point by adding some value.
+   * if the passed value is null, salt the points by randomly adding
+   * or subtracting from them.
+   * @param saltValue the value to add or subtract from each point.
    */
-  public void salt(){
+  public void salt(double saltValue){
     ArrayList<Tuple<Double>> points = getSaltedPoints();
     Random r = new Random();
     int rand;
     //get each point from the list
     for(Tuple<Double> t : points) {
-      //add or subtract a random value from the y value
-      rand = r.nextInt(0, 101);
-      if(rand <= 50) {
-        t.setOutput(t.getOutput() + r.nextInt((int) (t.getOutput()*2.0)));
+      //salt according to passed value
+      if (saltValue < 0 || saltValue >= 0) {
+        rand = r.nextInt();
+        if(rand % 2 == 0) {
+          t.setOutput(t.getOutput() + saltValue);
+        }
+        else{
+          t.setOutput(t.getOutput() - saltValue);
+        }
       }
-      else{
-        t.setOutput(t.getOutput() - r.nextInt((int) (t.getOutput()*2.0)));
+      //if saltValue was null, randomly apply a value
+      else {
+        rand = r.nextInt(0, 101);
+        if (rand <= 50) {
+          t.setOutput(t.getOutput() + r.nextInt((int) (t.getOutput() * 2.0)));
+        } else {
+          t.setOutput(t.getOutput() - r.nextInt((int) (t.getOutput() * 2.0)));
+        }
       }
-      //be able to configure the range of salt values
     }
     setSaltedPoints(points);
   }
 
   //method to output the data
-  public String exportObjects(String fileName, String header){
-    String successMsg = "";
+  /**
+   * exports the list of tuples to a csv file.
+   * @param fileName the name of the file excluding filetype.
+   * @param header the first line of the csv file explains column values.
+   * @return a message informing the user of success or failure.
+   */
+  public String exportObjects(String fileName, String header) throws IOException{
+    //string to return
+    String successMsg;
+    if(fileName != null){
+      //create the csv file to pass to the constructor
+      //using file writer object with the filename input
+      fileName = fileName.concat(".csv");
+      FileWriter toCsv = new FileWriter(fileName);
+      BufferedWriter csvWriter = new BufferedWriter(toCsv);
+      //write the headers separated by commas on line 1
+      csvWriter.write(header);
+      //for each person in the list,
+      for (Tuple<Double> t : getSaltedPoints()) {
+        //write each line with the variables in order separated by commas
+        csvWriter.newLine();
+        csvWriter.write(t.getInput() + "," + t.getOutput());
+      }
+      //after loop runs, close the file writer.
+      csvWriter.close();
+      //update success message informing user file was created.
+      successMsg = fileName + " created in the specified directory.";
+    }
+    //if any error with filename occurs,
+    else {
+      //throw an IO exception informing the user of the error
+      String errMsg = "File name passed to the export method is null.";
+      throw new IOException(errMsg);
+    }
+    //return the success message
     return successMsg;
   }
 
