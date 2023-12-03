@@ -2,9 +2,7 @@ package Project_2.Plot_Salt_Smooth;
 
 import Miscellaneous.CsvAble;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 import java.util.ArrayList;
 
 /**
@@ -24,7 +22,7 @@ public class Plotter implements CsvAble {
    * populates a list of pairs of associated inputs and outputs of a chosen function.
    */
   public void plotFunction() {
-    int bound = getPointCount();
+    int bound = getInputs().size();
     //pointCount times,
     for (int i = 0; i < bound; i++){
       //run the calculate function method using each input
@@ -63,24 +61,42 @@ public class Plotter implements CsvAble {
    * @param header the header describing each column of the file.
    * @return a message informing the user the file was created.
    */
-  public String exportObjects(String fileName, String header){
-    String successMsg = "";
+  public String exportObjects(String fileName, String header) throws IOException{
+    //string to return
+    String successMsg;
+    if(fileName != null){
+      //create the csv file to pass to the constructor
+      //using file writer object with the filename input
+      fileName = fileName.concat(".csv");
+      FileWriter toCsv = new FileWriter(fileName);
+      BufferedWriter csvWriter = new BufferedWriter(toCsv);
+      //write the headers separated by commas on line 1
+      csvWriter.write(header);
+      //for each object in the list,
+      for (Tuple<Double> t : getOutputPoints()) {
+        //write each line with the variables in order separated by commas
+        csvWriter.newLine();
+        csvWriter.write(t.getInput() + "," + t.getOutput());
+      }
+      //after loop runs, close the file writer.
+      csvWriter.close();
+      //update success message informing user file was created.
+      successMsg = fileName + " created in the specified directory.";
+    }
+    //if any error with filename occurs,
+    else {
+      //throw an IO exception informing the user of the error
+      String errMsg = "File name passed to the export method is null.";
+      throw new IOException(errMsg);
+    }
+    //return the success message
     return successMsg;
   }
 
-  public Plotter(int theCount){
-    setPointCount(theCount);
+  public Plotter(){
+    setInputs(new ArrayList<>());
     setOutputPoints(new ArrayList<>());
   }
-
-  public int getPointCount() {
-    return pointCount;
-  }
-
-  public void setPointCount(int pointCount) {
-    this.pointCount = pointCount;
-  }
-
   public ArrayList<Double> getInputs() {
     return inputs;
   }
@@ -97,8 +113,6 @@ public class Plotter implements CsvAble {
     this.outputPoints = outputPoints;
   }
 
-  //number of points to plot
-  private int pointCount;
   //input values to plot
   private ArrayList<Double> inputs;
   //data points to output to the csv
