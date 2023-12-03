@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/1/23">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 11/21/23">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Miscellaneous/CsvAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/CsvAble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Final_Project/Final Project ideas" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Final_Project/Final Project ideas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Plotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Plotter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Salter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Salter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Tuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Tuple.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/StockAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Stocks/StockAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Smoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Smoother.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,13 +37,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\Stocks" />
@@ -311,63 +313,7 @@
       <option name="project" value="LOCAL" />
       <updated>1700624426397</updated>
     </task>
-    <task id="LOCAL-00032" summary="separated programs into individual packages">
-      <option name="closed" value="true" />
-      <created>1701439922550</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1701439922550</updated>
-    </task>
-    <task id="LOCAL-00033" summary="created new data container for stocks csv values">
-      <option name="closed" value="true" />
-      <created>1701439944286</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1701439944286</updated>
-    </task>
-    <task id="LOCAL-00034" summary="moved program to individual folder. updated global variables and added new methods.">
-      <option name="closed" value="true" />
-      <created>1701440157954</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1701440157954</updated>
-    </task>
-    <task id="LOCAL-00035" summary="renamed exportObjects method">
-      <option name="closed" value="true" />
-      <created>1701440177986</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1701440177986</updated>
-    </task>
-    <task id="LOCAL-00036" summary="moved program to individual folder within project 2">
-      <option name="closed" value="true" />
-      <created>1701440197065</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1701440197065</updated>
-    </task>
-    <task id="LOCAL-00037" summary="moved files to correct package folders within project 2">
-      <option name="closed" value="true" />
-      <created>1701440374795</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1701440374795</updated>
-    </task>
-    <task id="LOCAL-00038" summary="workspace commit 12/1/23">
-      <option name="closed" value="true" />
-      <created>1701440387081</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1701440387081</updated>
-    </task>
-    <option name="localTasksCounter" value="39" />
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -382,6 +328,13 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="moved to Project 1 Folder" />
+    <MESSAGE value="pseudocode for compliment method" />
+    <MESSAGE value="corrected within number formula on formula sheet" />
+    <MESSAGE value="corrected dependence and bayes' theorem methods." />
+    <MESSAGE value="programmed all hand type methods. programmed handToString method. laid out pseudocode for hand probability method. laid out pseudocode for deal hands method." />
+    <MESSAGE value="programmed value to face method." />
+    <MESSAGE value="tested all hand evaluation methods. straight, two pair, pair, and high card need debugging." />
     <MESSAGE value="exported a larger population of results." />
     <MESSAGE value="note for debugging: check string comparisons - they are using single characters. remember some values are two digits" />
     <MESSAGE value="updated comparator, adding methods to compare values and difference in card values equal to 1." />
@@ -400,13 +353,6 @@
     <MESSAGE value="refactored interface name and import statement. temporary implementation of importObjects method" />
     <MESSAGE value="corrected typos in instructions" />
     <MESSAGE value="workspace commit 11/21/23" />
-    <MESSAGE value="separated programs into individual packages" />
-    <MESSAGE value="created new data container for stocks csv values" />
-    <MESSAGE value="moved program to individual folder. updated global variables and added new methods." />
-    <MESSAGE value="renamed exportObjects method" />
-    <MESSAGE value="moved program to individual folder within project 2" />
-    <MESSAGE value="moved files to correct package folders within project 2" />
-    <MESSAGE value="workspace commit 12/1/23" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 12/1/23" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 11/21/23" />
   </component>
 </project>
