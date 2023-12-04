@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/1/23">
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/4/23">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/StockAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Stocks/StockAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/StockDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Stocks/StockDay.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,7 +368,31 @@
       <option name="project" value="LOCAL" />
       <updated>1701440387081</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="worked on RSI and finished importObjects method. added pseudocode for other methods.">
+      <option name="closed" value="true" />
+      <created>1701701135853</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1701701135853</updated>
+    </task>
+    <task id="LOCAL-00040" summary="added default constructor.">
+      <option name="closed" value="true" />
+      <created>1701701160545</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1701701160545</updated>
+    </task>
+    <task id="LOCAL-00041" summary="workspace commit 12/4/23">
+      <option name="closed" value="true" />
+      <created>1701701174119</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1701701174119</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -384,9 +407,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="exported a larger population of results." />
-    <MESSAGE value="note for debugging: check string comparisons - they are using single characters. remember some values are two digits" />
-    <MESSAGE value="updated comparator, adding methods to compare values and difference in card values equal to 1." />
     <MESSAGE value="removed comparator from sortHand method. changed implementation of evaluateHand method and its helper methods to utilize the card comparator. now instead of string matching, the methods of the comparator determine hand types. enclosed pair matching steps in getPairs method to reduce method bloat. removed commented-out shuffle methods. added pseudocode for exportObjects implementation. completed javadoc for finished methods." />
     <MESSAGE value="debugged and tested all hand evaluation methods successfully." />
     <MESSAGE value="workspace commit" />
@@ -409,6 +429,9 @@
     <MESSAGE value="moved program to individual folder within project 2" />
     <MESSAGE value="moved files to correct package folders within project 2" />
     <MESSAGE value="workspace commit 12/1/23" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 12/1/23" />
+    <MESSAGE value="worked on RSI and finished importObjects method. added pseudocode for other methods." />
+    <MESSAGE value="added default constructor." />
+    <MESSAGE value="workspace commit 12/4/23" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 12/4/23" />
   </component>
 </project>

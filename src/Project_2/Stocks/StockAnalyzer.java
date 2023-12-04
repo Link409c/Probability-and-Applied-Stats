@@ -29,16 +29,19 @@ public class StockAnalyzer implements CsvAble{
         bfr.readLine();
         //parse each line
         String nextLine = bfr.readLine();
+        String[] columns;
+        StockDay nextDay;
         while (nextLine != null) {
             //split the string at the commas
-            String[] columns = nextLine.split(",");
+            columns = nextLine.split(",");
             //populate a new StockDay object
-            StockDay nextDay = populateDay(columns);
+            nextDay = populateDay(columns);
+            //add it to the list
             annualDailyValues.add(nextDay);
             //update nextLine
             nextLine = bfr.readLine();
         }
-        //add it to the global list
+        //set the global list
         setDaysData(annualDailyValues);
     }
 
@@ -62,11 +65,21 @@ public class StockAnalyzer implements CsvAble{
         return newDay;
     }
     public String exportObjects(String fileName, String header){
+        //export the data as a csv
+        //per day,
+        //display the date, total money, money earned, money spent, stocks bought, stocks sold?
+
         String successMsg = "";
         return successMsg;
     }
 
-    publoc boolean doIBuy(){
+    /**
+     * based on a series of calculations using daily stock values,
+     * determine the next action the program takes to buy, sell, or
+     * hold a stock.
+     * @return positive to buy, zero to hold, negative to sell.
+     */
+    public int dailyAction(){
         //basic without RSI or more values
         //based on day to day
         //get the moving average of the close
@@ -76,14 +89,21 @@ public class StockAnalyzer implements CsvAble{
         //if close is within a value dont do anything
 
         //with RSI
-        //
+        //if more up moves than down moves over a range,
+        //if RSI is in a certain range,
+        //couple this with moving average
+        return 0;
     }
     /**
-     * updates heuristics on central tendency of the stock data for
+     * updates heuristics of the stock data for
      * use in making financial decisions.
      */
     public void updateInternalData(){
-
+        //updating central tendency
+        //updating RSI
+        /*
+         What probability calculations can be applied here?
+         */
     }
 
     /**
