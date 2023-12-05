@@ -53,9 +53,10 @@ public class Salter implements CsvAble {
     int rand;
     //get each point from the list
     for(Tuple<Double> t : points) {
-      //salt according to passed value
+      rand = r.nextInt();
+      //check for non null input
       if (saltValue < 0 || saltValue >= 0) {
-        rand = r.nextInt();
+        //randomly choose negative or positive salt
         if(rand % 2 == 0) {
           t.setOutput(t.getOutput() + saltValue);
         }
@@ -65,7 +66,6 @@ public class Salter implements CsvAble {
       }
       //if saltValue was null, randomly apply a value
       else {
-        rand = r.nextInt(0, 101);
         if (rand <= 50) {
           t.setOutput(t.getOutput() + r.nextInt((int) (t.getOutput() * 2.0)));
         } else {
@@ -76,7 +76,6 @@ public class Salter implements CsvAble {
     setSaltedPoints(points);
   }
 
-  //method to output the data
   /**
    * exports the list of tuples to a csv file.
    * @param fileName the name of the file excluding filetype.
@@ -87,14 +86,18 @@ public class Salter implements CsvAble {
     //string to return
     String successMsg;
     if(fileName != null){
-      //create the csv file to pass to the constructor
-      //using file writer object with the filename input
+      //create file writer object with the filename input
       fileName = fileName.concat(".csv");
-      FileWriter toCsv = new FileWriter(fileName);
+      //specify an absolute path for file
+      //change this if testing on your own PC
+      String filePath = "E:\\Coding Projects\\Probability and Applied Statistics\\" +
+              "src\\Project_2\\Plot_Salt_Smooth\\Files";
+      filePath = filePath.concat("\\" + fileName);
+      FileWriter toCsv = new FileWriter(filePath);
       BufferedWriter csvWriter = new BufferedWriter(toCsv);
       //write the headers separated by commas on line 1
       csvWriter.write(header);
-      //for each person in the list,
+      //for each object in the list,
       for (Tuple<Double> t : getSaltedPoints()) {
         //write each line with the variables in order separated by commas
         csvWriter.newLine();
@@ -103,12 +106,12 @@ public class Salter implements CsvAble {
       //after loop runs, close the file writer.
       csvWriter.close();
       //update success message informing user file was created.
-      successMsg = fileName + " created in the specified directory.";
+      successMsg = fileName + " created in the specified directory: \n " + filePath;
     }
-    //if any error with filename occurs,
+    //if any error with filename or filepath occurs,
     else {
       //throw an IO exception informing the user of the error
-      String errMsg = "File name passed to the export method is null.";
+      String errMsg = "Error in file name or path specified in export method.";
       throw new IOException(errMsg);
     }
     //return the success message
