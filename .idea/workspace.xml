@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 11/21/23">
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/2/23">
+      <change afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Files/plotterTest.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Miscellaneous/CsvAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/CsvAble.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Final_Project/Final Project ideas" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Final_Project/Final Project ideas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/PlotSaltSmoothTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/PlotSaltSmoothTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Plotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Plotter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Salter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Salter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Smoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Smoother.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/MSFT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Stocks/Files/MSFT.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/Stock Analysis Program Outline" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Stocks/Files/Stock Analysis Program Outline" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,34 +34,50 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2Y6gf27b4Ll1pYrsBFo51swpprj" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_2\Stocks\Files" />
       <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\Stocks" />
       <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\MatLab" />
       <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\Final_Project" />
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Stats_Library" />
-      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Written_Work" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SetOpsTester">
+  <component name="RunManager" selected="Application.PlotSaltSmoothTester">
     <configuration name="HandEvaluatorTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Mini_Coding_Projects.Hand_Evaluator.HandEvaluatorTester" />
       <module name="Probability and Applied Statistics" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Mini_Coding_Projects.Hand_Evaluator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlotSaltSmoothTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Project_2.Plot_Salt_Smooth.PlotSaltSmoothTester" />
+      <module name="Probability and Applied Statistics" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Project_2.Plot_Salt_Smooth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -82,6 +100,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PlotSaltSmoothTester" />
         <item itemvalue="Application.SetOpsTester" />
         <item itemvalue="Application.HandEvaluatorTester" />
       </list>
@@ -313,7 +332,49 @@
       <option name="project" value="LOCAL" />
       <updated>1700624426397</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="added pseudocode for exportObjects">
+      <created>1701564828319</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1701564828319</updated>
+    </task>
+    <task id="LOCAL-00033" summary="added some more ideas for probability application">
+      <created>1701564847069</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1701564847069</updated>
+    </task>
+    <task id="LOCAL-00034" summary="removed pointCount variable. programmed exportObjects method.">
+      <created>1701564889487</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1701564889487</updated>
+    </task>
+    <task id="LOCAL-00035" summary="programmed exportObjects method. began programming smoothing method.">
+      <created>1701564921731</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1701564921731</updated>
+    </task>
+    <task id="LOCAL-00036" summary="programmed importObjects and exportObjects methods. began programming smoothing method.">
+      <created>1701564947972</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1701564947972</updated>
+    </task>
+    <task id="LOCAL-00037" summary="workspace commit 12/2/23">
+      <created>1701564963324</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1701564963324</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -328,12 +389,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="moved to Project 1 Folder" />
-    <MESSAGE value="pseudocode for compliment method" />
-    <MESSAGE value="corrected within number formula on formula sheet" />
-    <MESSAGE value="corrected dependence and bayes' theorem methods." />
-    <MESSAGE value="programmed all hand type methods. programmed handToString method. laid out pseudocode for hand probability method. laid out pseudocode for deal hands method." />
-    <MESSAGE value="programmed value to face method." />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="tested all hand evaluation methods. straight, two pair, pair, and high card need debugging." />
     <MESSAGE value="exported a larger population of results." />
     <MESSAGE value="note for debugging: check string comparisons - they are using single characters. remember some values are two digits" />
@@ -353,6 +409,12 @@
     <MESSAGE value="refactored interface name and import statement. temporary implementation of importObjects method" />
     <MESSAGE value="corrected typos in instructions" />
     <MESSAGE value="workspace commit 11/21/23" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 11/21/23" />
+    <MESSAGE value="added pseudocode for exportObjects" />
+    <MESSAGE value="added some more ideas for probability application" />
+    <MESSAGE value="removed pointCount variable. programmed exportObjects method." />
+    <MESSAGE value="programmed exportObjects method. began programming smoothing method." />
+    <MESSAGE value="programmed importObjects and exportObjects methods. began programming smoothing method." />
+    <MESSAGE value="workspace commit 12/2/23" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 12/2/23" />
   </component>
 </project>
