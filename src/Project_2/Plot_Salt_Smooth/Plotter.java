@@ -11,9 +11,12 @@ import java.util.ArrayList;
 **/
 
 public class Plotter implements CsvAble {
-  
-  //function method
-  //testing with simple parabola.
+
+  /**
+   * plots output points using a simple function. In this case a parabola was chosen.
+   * @param input the input value to pass to the function.
+   * @return an associated output value.
+   */
   public double calculateFunction(Double input){
     return Math.pow(input, 2);
   }
@@ -65,10 +68,14 @@ public class Plotter implements CsvAble {
     //string to return
     String successMsg;
     if(fileName != null){
-      //create the csv file to pass to the constructor
-      //using file writer object with the filename input
+      //create file writer object with the filename input
       fileName = fileName.concat(".csv");
-      FileWriter toCsv = new FileWriter(fileName);
+      //specify an absolute path for file
+      //change this if testing on your own PC
+      String filePath = "E:\\Coding Projects\\Probability and Applied Statistics\\" +
+              "src\\Project_2\\Plot_Salt_Smooth\\Files";
+      filePath = filePath.concat("\\" + fileName);
+      FileWriter toCsv = new FileWriter(filePath);
       BufferedWriter csvWriter = new BufferedWriter(toCsv);
       //write the headers separated by commas on line 1
       csvWriter.write(header);
@@ -81,12 +88,12 @@ public class Plotter implements CsvAble {
       //after loop runs, close the file writer.
       csvWriter.close();
       //update success message informing user file was created.
-      successMsg = fileName + " created in the specified directory.";
+      successMsg = fileName + " created in the specified directory: \n " + filePath;
     }
-    //if any error with filename occurs,
+    //if any error with filename or path occurs,
     else {
       //throw an IO exception informing the user of the error
-      String errMsg = "File name passed to the export method is null.";
+      String errMsg = "Error in file name or path specified in export method.";
       throw new IOException(errMsg);
     }
     //return the success message
