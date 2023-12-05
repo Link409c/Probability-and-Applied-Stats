@@ -13,21 +13,17 @@ import java.util.ArrayList;
 public class Smoother implements CsvAble {
 
     /**
-     * using a moving average, "smoothes" a list of data points to
+     * using a moving average, "smooths" a list of data points to
      * clearly illustrate trends in the data.
      * @param window the size of the window to smooth values around.
      */
     public void smooth(int window) {
-        StatsLibrary sl = new StatsLibrary();
         ArrayList<Tuple<Double>> points = getSmoothedPoints();
         int bound = points.size();
-        double sum = -1;
+        double sum, movingAvg;
         for(int i = 0; i < bound; i++) {
-            //take y values from a range around a point
-            //range is window
-            //get values from i - n to i - 1 and i + 1 to i + n
-            //average the points in the window and replace the point at x with the average
-            //repeat for all points on the plot
+            sum = 0;
+            //set window bounds
             int lowBound = i - window;
             int upperBound = i + window;
             //set bounds to limits if outside range for list size
@@ -37,7 +33,23 @@ public class Smoother implements CsvAble {
             if(upperBound > bound){
                 upperBound = bound;
             }
+            //get sum of points in window behind i
+            while(lowBound < i){
+                sum += points.get(lowBound).getOutput();
+                lowBound++;
+            }
+            int j = i + 1;
+            //get sum of points in window after i
+            while(j < upperBound){
+                sum += points.get(j).getOutput();
+                j++;
+            }
+            //calculate moving average
+            movingAvg = sum / (window * 2);
+            //set this average as points[i]
+            points.get(i).setOutput(movingAvg);
         }
+        setSmoothedPoints(points);
     }
 
     /**
@@ -78,10 +90,14 @@ public class Smoother implements CsvAble {
         //string to return
         String successMsg;
         if(fileName != null){
-            //create the csv file to pass to the constructor
-            //using file writer object with the filename input
+            //create file writer object with the filename input
             fileName = fileName.concat(".csv");
-            FileWriter toCsv = new FileWriter(fileName);
+            //specify an absolute path for file
+            //change this if testing on your own PC
+            String filePath = "E:\\Coding Projects\\Probability and Applied Statistics\\" +
+                    "src\\Project_2\\Plot_Salt_Smooth\\Files";
+            filePath = filePath.concat("\\" + fileName);
+            FileWriter toCsv = new FileWriter(filePath);
             BufferedWriter csvWriter = new BufferedWriter(toCsv);
             //write the headers separated by commas on line 1
             csvWriter.write(header);
@@ -94,12 +110,12 @@ public class Smoother implements CsvAble {
             //after loop runs, close the file writer.
             csvWriter.close();
             //update success message informing user file was created.
-            successMsg = fileName + " created in the specified directory.";
+            successMsg = fileName + " created in the specified directory: \n " + filePath;
         }
-        //if any error with filename occurs,
+        //if any error with filename or path occurs,
         else {
             //throw an IO exception informing the user of the error
-            String errMsg = "File name passed to the export method is null.";
+            String errMsg = "Error in file name or path specified in export method.";
             throw new IOException(errMsg);
         }
         //return the success message
