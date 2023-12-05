@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/2/23">
-      <change afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Files/plotterTest.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/5/23">
       <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/PlotSaltSmoothTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/PlotSaltSmoothTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Plotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Plotter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Salter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Salter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Smoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Smoother.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/MSFT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Stocks/Files/MSFT.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/Stock Analysis Program Outline" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2/Stocks/Files/Stock Analysis Program Outline" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +33,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_2\Stocks\Files" />
@@ -374,7 +366,56 @@
       <option name="project" value="LOCAL" />
       <updated>1701564963324</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="created subdirectory for import / export files and miscellaneous files relating to each program.">
+      <created>1701813992288</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1701813992288</updated>
+    </task>
+    <task id="LOCAL-00039" summary="sample output file for plotter">
+      <created>1701814005879</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814005879</updated>
+    </task>
+    <task id="LOCAL-00040" summary="refined plot and export methods. export now creates file in specified directory">
+      <created>1701814069486</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814069486</updated>
+    </task>
+    <task id="LOCAL-00041" summary="refined salt and export methods.">
+      <created>1701814102812</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814102812</updated>
+    </task>
+    <task id="LOCAL-00042" summary="programmed smooth method. refined export method.">
+      <created>1701814141738</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814141738</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Plotter: successful run of plot and export methods.">
+      <created>1701814212811</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814212811</updated>
+    </task>
+    <task id="LOCAL-00044" summary="workspace commit 12/5/23">
+      <created>1701814225556</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814225556</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -390,13 +431,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="tested all hand evaluation methods. straight, two pair, pair, and high card need debugging." />
-    <MESSAGE value="exported a larger population of results." />
-    <MESSAGE value="note for debugging: check string comparisons - they are using single characters. remember some values are two digits" />
-    <MESSAGE value="updated comparator, adding methods to compare values and difference in card values equal to 1." />
-    <MESSAGE value="removed comparator from sortHand method. changed implementation of evaluateHand method and its helper methods to utilize the card comparator. now instead of string matching, the methods of the comparator determine hand types. enclosed pair matching steps in getPairs method to reduce method bloat. removed commented-out shuffle methods. added pseudocode for exportObjects implementation. completed javadoc for finished methods." />
-    <MESSAGE value="debugged and tested all hand evaluation methods successfully." />
-    <MESSAGE value="workspace commit" />
     <MESSAGE value="created tester for plot / salt / smooth programs." />
     <MESSAGE value="programmed calculate function method and plot function method. added getters / setters and tuple object to hold pairs of points for output." />
     <MESSAGE value="added tuple object to hold pairs of points for output." />
@@ -415,6 +449,13 @@
     <MESSAGE value="programmed exportObjects method. began programming smoothing method." />
     <MESSAGE value="programmed importObjects and exportObjects methods. began programming smoothing method." />
     <MESSAGE value="workspace commit 12/2/23" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 12/2/23" />
+    <MESSAGE value="created subdirectory for import / export files and miscellaneous files relating to each program." />
+    <MESSAGE value="sample output file for plotter" />
+    <MESSAGE value="refined plot and export methods. export now creates file in specified directory" />
+    <MESSAGE value="refined salt and export methods." />
+    <MESSAGE value="programmed smooth method. refined export method." />
+    <MESSAGE value="Plotter: successful run of plot and export methods." />
+    <MESSAGE value="workspace commit 12/5/23" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 12/5/23" />
   </component>
 </project>
