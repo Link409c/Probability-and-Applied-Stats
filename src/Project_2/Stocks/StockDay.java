@@ -4,6 +4,9 @@ package Project_2.Stocks;
  * A Data Container for daily values of a stock.
  */
 public class StockDay {
+
+    public StockDay(){}
+
     public StockDay(String aDate, double theOpen, double theHigh,
                     double theLow, double theClose, double theAdjClose,
                     long theVolume){
