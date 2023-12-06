@@ -1,7 +1,7 @@
-package Project_2.Stocks;
+package Project_2_Final.Stocks;
 
-import Miscellaneous.CsvAble;
-import Project_2.Plot_Salt_Smooth.Tuple;
+import Miscellaneous.Interfaces.CsvAble;
+import Project_2_Final.Plot_Salt_Smooth.Tuple;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -10,7 +10,7 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 
 /**
- * Uses daily information on stocks to simulate best practices
+ * Uses daily information on stocks to simulate assumed best practices
  * in buying and selling.
  */
 public class StockAnalyzer implements CsvAble{
@@ -22,27 +22,44 @@ public class StockAnalyzer implements CsvAble{
      */
     public void importObjects(String fileName) throws IOException {
         ArrayList<StockDay> annualDailyValues = new ArrayList<>();
-        //read the file
-        FileReader fr = new FileReader(fileName);
-        BufferedReader bfr = new BufferedReader(fr);
-        //skip the header
-        bfr.readLine();
-        //parse each line
-        String nextLine = bfr.readLine();
-        String[] columns;
-        StockDay nextDay;
-        while (nextLine != null) {
-            //split the string at the commas
-            columns = nextLine.split(",");
-            //populate a new StockDay object
-            nextDay = populateDay(columns);
-            //add it to the list
-            annualDailyValues.add(nextDay);
-            //update nextLine
-            nextLine = bfr.readLine();
+        //read a file from the program package files directory
+        String filePath = "E:\\Coding Projects\\Probability and Applied Statistics" +
+                "\\src\\Project_2_Final\\Stocks\\Files";
+        //check for valid filetype (.csv)
+        int fileTypeIndex = fileName.indexOf(".");
+        //if invalid inform user
+        if(!fileName.substring(fileTypeIndex).equalsIgnoreCase(".csv")){
+            String errMsg = "importObjects: Passed file type is not valid. " +
+                    "Pass a .csv file to the method.";
+            throw new IOException(errMsg);
         }
-        //set the global list
-        setDaysData(annualDailyValues);
+        //else add file to path and read in data
+        else {
+            filePath = filePath.concat("\\" + fileName);
+            FileReader fr = new FileReader(filePath);
+            BufferedReader bfr = new BufferedReader(fr);
+            //skip the header
+            bfr.readLine();
+            //parse each line
+            String nextLine = bfr.readLine();
+            //array for column values
+            String[] columns;
+            //create data container to populate
+            StockDay nextDay;
+            //loop while next line has data
+            while (nextLine != null && !nextLine.equals("")) {
+                //split the string at the commas
+                columns = nextLine.split(",");
+                //populate the StockDay object
+                nextDay = populateDay(columns);
+                //add it to the list
+                annualDailyValues.add(nextDay);
+                //update nextLine
+                nextLine = bfr.readLine();
+            }
+            //set the global list
+            setDaysData(annualDailyValues);
+        }
     }
 
     /**
@@ -79,7 +96,7 @@ public class StockAnalyzer implements CsvAble{
      * hold a stock.
      * @return positive to buy, zero to hold, negative to sell.
      */
-    public int dailyAction(){
+    public int determineDailyAction(){
         //basic without RSI or more values
         //based on day to day
         //get the moving average of the close
@@ -94,6 +111,31 @@ public class StockAnalyzer implements CsvAble{
         //couple this with moving average
         return 0;
     }
+
+    /**
+     * helper method to buy a number of stocks.
+     * @param numStocks the amount to buy.
+     */
+    public void buyStock(int numStocks){
+        //multiply numStocks by close value
+        //if total cost will not cause us to go negative,
+            //subtract this value from total money
+            //add numStocks to sharesOwned
+        //else buy as many shares as possible without going negative
+    }
+
+    /**
+     * helper method to sell a number of stocks.
+     * @param numStocks the amount to sell.
+     */
+    public void sellStock(int numStocks){
+        //if numStocks is <= ownedShares,
+            //multiply numStocks by close value
+            //add this amount to our money
+            //subtract numStocks from ownedShares
+        //else sell as many as possible
+    }
+
     /**
      * updates heuristics of the stock data for
      * use in making financial decisions.
@@ -118,7 +160,7 @@ public class StockAnalyzer implements CsvAble{
             //get the difference between close and prev close
             double prevDayClose;
             double prevMinusOneDayClose;
-            double closeDiff = prevDayClose - prevMinusOneDayClose;
+            //double closeDiff = prevDayClose - prevMinusOneDayClose;
             //if positive or 0 move is up
             //if negative move is down
         }
@@ -129,14 +171,23 @@ public class StockAnalyzer implements CsvAble{
             //wilder's smoothing method
         //calculate Relative Strength
             //avgU over avgD
-        double rs = avgU / avgD;
+        //double rs = avgU / avgD;
         //calculate RSI using formula
-        return 100 - (100 / (1 + rs));
+        //return 100 - (100 / (1 + rs));
+        return 0;
     }
 
     public StockAnalyzer(){
         setDaysData(new ArrayList<>());
         setMyMoney(new BigInteger("10000"));
+    }
+
+    public int getSharesOwned() {
+        return sharesOwned;
+    }
+
+    public void setSharesOwned(int numShares) {
+        this.sharesOwned = numShares;
     }
 
     public BigInteger getMyMoney() {
@@ -156,10 +207,13 @@ public class StockAnalyzer implements CsvAble{
     }
 
     /**
+     * The amount of shares of the stock we own.
+     */
+    private int sharesOwned;
+    /**
      * The simulated amount of money we have.
      */
     private BigInteger myMoney;
-
     /**
      * Holds various values for individual days' performance of a stock.
      */
