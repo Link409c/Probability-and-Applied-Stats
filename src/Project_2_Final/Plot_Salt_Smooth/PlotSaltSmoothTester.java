@@ -1,4 +1,4 @@
-package Project_2.Plot_Salt_Smooth;
+package Project_2_Final.Plot_Salt_Smooth;
 
 import java.io.IOException;
 import java.util.Random;
@@ -25,10 +25,21 @@ public class PlotSaltSmoothTester {
         }catch(IOException i){
             i.printStackTrace();
         }
-        //import
+        //import from plotter output file
+        Salter salter = new Salter();
+        fileName = fileName.concat(".csv");
+        try{
+            salter.importObjects(fileName);
+        }catch(IOException i){
+            i.printStackTrace();
+        }
+        System.out.println("Import Data from plotter output file:");
+        for(Tuple<Double> t : salter.getSaltedPoints()){
+            System.out.println(t.getInput() + ", " + t.getOutput());
+        }
         //salt the values
         //export
-        //import
+        //import from salter output file
         //smooth the values
         //export
     }
