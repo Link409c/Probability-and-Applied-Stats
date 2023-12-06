@@ -1,6 +1,6 @@
-package Project_2.Plot_Salt_Smooth;
+package Project_2_Final.Plot_Salt_Smooth;
 
-import Miscellaneous.CsvAble;
+import Miscellaneous.Interfaces.CsvAble;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -44,18 +44,32 @@ public class Plotter implements CsvAble {
    * @throws IOException if fileName is null or path is invalid.
    */
   public void importObjects(String fileName) throws IOException {
-    FileReader fileReader = new FileReader(fileName);
-    BufferedReader bfr = new BufferedReader(fileReader);
-    //assume first line of a .csv file is header
-    bfr.readLine();
-    ArrayList<Double> inputPoints = new ArrayList<>();
-    //get all points in the .csv file
-    String next = bfr.readLine();
-    while(next != null){
-      inputPoints.add(Double.parseDouble(next));
-      next = bfr.readLine();
+    String filePath = "E:\\Coding Projects\\Probability and Applied Statistics" +
+            "\\src\\Project_2_Final\\Plot_Salt_Smooth\\Files";
+    //check for valid filetype (.csv)
+    int fileTypeIndex = fileName.indexOf(".");
+    //if invalid inform user
+    if(!fileName.substring(fileTypeIndex).equalsIgnoreCase(".csv")){
+      String errMsg = "importObjects: Passed file type is not valid. " +
+              "Pass a .csv file to the method.";
+      throw new IOException(errMsg);
     }
-    setInputs(inputPoints);
+    //else add file to path and read in data
+    else {
+      filePath = filePath.concat("\\" + fileName);
+      FileReader fr = new FileReader(filePath);
+      BufferedReader bfr = new BufferedReader(fr);
+      //skip the header
+      bfr.readLine();
+      ArrayList<Double> inputPoints = new ArrayList<>();
+      //get all points in the .csv file
+      String next = bfr.readLine();
+      while (next != null) {
+        inputPoints.add(Double.parseDouble(next));
+        next = bfr.readLine();
+      }
+      setInputs(inputPoints);
+    }
   }
 
   /**
@@ -73,7 +87,7 @@ public class Plotter implements CsvAble {
       //specify an absolute path for file
       //change this if testing on your own PC
       String filePath = "E:\\Coding Projects\\Probability and Applied Statistics\\" +
-              "src\\Project_2\\Plot_Salt_Smooth\\Files";
+              "src\\Project_2_Final\\Plot_Salt_Smooth\\Files";
       filePath = filePath.concat("\\" + fileName);
       FileWriter toCsv = new FileWriter(filePath);
       BufferedWriter csvWriter = new BufferedWriter(toCsv);

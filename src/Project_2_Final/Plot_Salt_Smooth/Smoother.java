@@ -1,7 +1,6 @@
-package Project_2.Plot_Salt_Smooth;
+package Project_2_Final.Plot_Salt_Smooth;
 
-import Miscellaneous.CsvAble;
-import Project_1_Stats_Library.StatsLibrary;
+import Miscellaneous.Interfaces.CsvAble;
 
 import java.io.*;
 import java.util.ArrayList;

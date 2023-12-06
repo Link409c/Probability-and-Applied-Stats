@@ -1,6 +1,6 @@
-package Project_2.Plot_Salt_Smooth;
+package Project_2_Final.Plot_Salt_Smooth;
 
-import Miscellaneous.CsvAble;
+import Miscellaneous.Interfaces.CsvAble;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -21,24 +21,39 @@ public class Salter implements CsvAble {
    * @throws IOException if the fileName is null or invalid.
    */
   public void importObjects(String fileName) throws IOException {
-    FileReader fileReader = new FileReader(fileName);
-    BufferedReader bfr = new BufferedReader(fileReader);
-    //assume first line of a .csv file is header
-    bfr.readLine();
-    ArrayList<Tuple<Double>> plottedPoints = new ArrayList<>();
-    String next = bfr.readLine();
-    while(next != null){
-      //split the string to get both points
-      int regex = next.indexOf(',');
-      //parse substrings to doubles
-      double x = Double.parseDouble(next.substring(0, regex));
-      double y = Double.parseDouble(next.substring(regex + 1));
-      //add points to list in a tuple
-      plottedPoints.add(new Tuple<>(x, y));
-      //get next line in file
-      next = bfr.readLine();
+    String filePath = "E:\\Coding Projects\\Probability and Applied Statistics" +
+            "\\src\\Project_2_Final\\Plot_Salt_Smooth\\Files";
+    //check for valid filetype (.csv)
+    int fileTypeIndex = fileName.indexOf(".");
+    //if invalid inform user
+    if(!fileName.substring(fileTypeIndex).equalsIgnoreCase(".csv")){
+      String errMsg = "importObjects: Passed file type is not valid. " +
+              "Pass a .csv file to the method.";
+      throw new IOException(errMsg);
     }
-    setSaltedPoints(plottedPoints);
+    //else add file to path and read in data
+    else {
+      filePath = filePath.concat("\\" + fileName);
+      //TODO: add check here for file existing in the specified path
+      FileReader fr = new FileReader(filePath);
+      BufferedReader bfr = new BufferedReader(fr);
+      //skip the header
+      bfr.readLine();
+      ArrayList<Tuple<Double>> plottedPoints = new ArrayList<>();
+      String next = bfr.readLine();
+      while (next != null && !next.equals("")) {
+        //split the string to get both points
+        int regex = next.indexOf(',');
+        //parse substrings to doubles
+        double x = Double.parseDouble(next.substring(0, regex));
+        double y = Double.parseDouble(next.substring(regex + 1));
+        //add points to list in a tuple
+        plottedPoints.add(new Tuple<>(x, y));
+        //get next line in file
+        next = bfr.readLine();
+      }
+      setSaltedPoints(plottedPoints);
+    }
   }
 
   /**
@@ -91,7 +106,7 @@ public class Salter implements CsvAble {
       //specify an absolute path for file
       //change this if testing on your own PC
       String filePath = "E:\\Coding Projects\\Probability and Applied Statistics\\" +
-              "src\\Project_2\\Plot_Salt_Smooth\\Files";
+              "src\\Project_2_Final\\Plot_Salt_Smooth\\Files";
       filePath = filePath.concat("\\" + fileName);
       FileWriter toCsv = new FileWriter(filePath);
       BufferedWriter csvWriter = new BufferedWriter(toCsv);
