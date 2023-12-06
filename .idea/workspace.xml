@@ -5,7 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/5/23">
-      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StocksTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BirthdayList.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Birthday_Problem/Files/BirthdayList.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coin toss dist.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Files/coin toss dist.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/names.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Birthday_Problem/Files/names.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homework/HomeworkOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/HomeworkOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homework/HomeworkThree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/HomeworkThree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Homework/HomeworkTwo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Homework/HomeworkTwo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Birthday Problem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Birthday_Problem/Files/Birthday Problem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Birthday_Problem/BirthdayProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/BirthdayProblemTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Birthday_Problem/BirthdayProblemTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Birthday_Problem/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Results.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Birthday_Problem/Files/Results.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Birthday_Problem/Results10PercentAndSharing.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Birthday_Problem/Files/Results10PercentAndSharing.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Car_Factory/Car.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/Factory Tester Output Example.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Car_Factory/Files/Factory Tester Output Example.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Car_Factory/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Car_Factory/FactoryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Car_Factory/FactoryTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravProbCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Extravagance/ExtravProbCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/ExtravaganceProbability.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Extravagance/ExtravaganceProbability.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Extravagance/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/Version Log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Extravagance/Version Log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Extravagance/YugiohCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Extravagance/YugiohCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Hand_Evaluator/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/CardComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Hand_Evaluator/CardComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Hand_Evaluator/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Hand_Evaluator/HandEvaluator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/HandEvaluatorTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Hand_Evaluator/HandEvaluatorTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Hand_Evaluator/Suit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Hand_Evaluator/Suit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/Monte Hall Problem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Monty_Hall_DealNoDeal/Files/Monte Hall Problem.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHallTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Monty_Hall_DealNoDeal/MonteHallTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/Results.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Monty_Hall_DealNoDeal/Files/ResultsIncorrect.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Mini_Coding_Projects/Monty_Hall_DealNoDeal/ResultsCorrect.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Monty_Hall_DealNoDeal/Files/ResultsCorrect.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Miscellaneous/CsvAble.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Interfaces/CsvAble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/Custom_Exceptions/NegativeProbabilityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Custom_Exceptions/NegativeProbabilityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/Custom_Exceptions/ProbabilityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Custom_Exceptions/ProbabilityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/Custom_Exceptions/TotalProbabilityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Custom_Exceptions/TotalProbabilityException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/Custom_Exceptions/WithinNumberException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Custom_Exceptions/WithinNumberException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/PAS Midterm Info.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Stats_Library_Set_Operations/Files/PAS Midterm Info.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/SetOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Stats_Library_Set_Operations/SetOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/SetOpsTestResults.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Stats_Library_Set_Operations/Files/SetOpsTestResults.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/SetOpsTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Stats_Library_Set_Operations/SetOpsTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibrary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Stats_Library_Set_Operations/StatsLibrary.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_1_Stats_Library/StatsLibraryTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Stats_Library_Set_Operations/StatsLibraryTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Final_Project/Final Project ideas" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Final_Project/Final Project ideas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/MatLab/MatLab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/MatLab/MatLab.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Files/plotterTest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Files/plotterTest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/PlotSaltSmoothTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/PlotSaltSmoothTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Plotter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Plotter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Salter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Salter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Smoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Smoother.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Plot_Salt_Smooth/Tuple.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Tuple.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Project 2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Project 2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/Files/MSFT.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/Files/MSFT.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/Files/Stock Analysis Program Outline" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/Files/Stock Analysis Program Outline" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/StockAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2/Stocks/StockDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockDay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testFile.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Mini_Coding_Projects/Car_Factory/Files/testFile.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,30 +92,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_2\Stocks\Files" />
-      <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\Stocks" />
-      <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\MatLab" />
-      <recent name="C:\Users\cdsim\IdeaProjects\Probability-and-Applied-Stats\src\Project_2\Final_Project" />
-      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Stats_Library" />
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Miscellaneous\Files" />
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Midterm\Mini_Coding_Projects\Birthday_Problem\Files" />
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Midterm\Mini_Coding_Projects\Car_Factory\Files" />
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Midterm\Stats_Library_Set_Operations\Files" />
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Stats_Library\Files" />
     </key>
   </component>
   <component name="RunManager" selected="Application.PlotSaltSmoothTester">
     <configuration name="HandEvaluatorTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Mini_Coding_Projects.Hand_Evaluator.HandEvaluatorTester" />
+      <option name="MAIN_CLASS_NAME" value="Project_1_Midterm.Mini_Coding_Projects.Hand_Evaluator.HandEvaluatorTester" />
       <module name="Probability and Applied Statistics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Mini_Coding_Projects.Hand_Evaluator.*" />
+          <option name="PATTERN" value="Project_1_Midterm.Mini_Coding_Projects.Hand_Evaluator.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -65,11 +125,11 @@
       </method>
     </configuration>
     <configuration name="PlotSaltSmoothTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project_2.Plot_Salt_Smooth.PlotSaltSmoothTester" />
+      <option name="MAIN_CLASS_NAME" value="Project_2_Final.Plot_Salt_Smooth.PlotSaltSmoothTester" />
       <module name="Probability and Applied Statistics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project_2.Plot_Salt_Smooth.*" />
+          <option name="PATTERN" value="Project_2_Final.Plot_Salt_Smooth.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,11 +138,11 @@
       </method>
     </configuration>
     <configuration name="SetOpsTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Project_1_Stats_Library.SetOpsTester" />
+      <option name="MAIN_CLASS_NAME" value="Project_1_Midterm.Stats_Library_Set_Operations.SetOpsTester" />
       <module name="Probability and Applied Statistics" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Project_1_Stats_Library.*" />
+          <option name="PATTERN" value="Project_1_Midterm.Stats_Library_Set_Operations.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -415,8 +475,18 @@
       <option name="project" value="LOCAL" />
       <updated>1701814225556</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="workspace commit 12/5/23">
+      <created>1701814355633</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1701814355633</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
