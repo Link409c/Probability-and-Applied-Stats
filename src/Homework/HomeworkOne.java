@@ -1,6 +1,6 @@
 package Homework;
 
-import Project_1_Stats_Library.StatsLibrary;
+import Project_1_Midterm.Stats_Library_Set_Operations.StatsLibrary;
 
 public class HomeworkOne {
 
