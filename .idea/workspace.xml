@@ -6,6 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/5/23">
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Files/saltTest.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Files/smoothTest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Files/plotterTest.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Files/plotterTest.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/PlotSaltSmoothTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/PlotSaltSmoothTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Salter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Salter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Smoother.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/Smoother.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Project 2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Project 2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockDay.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockDay.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StocksTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StocksTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,15 +44,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Miscellaneous\Files" />
@@ -51,7 +62,7 @@
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Stats_Library\Files" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PlotSaltSmoothTester">
+  <component name="RunManager">
     <configuration name="HandEvaluatorTester" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Project_1_Midterm.Mini_Coding_Projects.Hand_Evaluator.HandEvaluatorTester" />
       <module name="Probability and Applied Statistics" />
@@ -107,13 +118,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699851542905</updated>
-    </task>
-    <task id="LOCAL-00003" summary="created tester for set operations">
-      <created>1699852544008</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1699852544008</updated>
     </task>
     <task id="LOCAL-00004" summary="removed simple set operations. regrouped certain methods to clarify usage. coded intersection and union for probability. added dependence method.">
       <created>1699852660616</created>
@@ -451,7 +455,14 @@
       <option name="project" value="LOCAL" />
       <updated>1701836785343</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="workspace commit 12/5/23">
+      <created>1701836808958</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1701836808958</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="UnknownFeatures">
