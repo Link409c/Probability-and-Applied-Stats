@@ -5,6 +5,21 @@ package Project_2_Final.Stocks;
  */
 public class StockDay {
 
+    /**
+     * get the attributes of the object and add them to
+     * a String.
+     * @return a String consisting of the attributes of the object.
+     */
+    public String dailyValuesToString(){
+        return getDate() + ", " +
+                getOpen() + ", " +
+                getHigh() + ", " +
+                getLow() + ", " +
+                getClose() + ", " +
+                getAdjustedClose() + ", " +
+                getVolume();
+    }
+
     public StockDay(){}
 
     public StockDay(String aDate, double theOpen, double theHigh,
