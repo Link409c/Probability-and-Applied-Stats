@@ -1,6 +1,7 @@
 package Project_2_Final.Stocks;
 
 import Miscellaneous.Interfaces.CsvAble;
+import Project_1_Midterm.Stats_Library_Set_Operations.StatsLibrary;
 import Project_2_Final.Plot_Salt_Smooth.Tuple;
 
 import java.io.BufferedReader;
@@ -85,7 +86,6 @@ public class StockAnalyzer implements CsvAble{
         //export the data as a csv
         //per day,
         //display the date, total money, money earned, money spent, stocks bought, stocks sold?
-
         String successMsg = "";
         return successMsg;
     }
@@ -101,8 +101,8 @@ public class StockAnalyzer implements CsvAble{
         //based on day to day
         //get the moving average of the close
         //compare it to previous days close
-        //if close is higher buy
-        //if close is lower sell
+        //if close is higher sell
+        //if close is lower buy
         //if close is within a value dont do anything
 
         //with RSI
@@ -116,70 +116,178 @@ public class StockAnalyzer implements CsvAble{
      * helper method to buy a number of stocks.
      * @param numStocks the amount to buy.
      */
-    public void buyStock(int numStocks){
+    public void buyStock(int numStocks, StockDay aDay){
         //multiply numStocks by close value
+        double cost = numStocks * aDay.getClose();
         //if total cost will not cause us to go negative,
+        if(cost < getMyMoney().doubleValue()) {
             //subtract this value from total money
+            setMyMoney(getMyMoney().subtract(BigInteger.valueOf((long) cost)));
             //add numStocks to sharesOwned
+            setSharesOwned(getSharesOwned() + numStocks);
+        }
         //else buy as many shares as possible without going negative
+        else{
+            int numToBuy = (int) Math.floor(getMyMoney().doubleValue() / aDay.getClose());
+            setSharesOwned(getSharesOwned() + numToBuy);
+            cost = numToBuy * aDay.getClose();
+            setMyMoney(getMyMoney().subtract(BigInteger.valueOf((long) cost)));
+        }
     }
 
     /**
      * helper method to sell a number of stocks.
      * @param numStocks the amount to sell.
      */
-    public void sellStock(int numStocks){
+    public void sellStock(int numStocks, StockDay aDay){
         //if numStocks is <= ownedShares,
+        if(numStocks <= getSharesOwned()) {
             //multiply numStocks by close value
+            double earnings = numStocks * aDay.getClose();
             //add this amount to our money
+            setMyMoney(getMyMoney().add(BigInteger.valueOf((long) earnings)));
             //subtract numStocks from ownedShares
-        //else sell as many as possible
+            setSharesOwned(getSharesOwned() - numStocks);
+        }
+        //else sell as many as possible without going negative
+        else{
+            //get the total value of all owned stocks at current day
+            double earnings = getSharesOwned() * aDay.getClose();
+            //add this amount to our money
+            setMyMoney(getMyMoney().add(BigInteger.valueOf((long) earnings)));
+            //set owned stocks to 0
+            setSharesOwned(0);
+        }
     }
 
     /**
-     * updates heuristics of the stock data for
-     * use in making financial decisions.
+     * updates data on the stock to determine amounts to buy or sell.
      */
-    public void updateInternalData(){
+    public int updateInternalData(){
         //updating central tendency
         //updating RSI
         /*
          What probability calculations can be applied here?
          */
+        return 0;
     }
 
     /**
      * calculates the Relative Strength Index of the stock.
      */
-    public double calculateRSI(int period){
+    public double calculateRSI(String date){
+        //get days data
         ArrayList<StockDay> daysCopy = getDaysData();
-        //calculate up and down moves
+        //make list to hold move data
         ArrayList<Tuple<Double>> moves = new ArrayList<>(daysData.size());
-        //for each day in the window starting from a certain day,
-        for(int i = 1; i < period; i++){
-            //get the difference between close and prev close
-            double prevDayClose;
-            double prevMinusOneDayClose;
-            //double closeDiff = prevDayClose - prevMinusOneDayClose;
-            //if positive or 0 move is up
-            //if negative move is down
+        //get the index of the day with the passed date
+        int indexOfDate = 0;
+        for(StockDay day : daysCopy){
+            if(day.getDate().equals(date)){
+                indexOfDate = daysCopy.indexOf(day);
+                break;
+            }
         }
-        //average up and down moves
+        //check that date is at least 14 days since start of data
+        if(indexOfDate < 14){
+            String errMsg = "Date must be at least 14 days since the start of the data.";
+            throw new IllegalArgumentException(errMsg);
+        }
+        else {
+            //subtract 14 from date index
+            int start = indexOfDate - 14;
+            //calculate up and down moves
+            while(start < indexOfDate) {
+                //get the difference between close and prev close
+                double prevDayClose = daysCopy.get(start).getClose();
+                double prevMinusOneDayClose = daysCopy.get(start-1).getClose();
+                double closeDiff = prevDayClose - prevMinusOneDayClose;
+                moves.add(new Tuple<>((double) start, closeDiff));
+                start++;
+            }
+            //average up and down moves
             //3 methods
             //simple moving avg
+            //separate moves into 2 lists of negatives and positives
+            ArrayList<Double> upMoves = new ArrayList<>();
+            ArrayList<Double> downMoves = new ArrayList<>();
+            for(Tuple<Double> t : moves){
+                double move = t.getOutput();
+                //if negative move is down
+                if(move < 0){
+                    downMoves.add(move);
+                }
+                //if positive or 0 move is up
+                else{
+                    upMoves.add(move);
+                }
+            }
+            StatsLibrary sl = new StatsLibrary();
+            double avgU = sl.findListSum(upMoves);
+            double avgD = sl.findListSum(downMoves);
             //exponential moving avg
             //wilder's smoothing method
-        //calculate Relative Strength
+            //calculate Relative Strength
             //avgU over avgD
-        //double rs = avgU / avgD;
-        //calculate RSI using formula
-        //return 100 - (100 / (1 + rs));
-        return 0;
+            double rs = avgU / avgD;
+            //calculate RSI using formula
+            return 100 - (100 / (1 + rs));
+        }
     }
 
+    /**
+     * runs the program, analyzing the data day by day until
+     * no more data is available.
+     * @param buyAmount the initial dollar amount to spend.
+     * @return a String informing the user their profits or losses.
+     */
+    public String runProgram(double buyAmount){
+        double startingMoney = getMyMoney().doubleValue();
+        //buy some amount to start
+        //check for valid buyAmount
+        if(buyAmount > startingMoney){
+            String errMsg = "Cannot spend more than you have. Input a buyAmount up to" +
+                    "your total money.";
+            throw new IllegalArgumentException(errMsg);
+        }
+        //if buyAmount is valid, buy as many stocks as possible with that money
+        else{
+            int numBuy = (int) Math.floor(buyAmount / getDaysData().get(0).getOpen());
+            buyStock(numBuy, getDaysData().get(0));
+        }
+        //loop for each day of year
+        int days = getDaysData().size();
+        ArrayList<StockDay> daysCopy = getDaysData();
+        for(int i = 0; i < days; i++) {
+            StockDay currDay = daysCopy.get(i);
+            //update heuristics (moving avg, RSI, etc) to get buy amount
+            int numBuy = updateInternalData();
+            //call determineDailyAction method
+            int action = determineDailyAction();
+            //buy sell or hold
+            if(action > 0){
+                buyStock(numBuy, currDay);
+            }
+            else if (action < 0){
+                sellStock(numBuy, currDay);
+            }
+        }
+        //after year of analysis, sell all shares and compare starting money vs current
+        StockDay lastDay = getDaysData().get(365);
+        sellStock(getSharesOwned(), lastDay);
+        String result = "In trading the selected stock over one year, you ";
+        if(getMyMoney().doubleValue() < startingMoney){
+            result = result.concat("lost " + (startingMoney - getMyMoney().doubleValue()) + " dollars.");
+        }
+        else{
+            result = result.concat("gained " + (getMyMoney().doubleValue() - startingMoney) + " dollars.");
+        }
+        return result;
+    }
     public StockAnalyzer(){
         setDaysData(new ArrayList<>());
         setMyMoney(new BigInteger("10000"));
+        setSharesOwned(0);
     }
 
     public int getSharesOwned() {
