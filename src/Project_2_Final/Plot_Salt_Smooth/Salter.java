@@ -9,7 +9,7 @@ import java.util.Random;
 /**
  * Salter takes a csv file input and "salts" the data by adding or subtracting from
  * each value to change the plot, effectively scattering the information on an observable graph.
-**/
+ **/
 
 public class Salter implements CsvAble {
 
@@ -60,12 +60,18 @@ public class Salter implements CsvAble {
    * changes the values of each output point by adding some value.
    * if the passed value is null, salt the points by randomly adding
    * or subtracting from them.
-   * @param saltValue the value to add or subtract from each point.
    */
-  public void salt(double saltValue){
+  public void salt(){
     ArrayList<Tuple<Double>> points = getSaltedPoints();
     Random r = new Random();
     int rand;
+    double saltValue = 0;
+    //get the highest output value as the salt
+    for(Tuple<Double> t : points){
+      if(t.getOutput() > saltValue){
+        saltValue = t.getOutput();
+      }
+    }
     //get each point from the list
     for(Tuple<Double> t : points) {
       rand = r.nextInt();
