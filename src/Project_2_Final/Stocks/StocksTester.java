@@ -16,6 +16,7 @@ public class StocksTester {
         System.out.println("Date | Open | High | Low | Close | Adj Close | Volume");
         System.out.println(aDay.dailyValuesToString());
         //test buying and selling
+        System.out.println(stockAnalyzer.runProgram(stockAnalyzer.getMyMoney().doubleValue()));
         //test export
     }
 }
