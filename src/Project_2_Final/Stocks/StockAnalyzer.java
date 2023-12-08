@@ -112,6 +112,12 @@ public class StockAnalyzer implements CsvAble{
         return 0;
     }
 
+    public double movingAverage(String value, int midpoint, int window){
+        //take sum of value indicated by passed string
+        //get average
+        return 0;
+    }
+
     /**
      * helper method to buy a number of stocks.
      * @param numStocks the amount to buy.
@@ -173,7 +179,10 @@ public class StockAnalyzer implements CsvAble{
     }
 
     /**
-     * calculates the Relative Strength Index of the stock.
+     * calculates the Relative Strength Index of the stock. Also
+     * stores all up and down moves in a list used within the calculations.
+     * @param date the date on which to calculate a specific RSI.
+     * @return the RSI read as a percentage.
      */
     public double calculateRSI(String date){
         //get days data
@@ -223,8 +232,9 @@ public class StockAnalyzer implements CsvAble{
                 }
             }
             StatsLibrary sl = new StatsLibrary();
-            double avgU = sl.findListSum(upMoves);
-            double avgD = sl.findListSum(downMoves);
+            //sum up moves and down moves
+            double avgU = sl.findMean(upMoves);
+            double avgD = sl.findMean(downMoves);
             //exponential moving avg
             //wilder's smoothing method
             //calculate Relative Strength
@@ -273,7 +283,7 @@ public class StockAnalyzer implements CsvAble{
             }
         }
         //after year of analysis, sell all shares and compare starting money vs current
-        StockDay lastDay = getDaysData().get(365);
+        StockDay lastDay = getDaysData().get(getDaysData().size() - 1);
         sellStock(getSharesOwned(), lastDay);
         String result = "In trading the selected stock over one year, you ";
         if(getMyMoney().doubleValue() < startingMoney){
