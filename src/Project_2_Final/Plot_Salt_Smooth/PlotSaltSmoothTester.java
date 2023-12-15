@@ -5,6 +5,8 @@ import java.util.Random;
 
 /**
  * tester class for the plotter, salter, and smoother programs.
+ * tests both user-implemented methods and imported methods
+ * from Apache and JFreeCharts.
  */
 public class PlotSaltSmoothTester {
     public static void main(String[] args) {
