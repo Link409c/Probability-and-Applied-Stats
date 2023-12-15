@@ -112,6 +112,14 @@ public class StockAnalyzer implements CsvAble{
         return 0;
     }
 
+    /**
+     * calculates the moving average of a specific value over a period of time.
+     * @param value the value from a StockDay object to take the average of.
+     *              Open, Low, High, Close, Adjusted Close are all valid options.
+     * @param midpoint the index of the current point to average around.
+     * @param window the size of the window in which the average should be calculated.
+     * @return the average of all the data points about the midpoint in the window.
+     */
     public double movingAverage(String value, int midpoint, int window){
         //take sum of value indicated by passed string
         //get average
@@ -168,6 +176,7 @@ public class StockAnalyzer implements CsvAble{
 
     /**
      * updates data on the stock to determine amounts to buy or sell.
+     * dependent on changes in averages of whatever value is being monitored.
      */
     public int updateInternalData(){
         //updating central tendency
@@ -270,10 +279,10 @@ public class StockAnalyzer implements CsvAble{
         ArrayList<StockDay> daysCopy = getDaysData();
         for(int i = 0; i < days; i++) {
             StockDay currDay = daysCopy.get(i);
-            //update heuristics (moving avg, RSI, etc) to get buy amount
-            int numBuy = updateInternalData();
             //call determineDailyAction method
             int action = determineDailyAction();
+            //update heuristics (moving avg, RSI, etc) to get buy / sell amount
+            int numBuy = updateInternalData();
             //buy sell or hold
             if(action > 0){
                 buyStock(numBuy, currDay);
