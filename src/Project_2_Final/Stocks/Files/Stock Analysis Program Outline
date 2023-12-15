@@ -34,11 +34,11 @@ Software Engineering Side:
 5. write a method to calculate Relative Strength Index.
    * search Google macroption.com for calculation steps.
 
-Ideas for buying selling or staying
-* closing average
-* take moving average of close up to current
-* if average is higher than current sell
-* if lower buy
-* if approx equal stay
-* research using p/e ratio for buy sell decision
-* look at RSI
+   Ideas for buying selling or staying
+   * closing average
+   * take moving average of close up to current
+   * if average is higher than current sell
+   * if lower buy
+   * if approx equal stay
+   * research using p/e ratio for buy sell decision
+   * look at RSI

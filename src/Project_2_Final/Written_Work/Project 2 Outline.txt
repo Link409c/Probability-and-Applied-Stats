@@ -1,0 +1,25 @@
+::Plot/Salt/Smoother::
+Write a program that
+a. Plots data points
+b. Salts the data
+c. Smooths the data
+
+Download and Import the following libraries:
+JFreeChart
+Apache Stats Library
+use their methods to shorthand the work.
+
+Contain the results of the above in a report. Essay form.
+
+::Distributions Paper::
+Write a report on Alpha, Betta, and Gamma Distributions.
+
+::Stats Library::
+Add new distribution methods to the Stats Library Program.
+Only include new methods related to Chapter 4 and 5 for Final.
+
+::Final Report::
+Create a Report detailing applications of all the distributions and theorems we have learned this semester.
+Include anything you think is relevant to the data.
+Use at least one example from each assigned homework section applied to the data.
+Tell a story about the data and why analyzing it using probability and statistics matters.

@@ -1,8 +1,4 @@
 MatLab / Octave Work Documentation
-MatLab Credentials: 
-  simpso61@go.stockton.edu
-  R56DU2t4
-
 Todo:
 Work through tutorials to learn the basics of MatLab.
 Document progress as you work. Think comments, commit notes, and figures or screenshots.

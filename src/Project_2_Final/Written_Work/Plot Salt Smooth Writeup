@@ -1,0 +1,19 @@
+- Programming the Plotter / Salter / Smoother -
+
+Initially, I assumed working on this project would be simple. However, having not done much importing or
+exporting to files in my early programming courses, this part of the work was daunting. I learned a valuable
+skill in managing the BufferedReader and FileReader / Writer classes. I was also able to create a simple
+interface which I implemented in many of my programs for the second half of the semester, "CsvAble".
+
+I programmed a simple parabolic function to output points.
+
+I also worked with Excel for the first time, learning the simple functions of importing and exporting data
+as .csv files, as well as creating graphs and histograms.
+
+- Learning MatLab / Octave -
+
+- Libraries to implement methods for the program -
+
+This was also my first attempt at downloading and integrating outside libraries besides Java libraries. It took a
+while, but I was able to find a tutorial and follow the steps. Importing the Apache and JFreeChart libraries,
+I used their built-in methods alongside the output from my programmed methods to compare the results.

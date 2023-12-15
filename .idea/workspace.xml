@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="successfully tested sample run of program spending all money and holding for one year.">
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/7/23">
+      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Alpha, Beta, Gamma Distribution" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Formula Sheet" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Plot Salt Smooth Writeup" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Stock Analysis Writeup" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Project 2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Project 2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Final_Project/Final Project ideas" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Final_Project_Report/Final Project ideas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/MatLab/MatLab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/MatLab/MatLab.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/PlotSaltSmoothTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/PlotSaltSmoothTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Project 2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Project 2 Outline.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Stocks/Files/Stock Analysis Program Outline" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/Files/Stock Analysis Program Outline" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockAnalyzer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StocksTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StocksTester.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Written_Work/Formula Sheet" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Written_Work/Formula Sheet" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,11 +58,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_2_Final\Written_Work" />
+      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_2_Final\Plot_Salt_Smooth\Files" />
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Miscellaneous\Files" />
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Midterm\Mini_Coding_Projects\Birthday_Problem\Files" />
       <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Midterm\Mini_Coding_Projects\Car_Factory\Files" />
-      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Midterm\Stats_Library_Set_Operations\Files" />
-      <recent name="E:\Coding Projects\Probability and Applied Statistics\src\Project_1_Stats_Library\Files" />
     </key>
   </component>
   <component name="RunManager" selected="Application.StocksTester">
@@ -122,13 +135,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699851542905</updated>
-    </task>
-    <task id="LOCAL-00013" summary="tested all hand evaluation methods. straight, two pair, pair, and high card need debugging.">
-      <created>1699933527070</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1699933527070</updated>
     </task>
     <task id="LOCAL-00014" summary="exported a larger population of results.">
       <created>1699933572442</created>
@@ -466,7 +472,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702010308410</updated>
     </task>
-    <option name="localTasksCounter" value="62" />
+    <task id="LOCAL-00062" summary="workspace commit 12/7/23">
+      <created>1702010329277</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1702010329278</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -485,7 +498,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="removed pointCount variable. programmed exportObjects method." />
     <MESSAGE value="programmed exportObjects method. began programming smoothing method." />
     <MESSAGE value="programmed importObjects and exportObjects methods. began programming smoothing method." />
     <MESSAGE value="workspace commit 12/2/23" />
@@ -510,6 +522,7 @@
     <MESSAGE value="ui / workspace commit 12/7/23" />
     <MESSAGE value="completed runProgram method. corrected calculations for average up / down moves in RSI method." />
     <MESSAGE value="successfully tested sample run of program spending all money and holding for one year." />
-    <option name="LAST_COMMIT_MESSAGE" value="successfully tested sample run of program spending all money and holding for one year." />
+    <MESSAGE value="workspace commit 12/7/23" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 12/7/23" />
   </component>
 </project>
