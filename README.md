@@ -9,15 +9,3 @@ Project 1 contains the Stats Library and Set Operations programs, which model va
 Mini Coding Projects contains several examples of applied probability and statistics functions and formulae to solve real-world problems.
 Miscellaneous contains other programs which may not be related to the coursework.
 Written Work contains essays, formulas, and documentation of work.
-
-MIDTERM:
-Project 1 : Set Operations | Stats Library | Testers
-Mini Coding Projects : Monty Hall | Factory | Hand Evaluator | Birthday Problem | Testers
-Written Work : Github Essay | Formula Sheet 
-
-FINAL: 
-Project 2 | Written Work
-Normal / Beta / Gamma Distribution
-Continuous Random Variables
-Joint Discrete Random Variables
-MatLab Documentation | Normal / Beta / Gamma Distribution Essay
