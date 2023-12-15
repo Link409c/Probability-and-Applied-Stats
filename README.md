@@ -5,7 +5,24 @@ This repository contains coursework in programs modeling, essays on, and applica
 The program files and written works are all located in the SRC folder. 
 Workspace files are contained in the IDEA folder and should be ignored.
 Each individual assignment is contained within its own package for clarity. 
-Project 1 contains the Stats Library and Set Operations programs, which model various Probability Functions and Axioms, and simple set operations respectively.
-Mini Coding Projects contains several examples of applied probability and statistics functions and formulae to solve real-world problems.
-Miscellaneous contains other programs which may not be related to the coursework.
-Written Work contains essays, formulas, and documentation of work.
+
+Project 1: Midterm.
+
+Set Operations
+Stats Library
+Monte Carlo Hand Evaluator
+Monty Hall Deal or No Deal / Three Doors
+Birthday Problem
+Car Factory
+GitHub Workflow
+Formula Sheet
+
+Project 2: Final.
+
+Analytic Report
+Stats Library Update
+StocksBot Program
+Plotter / Salter / Smoother with Apache / JFreeChart.
+MatLab Writeup
+Alpha / Beta / Gamma Distribution Writeup
+Formula Sheet
