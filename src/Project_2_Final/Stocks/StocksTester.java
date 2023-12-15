@@ -12,6 +12,7 @@ public class StocksTester {
         }catch (IOException i){
             i.printStackTrace();
         }
+        //check data
         StockDay aDay = stockAnalyzer.getDaysData().get(0);
         System.out.println("Date | Open | High | Low | Close | Adj Close | Volume");
         System.out.println(aDay.dailyValuesToString());
