@@ -4,22 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="workspace commit 12/7/23">
-      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Alpha, Beta, Gamma Distribution" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Formula Sheet" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Plot Salt Smooth Writeup" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Stock Analysis Writeup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="update to gitignore to include .idea and .iml files">
+      <change afterPath="$PROJECT_DIR$/src/Miscellaneous/Interfaces/ProbabilityOperations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Final_Project/Final Project ideas" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Final_Project_Report/Final Project ideas" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/MatLab/MatLab.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/MatLab/MatLab.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/PlotSaltSmoothTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Plot_Salt_Smooth/PlotSaltSmoothTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Project 2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Written_Work/Project 2 Outline.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Stocks/Files/Stock Analysis Program Outline" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/Files/Stock Analysis Program Outline" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockAnalyzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StockAnalyzer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StocksTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_2_Final/Stocks/StocksTester.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Written_Work/Formula Sheet" beforeDir="false" afterPath="$PROJECT_DIR$/src/Project_1_Midterm/Written_Work/Formula Sheet" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +17,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -135,55 +123,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699851542905</updated>
-    </task>
-    <task id="LOCAL-00014" summary="exported a larger population of results.">
-      <created>1699933572442</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1699933572442</updated>
-    </task>
-    <task id="LOCAL-00015" summary="note for debugging: check string comparisons - they are using single characters. remember some values are two digits">
-      <created>1699934133671</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1699934133671</updated>
-    </task>
-    <task id="LOCAL-00016" summary="updated comparator, adding methods to compare values and difference in card values equal to 1.">
-      <created>1700011052327</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1700011052327</updated>
-    </task>
-    <task id="LOCAL-00017" summary="removed comparator from sortHand method. changed implementation of evaluateHand method and its helper methods to utilize the card comparator. now instead of string matching, the methods of the comparator determine hand types. enclosed pair matching steps in getPairs method to reduce method bloat. removed commented-out shuffle methods. added pseudocode for exportObjects implementation. completed javadoc for finished methods.">
-      <created>1700012877911</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1700012877911</updated>
-    </task>
-    <task id="LOCAL-00018" summary="debugged and tested all hand evaluation methods successfully.">
-      <created>1700012944566</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1700012944566</updated>
-    </task>
-    <task id="LOCAL-00019" summary="workspace commit">
-      <created>1700012966114</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1700012966114</updated>
-    </task>
-    <task id="LOCAL-00020" summary="created tester for plot / salt / smooth programs.">
-      <created>1700098139243</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1700098139243</updated>
     </task>
     <task id="LOCAL-00021" summary="programmed calculate function method and plot function method. added getters / setters and tuple object to hold pairs of points for output.">
       <created>1700098226257</created>
@@ -479,7 +418,56 @@
       <option name="project" value="LOCAL" />
       <updated>1702010329278</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="updated writeups and reports for final project">
+      <created>1702616419437</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1702616419437</updated>
+    </task>
+    <task id="LOCAL-00064" summary="moved miderm formula sheet to correct folder">
+      <created>1702616435286</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1702616435286</updated>
+    </task>
+    <task id="LOCAL-00065" summary="added use of apache / jfreechart libraries to tester">
+      <created>1702616455940</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1702616455940</updated>
+    </task>
+    <task id="LOCAL-00066" summary="removed package details from readme; needs updates.">
+      <created>1702616480695</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1702616480695</updated>
+    </task>
+    <task id="LOCAL-00067" summary="reordered method calls for action and numbuy in run method. added javadoc for moving average helper method.">
+      <created>1702616525569</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1702616525569</updated>
+    </task>
+    <task id="LOCAL-00068" summary="added comment.">
+      <created>1702616535226</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1702616535226</updated>
+    </task>
+    <task id="LOCAL-00069" summary="update to gitignore to include .idea and .iml files">
+      <created>1702616554146</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1702616554146</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -498,13 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="programmed exportObjects method. began programming smoothing method." />
-    <MESSAGE value="programmed importObjects and exportObjects methods. began programming smoothing method." />
-    <MESSAGE value="workspace commit 12/2/23" />
-    <MESSAGE value="created subdirectory for import / export files and miscellaneous files relating to each program." />
-    <MESSAGE value="sample output file for plotter" />
-    <MESSAGE value="refined plot and export methods. export now creates file in specified directory" />
-    <MESSAGE value="refined salt and export methods." />
     <MESSAGE value="programmed smooth method. refined export method." />
     <MESSAGE value="Plotter: successful run of plot and export methods." />
     <MESSAGE value="restructured project to organize files by assignment." />
@@ -523,6 +504,13 @@
     <MESSAGE value="completed runProgram method. corrected calculations for average up / down moves in RSI method." />
     <MESSAGE value="successfully tested sample run of program spending all money and holding for one year." />
     <MESSAGE value="workspace commit 12/7/23" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace commit 12/7/23" />
+    <MESSAGE value="updated writeups and reports for final project" />
+    <MESSAGE value="moved miderm formula sheet to correct folder" />
+    <MESSAGE value="added use of apache / jfreechart libraries to tester" />
+    <MESSAGE value="removed package details from readme; needs updates." />
+    <MESSAGE value="reordered method calls for action and numbuy in run method. added javadoc for moving average helper method." />
+    <MESSAGE value="added comment." />
+    <MESSAGE value="update to gitignore to include .idea and .iml files" />
+    <option name="LAST_COMMIT_MESSAGE" value="update to gitignore to include .idea and .iml files" />
   </component>
 </project>
