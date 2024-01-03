@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="update to gitignore to include .idea and .iml files">
-      <change afterPath="$PROJECT_DIR$/src/Miscellaneous/Interfaces/ProbabilityOperations.java" afterDir="false" />
+    <list default="true" id="aa22cff7-2f69-4502-9cde-a879f94462b2" name="Changes" comment="created ProbabilityOperations interface, designed to restructure the statslibrary class.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Miscellaneous/Interfaces/ProbabilityOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Miscellaneous/Interfaces/ProbabilityOperations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,13 +123,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1699851542905</updated>
-    </task>
-    <task id="LOCAL-00021" summary="programmed calculate function method and plot function method. added getters / setters and tuple object to hold pairs of points for output.">
-      <created>1700098226257</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1700098226257</updated>
     </task>
     <task id="LOCAL-00022" summary="added tuple object to hold pairs of points for output.">
       <created>1700098248142</created>
@@ -467,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702616554146</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="created ProbabilityOperations interface, designed to restructure the statslibrary class.">
+      <created>1702953732139</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1702953732140</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -486,7 +486,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="programmed smooth method. refined export method." />
     <MESSAGE value="Plotter: successful run of plot and export methods." />
     <MESSAGE value="restructured project to organize files by assignment." />
     <MESSAGE value="successfully tested importing data to salter" />
@@ -511,6 +510,7 @@
     <MESSAGE value="reordered method calls for action and numbuy in run method. added javadoc for moving average helper method." />
     <MESSAGE value="added comment." />
     <MESSAGE value="update to gitignore to include .idea and .iml files" />
-    <option name="LAST_COMMIT_MESSAGE" value="update to gitignore to include .idea and .iml files" />
+    <MESSAGE value="created ProbabilityOperations interface, designed to restructure the statslibrary class." />
+    <option name="LAST_COMMIT_MESSAGE" value="created ProbabilityOperations interface, designed to restructure the statslibrary class." />
   </component>
 </project>
